@@ -1,0 +1,29 @@
+[gd_scene format=4 uid="uid://6j3wu1a1wl4v"]
+
+[ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://player.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://npc.tscn" id="3_lquwl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
+texture = ExtResource("1_h2yge")
+separation = Vector2i(3, 0)
+texture_region_size = Vector2i(64, 110)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2tr8x"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_7mycd")
+
+[node name="Main" type="Node2D" unique_id=575015310]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
+tile_map_data = PackedByteArray("AAACAAQAAAAAAAAAAAADAAQAAAABAAAAAAAEAAQAAAACAAAAAAAFAAQAAAABAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAABAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAABAAAAAAAKAAQAAAAAAAAAAAALAAQAAAABAAAAAAAMAAQAAAACAAAAAAANAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_2tr8x")
+
+[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
+position = Vector2(290, 292)
+
+[node name="NPC" parent="." unique_id=1470715938 instance=ExtResource("3_lquwl")]
+position = Vector2(804, 290)

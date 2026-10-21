@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d1wk285ajamh7"]
+
+[ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="1_ideak"]
+[ext_resource type="Script" uid="uid://cgu6e8d3jw1li" path="res://npc.gd" id="1_kh24r"]
+[ext_resource type="Resource" uid="uid://dmjv3q16ovyq" path="res://dialogue/TestDialogue.dialogue" id="2_ul7y6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
+radius = 23.0
+
+[node name="NPC" type="Area2D" unique_id=1470715938]
+script = ExtResource("1_kh24r")
+dialogue_resource = ExtResource("2_ul7y6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1038434675]
+texture_filter = 1
+texture = ExtResource("1_ideak")
+hframes = 5
+region_enabled = true
+region_rect = Rect2(0, 127, 160, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=726418333]
+position = Vector2(1, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2tr8x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1156172971]
+shape = SubResource("CircleShape2D_2tr8x")
