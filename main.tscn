@@ -9,21 +9,26 @@ texture = ExtResource("1_h2yge")
 separation = Vector2i(3, 0)
 texture_region_size = Vector2i(64, 110)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -29, 32, -29, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -29, 32, -29, 32, 32, -32, 32)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -29, -18, -29, -18, 32, -32, 32)
+2:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -29, 32, -29, 32, 32, 20, 32)
 
 [sub_resource type="TileSet" id="TileSet_2tr8x"]
-tile_size = Vector2i(64, 64)
+tile_size = Vector2i(64, 110)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
 [node name="Main" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
-tile_map_data = PackedByteArray("AAACAAQAAAAAAAAAAAADAAQAAAABAAAAAAAEAAQAAAACAAAAAAAFAAQAAAABAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAABAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAABAAAAAAAKAAQAAAAAAAAAAAALAAQAAAABAAAAAAAMAAQAAAACAAAAAAANAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEAAIAAAACAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAABAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAABAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAABAAAAAAALAAIAAAABAAAAAAAMAAIAAAACAAAAAAANAAIAAAAAAAAAAAAOAAIAAAABAAAAAAAPAAIAAAAAAAAAAAAQAAIAAAABAAAAAAARAAIAAAAAAAAAAAASAAIAAAABAAAAAAADAAIAAAABAAAAAAACAAIAAAABAAAAAAABAAIAAAAAAAAAAAAAAAIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_2tr8x")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
 position = Vector2(290, 292)
 
 [node name="NPC" parent="." unique_id=1470715938 instance=ExtResource("3_lquwl")]
-position = Vector2(804, 290)
+position = Vector2(590, 320)

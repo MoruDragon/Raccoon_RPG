@@ -90,9 +90,10 @@ animations = [{
 height = 36.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
-radius = 28.0
+radius = 45.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2114017779]
+collision_layer = 2
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=398866832]
@@ -108,6 +109,8 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_2tr8x")
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=1248960068]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=1826520272]
 shape = SubResource("CircleShape2D_2tr8x")
