@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+# test comment, ignore
+
 # Movement speed in pixels per second.
 # @export exposes the variable directly to the Godot Inspector dock.
 @export var move_speed: float = 140.0
