@@ -22,6 +22,7 @@ var is_talking: bool = false
 # can be put somewhere else but idk how to do that
 func _save_game() -> void:
 	# Saves the save upon ctrl+s 
+	print("Saving game")
 	save_resource._create_save_state(self)
 	ResourceSaver.save(save_resource, SAVE_DATA_PATH)
 
@@ -38,6 +39,7 @@ func _load_save() -> void:
 
 func _delete_save() -> void:
 	# Deletes the save upon ctrl+shift+alt+d
+	print("Deleting save")
 	if ResourceLoader.exists(SAVE_DATA_PATH):
 		DirAccess.remove_absolute(SAVE_DATA_PATH)
 		
