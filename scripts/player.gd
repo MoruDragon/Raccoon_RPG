@@ -18,21 +18,29 @@ const SAVE_DATA_PATH = "user://savedata.tres"
 # State flag to freeze player movement, inputs, and state changes during dialogue.
 var is_talking: bool = false
 
-
-func _load_save() -> void:
-	# Checks if the save exists, if it does then it loads it
-	if not ResourceLoader.exists(SAVE_DATA_PATH):
-		print("Test")
-		save_resource = SaveData.new()
-	else:
-		save_resource = ResourceLoader.load(SAVE_DATA_PATH)
-	save_resource._load_save_state(self)
-	
+# I feel like these save and loads functions
+# can be put somewhere else but idk how to do that
 func _save_game() -> void:
 	# Saves the save upon ctrl+s 
 	save_resource._create_save_state(self)
 	ResourceSaver.save(save_resource, SAVE_DATA_PATH)
-	
+
+func _load_save() -> void:
+	# Checks if the save exists, if it does then it loads it
+	if not ResourceLoader.exists(SAVE_DATA_PATH):
+		print("Making new save")
+		save_resource = SaveData.new()
+		save_resource._create_default_save()
+	else:
+		print("Loading old save")
+		save_resource = ResourceLoader.load(SAVE_DATA_PATH)
+	save_resource._load_save_state(self)
+
+func _delete_save() -> void:
+	# Deletes the save upon ctrl+shift+alt+d
+	if ResourceLoader.exists(SAVE_DATA_PATH):
+		DirAccess.remove_absolute(SAVE_DATA_PATH)
+		
 func _ready() -> void:
 	# Loads save data on boot up
 	_load_save()
@@ -82,7 +90,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Discard interaction input if a dialogue sequence is active.
 	if is_talking:
 		return
-
+	
+	if event.is_action_pressed("save_game"):
+		_save_game()
+	if event.is_action_pressed("delete_save"):
+		_delete_save()
+	
 	# _unhandled_input fires only when GUI elements have not consumed the input event.
 	if event.is_action_pressed("interact"):
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
@@ -96,8 +109,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				area.interact()
 				# Terminate search after triggering the first valid interactable target in range.
 				break
-	if event.is_action_pressed("save_game"):
-		_save_game()
 
 # Callback executed when DialogueManager signals that conversation has concluded.
 func _on_dialogue_ended(_resource: Resource) -> void:

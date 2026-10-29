@@ -10,3 +10,6 @@ func _create_save_state(player: CharacterBody2D) -> void:
 
 func _load_save_state(player: CharacterBody2D) -> void:
 	player.position = current_position
+
+func _create_default_save() -> void:
+	current_position = Vector2(290.0,292.0)
