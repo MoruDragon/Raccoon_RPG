@@ -26,6 +26,7 @@ func _load_save() -> void:
 		save_resource = SaveData.new()
 	else:
 		save_resource = ResourceLoader.load(SAVE_DATA_PATH)
+	save_resource._load_save_state(self)
 	
 func _save_game() -> void:
 	# Saves the save upon ctrl+s 

@@ -7,3 +7,6 @@ class_name SaveData
 
 func _create_save_state(player: CharacterBody2D) -> void:
 	current_position = player.position
+
+func _load_save_state(player: CharacterBody2D) -> void:
+	player.position = current_position
