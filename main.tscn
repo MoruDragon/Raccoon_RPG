@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://player.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://wwomng6as3aq" path="res://data/save_data.gd" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://npc.tscn" id="3_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
@@ -21,6 +22,10 @@ tile_size = Vector2i(64, 110)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
+[sub_resource type="Resource" id="Resource_h2yge"]
+script = ExtResource("3_1bvp3")
+metadata/_custom_type_script = "uid://wwomng6as3aq"
+
 [node name="Main" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
@@ -30,6 +35,7 @@ tile_set = SubResource("TileSet_2tr8x")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
 position = Vector2(290, 292)
+save_resource = SubResource("Resource_h2yge")
 
 [node name="NPC" parent="." unique_id=1470715938 instance=ExtResource("3_lquwl")]
 position = Vector2(590, 320)

@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+# The path to the user's save data
+const SAVE_DATA_PATH = "user://savedata.tres"
+@export var save_resource: SaveData
+
 # Movement speed in pixels per second.
 # @export exposes the variable directly to the Godot Inspector dock.
 @export var move_speed: float = 140.0
@@ -14,7 +18,35 @@ extends CharacterBody2D
 # State flag to freeze player movement, inputs, and state changes during dialogue.
 var is_talking: bool = false
 
+# I feel like these save and loads functions
+# can be put somewhere else but idk how to do that
+func _save_game() -> void:
+	# Saves the save upon ctrl+s 
+	print("Saving game")
+	save_resource._create_save_state(self)
+	ResourceSaver.save(save_resource, SAVE_DATA_PATH)
+
+func _load_save() -> void:
+	# Checks if the save exists, if it does then it loads it
+	if not ResourceLoader.exists(SAVE_DATA_PATH):
+		print("Making new save")
+		save_resource = SaveData.new()
+		save_resource._create_default_save()
+	else:
+		print("Loading old save")
+		save_resource = ResourceLoader.load(SAVE_DATA_PATH)
+	save_resource._load_save_state(self)
+
+func _delete_save() -> void:
+	# Deletes the save upon ctrl+shift+alt+d
+	print("Deleting save")
+	if ResourceLoader.exists(SAVE_DATA_PATH):
+		DirAccess.remove_absolute(SAVE_DATA_PATH)
+		
 func _ready() -> void:
+	# Loads save data on boot up
+	_load_save()
+	
 	# Connect to the global signal provided by the Dialogue Manager autoload singleton.
 	# DialogueManager emits 'dialogue_ended' when a conversation balloon closes.
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
@@ -60,7 +92,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Discard interaction input if a dialogue sequence is active.
 	if is_talking:
 		return
-
+	
+	if event.is_action_pressed("save_game"):
+		_save_game()
+	if event.is_action_pressed("delete_save"):
+		_delete_save()
+	
 	# _unhandled_input fires only when GUI elements have not consumed the input event.
 	if event.is_action_pressed("interact"):
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
