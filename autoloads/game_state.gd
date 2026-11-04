@@ -8,7 +8,6 @@ var player_node:CharacterBody2D
 func _ready():
 	await get_tree().root.ready
 	player_node = get_player()
-	await player_node
 	_load_save()
 	
 func get_player() -> CharacterBody2D:
@@ -30,7 +29,10 @@ func _create_save_state(player: CharacterBody2D) -> void:
 		#print("No player detected")
 		return
 	save_resource.current_position = player.position
-	
+
+func _set_talked_to_rat() -> void:
+	save_resource.talked_to_rat = true
+
 func _load_save() -> void:
 	# Checks if the save exists, if it does then it loads it
 	if not ResourceLoader.exists(SAVE_DATA_PATH):
@@ -60,7 +62,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("delete_save"):
 		_delete_save()
 		
-
 
 func _delete_save() -> void:
 	# Deletes the save upon ctrl+shift+alt+d
