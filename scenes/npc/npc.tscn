@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://d1wk285ajamh7"]
 
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="1_ideak"]
-[ext_resource type="Script" uid="uid://cgu6e8d3jw1li" path="res://scripts/npc.gd" id="1_kh24r"]
-[ext_resource type="Resource" uid="uid://dmjv3q16ovyq" path="res://dialogue/TestDialogue.dialogue" id="2_ul7y6"]
-[ext_resource type="Script" uid="uid://836akaui1e6w" path="res://scripts/interaction_area.gd" id="4_ul7y6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ul7y6"]
 atlas = ExtResource("1_ideak")
@@ -81,17 +78,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
-radius = 40.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
 radius = 7.0
 height = 28.0
 
 [node name="NPC" type="StaticBody2D" unique_id=1401522541]
 collision_mask = 0
-script = ExtResource("1_kh24r")
-dialogue_resource = ExtResource("2_ul7y6")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=224542822]
 texture_filter = 1
@@ -99,14 +91,6 @@ sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.5934011
-
-[node name="InteractionArea" type="Area2D" parent="." unique_id=587212205]
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("4_ul7y6")
-
-[node name="TriggerCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=1156172971]
-shape = SubResource("CircleShape2D_2tr8x")
 
 [node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=726418333]
 position = Vector2(1, 0)

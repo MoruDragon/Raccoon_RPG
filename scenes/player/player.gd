@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 # Movement speed in pixels per second.
@@ -16,14 +17,20 @@ var is_talking: bool = false
 
 		
 func _ready() -> void:
-	
 	# Connect to the global signal provided by the Dialogue Manager autoload singleton.
 	# DialogueManager emits 'dialogue_ended' when a conversation balloon closes.
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
+	GameState.player = self
+	
 	# Set the initial visual state to the idle animation loop on scene load.
 	sprite.play("idle")
-	call_deferred("_apply_entry_position")
+	_apply_entry_position.call_deferred()
+
+func _exit_tree() -> void:
+	# Sets the game state's player reference to null so it doesn't try to do stuff
+	# to a deleted player node.
+	GameState.player = null
 
 func _physics_process(_delta: float) -> void:
 	# Halt all kinematic processing and force the idle pose when dialogue is active.
@@ -69,14 +76,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
 		var overlapping_areas: Array[Area2D] = interaction_detector.get_overlapping_areas()
 		
-		for area in overlapping_areas:
-			# Duck typing: verify the target area contains an 'interact' method before invoking.
-			# This decouples the Player node from hard dependencies on specific NPC classes.
-			if area.has_method("interact"):
-				is_talking = true
-				area.interact()
-				# Terminate search after triggering the first valid interactable target in range.
-				break
+		# DialogueManager has a methods to get the closest DialogueActionable2D
+		# from a position.
+		var closest_actionable: DialogueActionable2D = \
+			DialogueActionable2D.get_nearest_actionable_to(global_position)
+		if closest_actionable in overlapping_areas:
+			closest_actionable.action()
+			is_talking = true
 
 # Callback executed when DialogueManager signals that conversation has concluded.
 func _on_dialogue_ended(_resource: Resource) -> void:

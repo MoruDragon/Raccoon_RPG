@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bs0qs43w3s2q5"]
 
-[ext_resource type="Script" uid="uid://quoto767oqc5" path="res://scripts/water.gd" id="1_7wcun"]
-[ext_resource type="Script" uid="uid://0srledbuux74" path="res://scripts/watertoggle.gd" id="1_dcmoc"]
+[ext_resource type="Script" uid="uid://quoto767oqc5" path="res://scenes/valve_puzzle/water.gd" id="1_7wcun"]
+[ext_resource type="Script" uid="uid://0srledbuux74" path="res://scenes/valve_puzzle/watertoggle.gd" id="1_dcmoc"]
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="2_dcmoc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmoj4"]

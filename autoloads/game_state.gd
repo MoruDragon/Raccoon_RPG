@@ -2,79 +2,65 @@ extends Node
 
 # The path to the user's save data
 const SAVE_DATA_PATH = "user://savedata.tres"
-@export var current: SaveData
-var player_node: CharacterBody2D
+@export var save_data: SaveData
+
+# Players registers itself when entering the tree.
+var player: CharacterBody2D
 
 func _ready():
-	await get_tree().root.ready
-	player_node = get_player()
-	_load_save()
-	
-func get_player() -> CharacterBody2D:
-	var players = get_tree().get_nodes_in_group("Player")
-	if players.size() > 0:
-		return players[0] as CharacterBody2D
-	#print("Returning null")
-	return null
-	
-func _save_game() -> void:
+	load_save()
+
+
+func save_game() -> void:
 	# Saves the save upon ctrl+s 
 	print("Saving game")
-	_create_save_state(player_node)
-	ResourceSaver.save(current, SAVE_DATA_PATH)
-	
-func _create_save_state(player: CharacterBody2D) -> void:
+	_create_save_state()
+	ResourceSaver.save(save_data, SAVE_DATA_PATH)
+
+
+func _create_save_state() -> void:
 	# Loads the save state with the correct information
-	if not player:
-		#print("No player detected")
-		return
-	current.current_position = player.position
-	current.valve_puzzle_states = ValvePuzzleManager.valve_states.duplicate()
+	save_data.valve_puzzle_states = ValvePuzzleManager.valve_states.duplicate()
 
-func _set_talked_to_rat() -> void:
-	current.talked_to_rat = true
 
-func _load_save() -> void:
+func load_save() -> void:
 	# Checks if the save exists, if it does then it loads it
 	if not ResourceLoader.exists(SAVE_DATA_PATH):
 		print("Making new save")
-		current = SaveData.new()
+		save_data = SaveData.new()
 		_create_default_save()
 	else:
 		print("Loading old save")
-		current = ResourceLoader.load(SAVE_DATA_PATH)
-	_load_save_state(player_node)
-	
+		save_data = ResourceLoader.load(SAVE_DATA_PATH)
+	_load_save_state()
+
+
 func _create_default_save() -> void:
 	# Makes a default save state
-	current.current_position = Vector2(290.0, 292.0)
-	current.valve_puzzle_states = {
+	save_data.valve_puzzle_states = {
 		"V1": false,
 		"V2": false,
 		"V3": false,
 		"V4": false
 	}
-	
-func _load_save_state(player: CharacterBody2D) -> void:
-	# Puts in the saved data into the player
-	if not player:
-		return
-	player.position = current.current_position
-	if not current.valve_puzzle_states.is_empty():
-		ValvePuzzleManager.valve_states = current.valve_puzzle_states.duplicate()
+
+
+func _load_save_state() -> void:
+	if not save_data.valve_puzzle_states.is_empty():
+		ValvePuzzleManager.valve_states = save_data.valve_puzzle_states.duplicate()
 		ValvePuzzleManager.evaluate_puzzle()
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	
 	if event.is_action_pressed("save_game"):
-		_save_game()
+		save_game()
 	if event.is_action_pressed("delete_save"):
 		_delete_save()
-		
+
 
 func _delete_save() -> void:
 	# Deletes the save upon ctrl+shift+alt+d
 	print("Deleting save")
 	if ResourceLoader.exists(SAVE_DATA_PATH):
 		DirAccess.remove_absolute(SAVE_DATA_PATH)
+	load_save()

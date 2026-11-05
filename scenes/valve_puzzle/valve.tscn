@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cds81j2cfcfsm"]
+
+[ext_resource type="Script" uid="uid://crg50hra4sj7j" path="res://scenes/valve_puzzle/valve.gd" id="1_xgvd7"]
+[ext_resource type="Resource" uid="uid://iwh1a71h1lri" path="res://dialogue/valve.dialogue" id="2_elngg"]
+[ext_resource type="Texture2D" uid="uid://be71vso7ffm8r" path="res://icon.svg" id="2_xcy3o"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="4_sid1s"]
+[ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="5_iygui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jke"]
+atlas = ExtResource("2_xcy3o")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2tr8x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4jke")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iygui"]
+radius = 40.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
+radius = 13.0
+height = 26.0
+
+[node name="Valve" type="StaticBody2D" unique_id=1401522541]
+collision_mask = 0
+script = ExtResource("1_xgvd7")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=224542822]
+texture_filter = 1
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
+scale = Vector2(0.20312503, 0.20312503)
+sprite_frames = SubResource("SpriteFrames_2tr8x")
+animation = &"new_animation"
+
+[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=270999966]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("4_sid1s")
+dialogue_resource = ExtResource("2_elngg")
+dialogue_cue = "start"
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="TriggerCollision" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=1888556540]
+shape = SubResource("CircleShape2D_iygui")
+
+[node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=726418333]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2tr8x")
+
+[node name="DialogueStateContext" type="Node" parent="." unique_id=1851315388 node_paths=PackedStringArray("target")]
+script = ExtResource("5_iygui")
+alias = "valve"
+target = NodePath("..")
+metadata/_custom_type_script = "uid://cd3222nx3y3k5"

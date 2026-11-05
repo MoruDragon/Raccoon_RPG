@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cndxq4rqsbjlh"]
 
-[ext_resource type="Script" uid="uid://n3xcgxeqslf2" path="res://scripts/spawnmarker.gd" id="1_cbugw"]
+[ext_resource type="Script" uid="uid://n3xcgxeqslf2" path="res://scenes/spawn_marker/spawn_marker.gd" id="1_4wig8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2tr8x"]
 size = Vector2(60, 60)
 
-[node name="Marker2D" type="Marker2D" unique_id=1224443294]
-script = ExtResource("1_cbugw")
+[node name="SpawnMarker" type="Marker2D" unique_id=1224443294]
+script = ExtResource("1_4wig8")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1756906509]
 collision_layer = 0

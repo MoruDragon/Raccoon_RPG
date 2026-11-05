@@ -1,0 +1,17 @@
+~ start
+if not GameState.save_data.talked_to_rat
+	Nathan: [[Hi|Hello|Howdy]], this is dialogue for the first time.
+else
+	Nathan: [[Hi|Hello|Howdy]], this is dialogue after we have spoken already.
+Nathan: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => end_dialogue
+Nathan: For more information see the online documentation.
+~ end_dialogue
+$> debug("Setting talked_to_rat to true")
+$> GameState.save_data.talked_to_rat = true
+=> END

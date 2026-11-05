@@ -1,17 +1,18 @@
 [gd_scene format=4 uid="uid://6j3wu1a1wl4v"]
 
-[ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://player.tscn" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://wwomng6as3aq" path="res://data/save_data.gd" id="3_1bvp3"]
-[ext_resource type="Resource" uid="uid://jwje6kjck28p" path="res://dialogue/opening.dialogue" id="3_5vw27"]
-[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://npc.tscn" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://valve.tscn" id="5_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://water.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://spawnmarker.tscn" id="7_272bh"]
-[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scripts/opening_dialogue.gd" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_00xaj"]
+[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_kvreu"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="3_qy6yc"]
+[ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
+[ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="5_4jiwq"]
+[ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/water.tscn" id="6_4h6cl"]
+[ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
+[ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
+[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/opening_dialogue.gd" id="9_b02sy"]
+[ext_resource type="Resource" uid="uid://jwje6kjck28p" path="res://dialogue/opening.dialogue" id="10_8465s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
-texture = ExtResource("1_h2yge")
+texture = ExtResource("1_00xaj")
 separation = Vector2i(2, 3)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -81,6 +82,9 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_choun"]
+radius = 40.0
+
 [node name="Main" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
@@ -88,35 +92,44 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAEAAIAAAABAAAAAAAFAAIAAAADAAAAAAAMAAIAAAADAAAAABANAAIAAAABAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAQAAIAAAADAAEAAAARAAIAAAAAAAAAAAASAAIAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAFAAMAAAAFAAAAAAAFAAQAAAACAAAAAAAFAAUAAAACAAAAAAAFAAYAAAACAAAAAAAFAAcAAAAFAAAAAAAFAAgAAAAEAAAAABAGAAgAAAABAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAADAAEAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAABAAAAAAAMAAgAAAAEAAAAAAAMAAcAAAAFAAAAAAAMAAYAAAACAAAAAAAMAAUAAAACAAAAAAAMAAQAAAACAAAAAAAMAAMAAAAFAAAAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAAKAAYAAAAEAAEAAAAJAAYAAAAFAAEAAAAIAAYAAAAEAAEAAAAHAAYAAAAFAAEAAAAHAAUAAAAFAAEAAAAIAAUAAAAEAAEAAAAJAAUAAAAFAAEAAAAKAAUAAAAFAAEAAAAKAAQAAAAFAAEAAAAJAAQAAAAEAAEAAAAIAAQAAAAEAAEAAAAHAAQAAAAFAAEAAAAGAAQAAAAAAAEAAAAGAAMAAAAAAAEAAAAHAAMAAAAEAAEAAAAIAAMAAAAEAAEAAAAJAAMAAAAEAAEAAAAKAAMAAAAEAAEAAAALAAMAAAAAAAEAAAALAAIAAAAAAAEAAAAKAAIAAAAFAAEAAAAJAAIAAAAFAAEAAAAIAAIAAAAFAAEAAAAHAAIAAAAFAAEAAAAGAAIAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAALAAYAAAAAAAEAAAALAAcAAAAAAAEAAAALAAUAAAAAAAEAAAALAAQAAAAAAAEAAAAHAAEAAAAEAAEAAAAIAAEAAAAFAAEAAAAJAAEAAAAFAAEAAAAKAAEAAAAEAAEAAAAGAAEAAAAAAAEAAAAGAAAAAAAAAAEAAAAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAALAAAAAAAAAAEAAAALAAEAAAAAAAEAAAAAAAMAAAAAAAEAAAABAAMAAAAAAAEAAAACAAMAAAAAAAEAAAADAAMAAAAAAAEAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAANAAMAAAAAAAEAAAANAAQAAAAAAAEAAAANAAUAAAAAAAEAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAAMAAkAAAAAAAEAAAALAAkAAAAAAAEAAAAKAAkAAAAAAAEAAAAJAAkAAAAAAAEAAAAIAAkAAAABAAEAAGAHAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAFAAkAAAAAAAEAAAAEAAkAAAAAAAEAAAAOAAMAAAAAAAEAAAAPAAMAAAAAAAEAAAAQAAMAAAAFAAAAAAARAAMAAAAAAAEAAAASAAMAAAAAAAEAAAASAAEAAAAAAAEAAAARAAEAAAAAAAEAAAAQAAEAAAAAAAEAAAAPAAEAAAAAAAEAAAAOAAEAAAAAAAEAAAANAAEAAAAAAAEAAAAMAAEAAAAAAAEAAAAFAAEAAAAAAAEAAAAEAAEAAAAAAAEAAAADAAEAAAAAAAEAAAACAAEAAAAAAAEAAAABAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAD//wEAAAAAAAEAAAD//wMAAAAAAAEAAAD//wIAAAAAAAAAAAADAAQAAAAAAAEAAAABAAYAAAADAAAAAAABAAcAAAAFAAAAAAABAAgAAAACAAAAAAABAAkAAAAFAAAAAAABAAoAAAAEAAAAABAAAAYAAAABAAAAAAD//wYAAAAAAAAAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAACAAoAAAABAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAACAAEAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAADAAkAAAAAAAEAAAACAAkAAAAAAAEAAAACAAgAAAAAAAEAAAADAAgAAAAAAAEAAAADAAcAAAAAAAEAAAACAAcAAAAAAAEAAAACAAYAAAAAAAEAAAADAAYAAAAAAAEAAAADAAUAAAAAAAEAAAACAAUAAAAAAAEAAAABAAUAAAAAAAEAAAAAAAUAAAAAAAEAAAACAAQAAAAAAAEAAAABAAQAAAAAAAEAAAAAAAQAAAAAAAEAAAD//wQAAAAAAAEAAAD//wUAAAAAAAEAAAD//wcAAAAAAAEAAAD//wgAAAAAAAEAAAD//wkAAAAAAAEAAAD//woAAAAAAAEAAAAQAAoAAAAGAAEAAAAPAAoAAAABAAAAAAARAAoAAAABAAAAAAAQAAkAAAAFAAAAAAAPAAkAAAAAAAEAAAARAAkAAAAAAAEAAAAOAAoAAAAAAAAAAAAQAAgAAAACAAAAAAAQAAcAAAACAAAAAAAQAAYAAAACAAAAAAAQAAUAAAACAAAAAAAQAAQAAAACAAAAAAAOAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAYAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAOAAUAAAAAAAEAAAAOAAYAAAAAAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAARAAQAAAAAAAEAAAARAAUAAAAAAAEAAAARAAYAAAAAAAEAAAARAAcAAAAAAAEAAAARAAgAAAAAAAEAAAASAAkAAAAAAAEAAAASAAgAAAAAAAEAAAASAAcAAAAAAAEAAAASAAYAAAAAAAEAAAASAAUAAAAAAAEAAAASAAQAAAAAAAEAAAASAAoAAAAAAAAAAAAMAAAAAAAAAAEAAAANAAAAAAAAAAEAAAAOAAAAAAAAAAEAAAAPAAAAAAAAAAEAAAAQAAAAAAAAAAEAAAARAAAAAAAAAAEAAAASAAAAAAAAAAEAAAAFAAAAAAAAAAEAAAAEAAAAAAAAAAEAAAADAAAAAAAAAAEAAAACAAAAAAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAD//wAAAAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAAFAP//AAAAAAEAAAAGAP//AAAAAAEAAAAHAP//AAAAAAEAAAAIAP//AAAAAAEAAAAJAP//AAAAAAEAAAAKAP//AAAAAAEAAAALAP//AAAAAAEAAAAMAP//AAAAAAEAAAANAP//AAAAAAEAAAAOAP//AAAAAAEAAAAPAP//AAAAAAEAAAAQAP//AAAAAAEAAAARAP//AAAAAAEAAAASAP//AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_2tr8x")
 
-[node name="NPC" parent="." unique_id=1470715938 instance=ExtResource("3_lquwl")]
+[node name="Rat" parent="." unique_id=1470715938 instance=ExtResource("2_kvreu")]
 position = Vector2(590, 320)
 
-[node name="NPC2" parent="." unique_id=1401522541 instance=ExtResource("5_7mycd")]
+[node name="DialogueActionable2D" type="Area2D" parent="Rat" unique_id=547500483]
+script = ExtResource("3_qy6yc")
+dialogue_resource = ExtResource("4_utjhh")
+dialogue_cue = "start"
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/DialogueActionable2D" unique_id=547713839]
+shape = SubResource("CircleShape2D_choun")
+
+[node name="Valve1" parent="." unique_id=1401522541 instance=ExtResource("5_4jiwq")]
 position = Vector2(865, 297)
 
-[node name="NPC3" parent="." unique_id=542227964 instance=ExtResource("5_7mycd")]
-position = Vector2(987, 424)
-valve_id = "V4"
-
-[node name="NPC4" parent="." unique_id=1868940086 instance=ExtResource("5_7mycd")]
+[node name="Valve2" parent="." unique_id=1868940086 instance=ExtResource("5_4jiwq")]
 position = Vector2(989, 300)
 valve_id = "V2"
 
-[node name="NPC5" parent="." unique_id=421308508 instance=ExtResource("5_7mycd")]
+[node name="Valve3" parent="." unique_id=421308508 instance=ExtResource("5_4jiwq")]
 position = Vector2(870, 423)
 valve_id = "V3"
 
-[node name="Node2D" parent="." unique_id=1294021697 instance=ExtResource("6_7mycd")]
+[node name="Valve4" parent="." unique_id=542227964 instance=ExtResource("5_4jiwq")]
+position = Vector2(987, 424)
+valve_id = "V4"
+
+[node name="Node2D" parent="." unique_id=1294021697 instance=ExtResource("6_4h6cl")]
 position = Vector2(1121, 223)
 
-[node name="Marker2D" parent="." unique_id=1224443294 instance=ExtResource("7_272bh")]
+[node name="SpawnMarker" parent="." unique_id=1224443294 instance=ExtResource("7_536tc")]
 position = Vector2(1121, 223)
 marker_tag = "main_map2"
 target_scene_path = "uid://8oq7ftvplh6d"
 
-[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
+[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
 position = Vector2(290, 292)
 
 [node name="Opening Dialogue" type="Node" parent="." unique_id=332815490]
-script = ExtResource("9_kek77")
-opening_dialogue = ExtResource("3_5vw27")
+script = ExtResource("9_b02sy")
+opening_dialogue = ExtResource("10_8465s")

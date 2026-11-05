@@ -13,7 +13,7 @@ func _ready() -> void:
 	add_to_group("spawn_markers")
 	
 	if not trigger_area:
-		push_error("[DoorwayMarker] ERROR: Child Area2D node not found on marker '", marker_tag, "'")
+		push_error("[SpawnMarker] ERROR: Child Area2D node not found on marker '", marker_tag, "'")
 		return
 
 	trigger_area.body_entered.connect(_on_body_entered)
@@ -27,8 +27,7 @@ func _ready() -> void:
 		can_trigger = true
 
 func _on_body_entered(body: Node2D) -> void:
-	
-	if not (body is CharacterBody2D):
+	if not body is Player:
 		return
 		
 	is_player_inside = true
@@ -38,7 +37,7 @@ func _on_body_entered(body: Node2D) -> void:
 		SceneManager.transition_to_map(target_scene_path, marker_tag)
 
 func _on_body_exited(body: Node2D) -> void:
-	if not (body is CharacterBody2D):
+	if not body is Player:
 		return
 		
 	is_player_inside = false
