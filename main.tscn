@@ -3,10 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://player.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://wwomng6as3aq" path="res://data/save_data.gd" id="3_1bvp3"]
+[ext_resource type="Resource" uid="uid://jwje6kjck28p" path="res://dialogue/opening.dialogue" id="3_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://npc.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://valve.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://water.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://spawnmarker.tscn" id="7_272bh"]
+[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://opening_dialogue.gd" id="9_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_h2yge")
@@ -119,3 +121,7 @@ target_scene_path = "uid://8oq7ftvplh6d"
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
 position = Vector2(290, 292)
 save_resource = SubResource("Resource_h2yge")
+
+[node name="Opening Dialogue" type="Node" parent="." unique_id=332815490]
+script = ExtResource("9_kek77")
+opening_dialogue = ExtResource("3_5vw27")

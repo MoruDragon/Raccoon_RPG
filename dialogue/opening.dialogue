@@ -1,0 +1,30 @@
+~ start
+# roro happy expression
+Roro: It's such a beautiful day today! The sun is shining, my toes are curling, and I'm ready to steal some unfortunate soul's lunch!
+Your mouth salivates thinking about your culinary options. 
+What will today bring? 
+# roro neutral
+A hero?
+Some scrumptious pasta.
+A nice orange drink.
+...If you know, you know.
+# roro surprised
+Roro: Ah!
+A feathered ruffian and furry rat totally knock you over!
+They're fighting over a stale New York Pizza!
+Roro: Wow, such bad taste! I need it MORE THAN THEM!
+# roro neutral
+They briefly paused in shock, watching you jump in as well!
+# angry rat npc portrait
+Random Rat: Ey, yo, grab yo own grub!
+# angry pigeon npc portrait
+Paltry Pigeon: Ugh, the audacity!
+You ignore their feeble protests, winning the battle! 
+You run, snatching the pizza away from the two and scurrying away behind a dumpster.
+# roro happy
+You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
+As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
+# roro thinking
+Roro: Hmm, what does this say? 
+=> END
+
