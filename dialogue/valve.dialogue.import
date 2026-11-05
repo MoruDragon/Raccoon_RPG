@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://iwh1a71h1lri"
+path="res://.godot/imported/valve.dialogue-e068ab5fc2f564e2507285bb175e67f4.tres"
+
+[deps]
+
+source_file="res://dialogue/valve.dialogue"
+dest_files=["res://.godot/imported/valve.dialogue-e068ab5fc2f564e2507285bb175e67f4.tres"]
+
+[params]
+
+defaults=true

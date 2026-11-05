@@ -53,6 +53,7 @@ func _ready() -> void:
 	
 	# Set the initial visual state to the idle animation loop on scene load.
 	sprite.play("idle")
+	call_deferred("_apply_entry_position")
 
 func _physics_process(_delta: float) -> void:
 	# Halt all kinematic processing and force the idle pose when dialogue is active.
@@ -116,3 +117,19 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_dialogue_ended(_resource: Resource) -> void:
 	# Restore player movement, inputs, and interaction capability.
 	is_talking = false
+
+func _apply_entry_position() -> void:
+	if SceneManager.target_marker_tag.is_empty():
+		return
+		
+	var markers: Array[Node] = get_tree().get_nodes_in_group("spawn_markers")
+	
+	var found: bool = false
+	for marker in markers:
+		if marker is Marker2D and marker.get("marker_tag") == SceneManager.target_marker_tag:
+			global_position = marker.global_position
+			found = true
+			break
+			
+	if not found:
+		push_warning("[Player] Warning: No marker found matching tag '", SceneManager.target_marker_tag, "'")

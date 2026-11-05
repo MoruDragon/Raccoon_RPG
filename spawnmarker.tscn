@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cndxq4rqsbjlh"]
+
+[ext_resource type="Script" uid="uid://n3xcgxeqslf2" path="res://scripts/spawnmarker.gd" id="1_cbugw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tr8x"]
+size = Vector2(60, 60)
+
+[node name="Marker2D" type="Marker2D" unique_id=1224443294]
+script = ExtResource("1_cbugw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1756906509]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=326862558]
+shape = SubResource("RectangleShape2D_2tr8x")
