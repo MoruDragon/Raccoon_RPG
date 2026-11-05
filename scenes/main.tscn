@@ -81,10 +81,6 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
-[sub_resource type="Resource" id="Resource_h2yge"]
-script = ExtResource("3_1bvp3")
-metadata/_custom_type_script = "uid://wwomng6as3aq"
-
 [node name="Main" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
@@ -120,7 +116,6 @@ target_scene_path = "uid://8oq7ftvplh6d"
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_1bvp3")]
 position = Vector2(290, 292)
-save_resource = SubResource("Resource_h2yge")
 
 [node name="Opening Dialogue" type="Node" parent="." unique_id=332815490]
 script = ExtResource("9_kek77")

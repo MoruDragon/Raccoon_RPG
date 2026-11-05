@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 ValvePuzzleManager="*uid://mbilr2rkpjd3"
 SceneManager="*uid://bktvek3csjq0o"
+GameState="*uid://cqlrtxbwcrb1w"
 
 [display]
 
@@ -29,6 +30,10 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[global_group]
+
+Player="This group contains the player"
 
 [input]
 
