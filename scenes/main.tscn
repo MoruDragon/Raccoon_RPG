@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://valve.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://water.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://spawnmarker.tscn" id="7_272bh"]
-[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://opening_dialogue.gd" id="9_kek77"]
+[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scripts/opening_dialogue.gd" id="9_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_h2yge")

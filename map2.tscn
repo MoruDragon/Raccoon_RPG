@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://valve.tscn" id="5_aqkjv"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://water.tscn" id="6_dayf4"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://spawnmarker.tscn" id="7_ky2co"]
+[ext_resource type="Script" uid="uid://cqvmsin185eqx" path="res://tunnel_opening_dialogue.gd" id="8_dt2mv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_ehxak")
@@ -120,3 +121,6 @@ target_scene_path = "uid://6j3wu1a1wl4v"
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_ky2co")]
 position = Vector2(-45, 225)
 save_resource = SubResource("Resource_h2yge")
+
+[node name="Tunnel Opening Dialogue" type="Node" parent="." unique_id=2031492619]
+script = ExtResource("8_dt2mv")
