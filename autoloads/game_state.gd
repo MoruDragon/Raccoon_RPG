@@ -2,8 +2,8 @@ extends Node
 
 # The path to the user's save data
 const SAVE_DATA_PATH = "user://savedata.tres"
-@export var save_resource: SaveData
-var player_node:CharacterBody2D
+@export var current: SaveData
+var player_node: CharacterBody2D
 
 func _ready():
 	await get_tree().root.ready
@@ -21,40 +21,50 @@ func _save_game() -> void:
 	# Saves the save upon ctrl+s 
 	print("Saving game")
 	_create_save_state(player_node)
-	ResourceSaver.save(save_resource, SAVE_DATA_PATH)
+	ResourceSaver.save(current, SAVE_DATA_PATH)
 	
 func _create_save_state(player: CharacterBody2D) -> void:
 	# Loads the save state with the correct information
 	if not player:
 		#print("No player detected")
 		return
-	save_resource.current_position = player.position
+	current.current_position = player.position
+	current.valve_puzzle_states = ValvePuzzleManager.valve_states.duplicate()
 
 func _set_talked_to_rat() -> void:
-	save_resource.talked_to_rat = true
+	current.talked_to_rat = true
 
 func _load_save() -> void:
 	# Checks if the save exists, if it does then it loads it
 	if not ResourceLoader.exists(SAVE_DATA_PATH):
 		print("Making new save")
-		save_resource = SaveData.new()
+		current = SaveData.new()
 		_create_default_save()
 	else:
 		print("Loading old save")
-		save_resource = ResourceLoader.load(SAVE_DATA_PATH)
+		current = ResourceLoader.load(SAVE_DATA_PATH)
 	_load_save_state(player_node)
 	
 func _create_default_save() -> void:
 	# Makes a default save state
-	save_resource.current_position = Vector2(290.0,292.0)
+	current.current_position = Vector2(290.0, 292.0)
+	current.valve_puzzle_states = {
+		"V1": false,
+		"V2": false,
+		"V3": false,
+		"V4": false
+	}
 	
 func _load_save_state(player: CharacterBody2D) -> void:
 	# Puts in the saved data into the player
 	if not player:
 		return
-	player.position = save_resource.current_position
+	player.position = current.current_position
+	if not current.valve_puzzle_states.is_empty():
+		ValvePuzzleManager.valve_states = current.valve_puzzle_states.duplicate()
+		ValvePuzzleManager.evaluate_puzzle()
 
-	
+
 func _unhandled_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("save_game"):
