@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="4_n8cy1"]
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_x6mtj"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="5_aqkjv"]
-[ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/water.tscn" id="6_dayf4"]
+[ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="6_dayf4"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_ky2co"]
-[ext_resource type="Script" uid="uid://cqvmsin185eqx" path="res://scenes/tunnel_opening_dialogue.gd" id="8_dt2mv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_ehxak")
@@ -84,6 +83,20 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 [sub_resource type="CircleShape2D" id="CircleShape2D_urrlk"]
 radius = 40.0
 
+[sub_resource type="GDScript" id="GDScript_o4kqt"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Map2" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
@@ -133,4 +146,4 @@ target_scene_path = "uid://6j3wu1a1wl4v"
 position = Vector2(-45, 225)
 
 [node name="Tunnel Opening Dialogue" type="Node" parent="." unique_id=2031492619]
-script = ExtResource("8_dt2mv")
+script = SubResource("GDScript_o4kqt")
