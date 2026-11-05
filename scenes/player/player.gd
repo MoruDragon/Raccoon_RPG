@@ -75,14 +75,21 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
 		var overlapping_areas: Array[Area2D] = interaction_detector.get_overlapping_areas()
-		
-		# DialogueManager has a methods to get the closest DialogueActionable2D
-		# from a position.
+		# Get the closest actionable and call its action method.
 		var closest_actionable: DialogueActionable2D = \
 			DialogueActionable2D.get_nearest_actionable_to(global_position)
 		if closest_actionable in overlapping_areas:
 			closest_actionable.action()
 			is_talking = true
+			return
+		
+		for area in overlapping_areas:
+			# Duck typing: verify the target area contains an 'interact' method before invoking.
+			# This decouples the Player node from hard dependencies on specific NPC classes.
+			if area.has_method("interact"):
+				if area.interact():
+					is_talking = true	# only sets talking to true if interact succeeded
+				return
 
 # Callback executed when DialogueManager signals that conversation has concluded.
 func _on_dialogue_ended(_resource: Resource) -> void:

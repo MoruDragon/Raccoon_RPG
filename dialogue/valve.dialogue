@@ -1,8 +1,8 @@
 ~ start
-Valve: The indicator shows this valve is currently {{valve.current_status}}.
+Valve: The indicator shows this valve is currently {{current_status}}.
 - Turn the valve
-	$> valve.toggle()
-	Valve: You turn the wheel. The valve is now {{valve.current_status}}.
+	$> toggle()
+	Valve: You turn the wheel. The valve is now {{current_status}}.
 	=> END
 - Step away
 	=> END

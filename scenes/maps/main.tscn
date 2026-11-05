@@ -96,6 +96,8 @@ tile_set = SubResource("TileSet_2tr8x")
 position = Vector2(590, 320)
 
 [node name="DialogueActionable2D" type="Area2D" parent="Rat" unique_id=547500483]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("3_qy6yc")
 dialogue_resource = ExtResource("4_utjhh")
 dialogue_cue = "start"

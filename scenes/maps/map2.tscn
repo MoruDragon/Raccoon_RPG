@@ -96,6 +96,8 @@ position = Vector2(539, 95)
 scale = Vector2(-1, 1)
 
 [node name="DialogueActionable2D" type="Area2D" parent="Rat" unique_id=1245736601]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("3_cb40e")
 dialogue_resource = ExtResource("4_x6mtj")
 dialogue_cue = "start"

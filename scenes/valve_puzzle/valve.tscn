@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://cds81j2cfcfsm"]
 
 [ext_resource type="Script" uid="uid://crg50hra4sj7j" path="res://scenes/valve_puzzle/valve.gd" id="1_xgvd7"]
-[ext_resource type="Resource" uid="uid://iwh1a71h1lri" path="res://dialogue/valve.dialogue" id="2_elngg"]
 [ext_resource type="Texture2D" uid="uid://be71vso7ffm8r" path="res://icon.svg" id="2_xcy3o"]
-[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="4_sid1s"]
-[ext_resource type="Script" uid="uid://cd3222nx3y3k5" path="res://addons/dialogue_manager/nodes/context/dialogue_state_context.gd" id="5_iygui"]
+[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_5ehjv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4jke"]
 atlas = ExtResource("2_xcy3o")
@@ -39,23 +37,14 @@ scale = Vector2(0.20312503, 0.20312503)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"new_animation"
 
-[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=270999966]
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1056906699]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("4_sid1s")
-dialogue_resource = ExtResource("2_elngg")
-dialogue_cue = "start"
-metadata/_custom_type_script = "uid://cqcur1rm7433g"
+script = ExtResource("3_5ehjv")
 
-[node name="TriggerCollision" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=1888556540]
+[node name="TriggerCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=1888556540]
 shape = SubResource("CircleShape2D_iygui")
 
 [node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=726418333]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_2tr8x")
-
-[node name="DialogueStateContext" type="Node" parent="." unique_id=1851315388 node_paths=PackedStringArray("target")]
-script = ExtResource("5_iygui")
-alias = "valve"
-target = NodePath("..")
-metadata/_custom_type_script = "uid://cd3222nx3y3k5"
