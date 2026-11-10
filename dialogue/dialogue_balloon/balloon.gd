@@ -23,6 +23,9 @@ extends CanvasLayer
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
+## jamie test for character portraits
+#@onready var portrait: TextureRect = $Balloon/Portrait
+
 ## Temporary game states
 var temporary_game_states: Array = []
 
@@ -133,6 +136,14 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+
+
+	# jamie tried
+	#var portrait_path: String = "res://assets/roro_portraits/%s/roro_neutral.png" % dialogue_line.character
+	#if ResourceLoader.exists(portrait_path):
+		#portrait.texture = load(portrait_path)
+	#else:
+		#portrait.texture = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
