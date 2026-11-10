@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://qfe27xhmokc8"]
 
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="1_be34d"]
+[ext_resource type="Script" uid="uid://cgu6e8d3jw1li" path="res://scenes/npc/npc.gd" id="1_wl586"]
+[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="2_bal84"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_be34d"]
 atlas = ExtResource("1_be34d")
@@ -56,7 +58,11 @@ animations = [{
 radius = 15.0
 height = 46.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wl586"]
+radius = 40.0
+
 [node name="RoroNpc" type="StaticBody2D" unique_id=749341705]
+script = ExtResource("1_wl586")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1639554741]
 sprite_frames = SubResource("SpriteFrames_rphhr")
@@ -65,3 +71,11 @@ frame_progress = 0.50009334
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904983410]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_kptei")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1704362692]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_bal84")
+
+[node name="TriggerCollision" type="CollisionShape2D" parent="InteractionArea" unique_id=1784324520]
+shape = SubResource("CircleShape2D_wl586")

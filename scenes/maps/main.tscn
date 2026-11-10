@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_00xaj"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_kvreu"]
-[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="3_qy6yc"]
+[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_00xaj"]
+[ext_resource type="PackedScene" uid="uid://cbx1jr7bs2cr4" path="res://dialogue/dialogue_balloon/city_balloon.tscn" id="4_00xaj"]
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="5_4jiwq"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="6_4h6cl"]
@@ -76,7 +77,7 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ss43a")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_choun"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m6k0o"]
 radius = 40.0
 
 [node name="Main" type="Node2D" unique_id=575015310]
@@ -88,17 +89,16 @@ tile_set = SubResource("TileSet_00xaj")
 
 [node name="Rat" parent="." unique_id=1470715938 instance=ExtResource("2_kvreu")]
 position = Vector2(590, 320)
+dialogue_resource = ExtResource("4_utjhh")
+dialogue_bubble = ExtResource("4_00xaj")
 
-[node name="DialogueActionable2D" type="Area2D" parent="Rat" unique_id=547500483]
+[node name="InteractionArea" type="Area2D" parent="Rat" unique_id=616761707]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("3_qy6yc")
-dialogue_resource = ExtResource("4_utjhh")
-dialogue_cue = "start"
-metadata/_custom_type_script = "uid://cqcur1rm7433g"
+script = ExtResource("3_00xaj")
 
-[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/DialogueActionable2D" unique_id=547713839]
-shape = SubResource("CircleShape2D_choun")
+[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/InteractionArea" unique_id=597666751]
+shape = SubResource("CircleShape2D_m6k0o")
 
 [node name="Valve1" parent="." unique_id=1401522541 instance=ExtResource("5_4jiwq")]
 position = Vector2(865, 297)
@@ -128,3 +128,4 @@ position = Vector2(290, 292)
 
 [node name="OpeningDialogue" type="Node" parent="." unique_id=332815490]
 script = ExtResource("9_b02sy")
+dialogue_balloon = ExtResource("4_00xaj")
