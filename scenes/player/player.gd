@@ -75,13 +75,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
 		var overlapping_areas: Array[Area2D] = interaction_detector.get_overlapping_areas()
-		# Get the closest actionable and call its action method.
-		var closest_actionable: DialogueActionable2D = \
-			DialogueActionable2D.get_nearest_actionable_to(global_position)
-		if closest_actionable in overlapping_areas:
-			closest_actionable.action()
-			is_talking = true
-			return
 		
 		for area in overlapping_areas:
 			# Duck typing: verify the target area contains an 'interact' method before invoking.
