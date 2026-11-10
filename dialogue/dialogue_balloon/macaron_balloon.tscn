@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dhfxaraf4wwsk"]
+[gd_scene format=3 uid="uid://6424m7llmy1g"]
 
-[ext_resource type="Script" uid="uid://n60rfmp6qath" path="res://dialogue/dialogue_balloon/balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Script" uid="uid://n60rfmp6qath" path="res://dialogue/dialogue_balloon/balloon.gd" id="1_7kf3e"]
+[ext_resource type="Texture2D" uid="uid://b1nwd3y70rire" path="res://assets/dialogue_boxes.png" id="2_6c3gd"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="3_brdxn"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="4_tefyc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 content_margin_left = 20.0
@@ -75,6 +76,10 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_l76e4"]
+atlas = ExtResource("2_6c3gd")
+region = Rect2(193.945, 1.436, 93.084, 93.29)
+
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -111,9 +116,9 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
+[node name="Macaron_Balloon" type="CanvasLayer" unique_id=38036521]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_7kf3e")
 skip_action = &"ui_accept"
 
 [node name="Balloon" type="Control" parent="." unique_id=154399927]
@@ -136,49 +141,66 @@ offset_top = -219.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=2145270309]
-clip_children = 2
+[node name="NinePatchRect" type="NinePatchRect" parent="Balloon/MarginContainer" unique_id=224156611]
+texture_filter = 1
 layout_mode = 2
-mouse_filter = 1
+texture = SubResource("AtlasTexture_l76e4")
+region_rect = Rect2(0, 0, 93, 93)
+patch_margin_left = 18
+patch_margin_top = 20
+patch_margin_right = 19
+patch_margin_bottom = 20
 
-[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=903640783]
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/NinePatchRect" unique_id=903640783]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1089.0
+offset_bottom = 186.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer" unique_id=1685890612]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=1685890612]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1890134056]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=1890134056]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1567782692]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1567782692]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("3_brdxn")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Dialogue..."
 
-[node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=418507161]
+[node name="Control" type="Control" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=418507161]
 custom_minimum_size = Vector2(20, 10)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=2091292889]
+[node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer/Control" unique_id=2091292889]
 unique_name_in_owner = true
 polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=1602634471]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/NinePatchRect/MarginContainer/HBoxContainer/Control" unique_id=1602634471]
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
+
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=2145270309]
+visible = false
+clip_children = 2
+layout_mode = 2
+mouse_filter = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="Balloon" unique_id=1087901387]
 layout_mode = 1
@@ -194,7 +216,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
+script = ExtResource("4_tefyc")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1446810977]
