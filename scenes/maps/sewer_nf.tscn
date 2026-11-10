@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dhaq3jbb42vhe"]
+[gd_scene format=4 uid="uid://8ii750xkq3jt"]
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_j7jxv"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="2_uf3e1"]
