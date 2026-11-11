@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueBalloonConfig" format=3 uid="uid://btgdtpx704y76"]
+
+[ext_resource type="Script" uid="uid://dyg777gq7s1ij" path="res://dialogue/dialogue_balloon_config/dialogue_balloon_config.gd" id="1_5vdds"]
+[ext_resource type="StyleBox" uid="uid://dluk1luet13wf" path="res://dialogue/dialogue_balloon_config/panels/roro_stylebox.tres" id="1_hpykx"]
+
+[resource]
+script = ExtResource("1_5vdds")
+metadata/_custom_type_script = "uid://dyg777gq7s1ij"

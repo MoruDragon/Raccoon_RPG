@@ -13,4 +13,4 @@ func interact() -> void:
 	if dialogue_resource:
 		# Spawns Dialogue Manager built-in GUI balloon to display lines and options.
 		# This handles text layout, typing effects, and choice selections automatically.
-		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start_title)
+		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start_title)

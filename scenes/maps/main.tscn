@@ -126,4 +126,3 @@ position = Vector2(290, 292)
 
 [node name="OpeningDialogue" type="Node" parent="." unique_id=332815490]
 script = ExtResource("9_b02sy")
-dialogue_balloon = "uid://dhfxaraf4wwsk"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueBalloonConfig" format=3 uid="uid://c5age4tbqemmn"]
+
+[ext_resource type="StyleBox" uid="uid://cpqqdmjjwu1a1" path="res://dialogue/dialogue_balloon_config/panels/macaron_stylebox.tres" id="1_b3lqc"]
+[ext_resource type="Script" uid="uid://dyg777gq7s1ij" path="res://dialogue/dialogue_balloon_config/dialogue_balloon_config.gd" id="1_i8t1i"]
+
+[resource]
+script = ExtResource("1_i8t1i")
+panel = ExtResource("1_b3lqc")
+metadata/_custom_type_script = "uid://dyg777gq7s1ij"

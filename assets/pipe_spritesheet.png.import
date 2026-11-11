@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddykq3wx2mxqq"
-path="res://.godot/imported/dialogue_boxes-expor_revised.png-892e2d2609a5017172cf676d2b1d784f.ctex"
+uid="uid://deitqxmkud6j5"
+path="res://.godot/imported/pipe_spritesheet.png-f0dae66a5930eeac0061c45b18d1d97a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogue_boxes-expor_revised.png"
-dest_files=["res://.godot/imported/dialogue_boxes-expor_revised.png-892e2d2609a5017172cf676d2b1d784f.ctex"]
+source_file="res://assets/pipe_spritesheet.png"
+dest_files=["res://.godot/imported/pipe_spritesheet.png-f0dae66a5930eeac0061c45b18d1d97a.ctex"]
 
 [params]
 

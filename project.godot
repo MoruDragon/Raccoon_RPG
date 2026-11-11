@@ -24,7 +24,7 @@ GameState="*uid://cqlrtxbwcrb1w"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://dialogue/dialogue_balloon/xiu_balloon.tscn"
+runtime/balloon_path="uid://guej1x4yrrjo"
 
 [display]
 

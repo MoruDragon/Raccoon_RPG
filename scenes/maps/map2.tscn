@@ -83,20 +83,6 @@ sources/0 = SubResource("TileSetAtlasSource_7mycd")
 [sub_resource type="CircleShape2D" id="CircleShape2D_urrlk"]
 radius = 40.0
 
-[sub_resource type="GDScript" id="GDScript_o4kqt"]
-script/source = "extends Node
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Map2" type="Node2D" unique_id=575015310]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
@@ -149,6 +135,3 @@ target_scene_path = "uid://dhaq3jbb42vhe"
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_ky2co")]
 position = Vector2(-45, 225)
-
-[node name="Tunnel Opening Dialogue" type="Node" parent="." unique_id=2031492619]
-script = SubResource("GDScript_o4kqt")
