@@ -117,7 +117,7 @@ valve_id = "V4"
 position = Vector2(1121, 223)
 
 [node name="SpawnMarker" parent="." unique_id=1224443294 instance=ExtResource("7_536tc")]
-position = Vector2(1119, 221)
+position = Vector2(1120, 223)
 marker_tag = "main_map2"
 target_scene_path = "uid://8oq7ftvplh6d"
 
