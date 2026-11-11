@@ -1,69 +1,79 @@
 ~ start
 # roro happy expression
-Roro: It's such a beautiful day today! The sun is shining, my toes are curling, and I'm ready to steal some unfortunate soul's lunch!
+[#happy] Roro: It's such a beautiful day today! The sun is shining, my toes are curling, and I'm ready to steal some unfortunate soul's lunch!
 Your mouth salivates thinking about your culinary options. 
 What will today bring? 
 # roro neutral
-A hero?
+[#neutral] A hero?
 Some scrumptious pasta.
 A nice orange drink.
 ...If you know, you know.
 # roro surprised
-Roro: Ah!
+[#surprised] Roro: Ah!
 A feathered ruffian and furry rat totally knock you over!
 They're fighting over a stale New York Pizza!
 Roro: Wow, such bad taste! I need it MORE THAN THEM!
 # roro neutral
-They briefly paused in shock, watching you jump in as well!
+[#neutral] They briefly paused in shock, watching you jump in as well!
 # angry rat npc portrait
-Random Rat: Ey, yo, grab yo own grub!
+[#angry] Random Rat: Ey, yo, grab yo own grub!
 # angry pigeon npc portrait
 Paltry Pigeon: Ugh, the audacity!
 You ignore their feeble protests, winning the battle! 
 # You run, snatching the pizza away from the two and scurrying away behind a dumpster.
 # roro happy
-You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
+[#happy] You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
 As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
 # roro thinking
-Roro: Hmm, what does this say? 
+[#thinking] Roro: Hmm, what does this say? 
 
 # NEWSPAPER PUZZLE STARTS HERE 
 You start trying to piece together the ripped up newspaper. Curiosity might've killed the cat, but you’re a raccoon!
 # roro surprised
-Roro: Wow, they are still going at it? How many years have the rats and pigeons been fighting for? I forget. Not my dumpster, not my trash. 
+[#surprised] Roro: Wow, they are still going at it? How many years have the rats and pigeons been fighting for? I forget. Not my dumpster, not my trash. 
 # roro thinking
-You continue to put together the article. 
+[#thinking] You continue to put together the article. 
 Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and he’ll fix it quickly.
 # NEWSPAPER PUZZLE ENDS HERE
 
-With the newspaper now finished, you lick your paws clean from the pizza sauce and lift your nose to the sky. 
-You sniff the air and GASP, the smell of a lovely apple pie enters your nostrils. 
-You follow your nose, deeper into the alleyway, ready to feast on the dessert. But suddenly a loud BANG is heard, followed by a smaller bang. 
-You stop midstep and whip my head over to the noise. Your interest is piqued and you immediately change course. 
+# roro happy
+[#happy] With the newspaper now finished, you lick your paws clean from the pizza sauce and lift your nose to the sky.
+# roro surprised
+[#surprised] You sniff the air and GASP, the smell of a lovely apple pie enters your nostrils. 
+# roro neutral
+[#neutral] You follow your nose, deeper into the alleyway, ready to feast on the dessert. But suddenly a loud BANG is heard, followed by a smaller bang. 
+You stop midstep and whip your head over to the noise. Your interest is piqued and you immediately change course. 
 As you continue deeper into the alleyway, you can pick up pieces of a hushed conversation. 
-Macaroon: Are you sure? I don't want to take food away from you...
-Xiu: Yes, Macaroon!! I made this for you!
-Macaroon: You made it?!
+Macaron: Are you sure? I don't want to take food away from you...
+Xiu: Yes, Macaron!! I made this for you!
+Macaron: You made it?!
 Xiu: I poured my heart and soul into this pie, because [i]you're[/i] the apple of [i]my[/i] eye.
-Macaroon: Coo!!!
-Macaroon's feathers explode up into her face, prompting her to hide them.
-Roro: Woah… This is beautiful! To share food with your mortal enemy under the cover of alleyway darkness!!!!!
+Macaron: Coo!!!
+Macaron's feathers explode up into her face, prompting her to hide them.
+# roro surprised
+[#surprised] Roro: Woah… This is beautiful! To share food with your mortal enemy under the cover of alleyway darkness!!!!!
 You continue to watch their conversation and it’s filled with LOVE.
-Macaroon: W-Well, I made you this!
+Macaron: W-Well, I made you this!
 The pigeon thrusts a meticulously beak(?)-crafted flower crown into Xiu's paws.
 Xiu: Wow, flowers? 
-Roro: How the heck did she find flowers in the concrete jungle?
-Macaroon: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
+# roro neutral
+[#neutral] Roro: How the heck did she find flowers in the concrete jungle?
+# roro surprised
+[#surprised] Macaron: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
 Xiu bashfully starts twirling her tail while looking demure. Her flustered gaze was directed downward, overwhelmed by the display of affection. 
 Xiu: Oooooh! 
 Roro: Jeez, even my parents weren’t this mushy gushy with each other!
-Macaroon and Xiu continue to profess their love to each other as you watch from your super secret hiding place, the disturbed dumpster. 
-Roro: Wow... I didn't think such aggressive species were capable of love.
+Macaron and Xiu continue to profess their love to each other as you watch from your super secret hiding place, the disturbed dumpster. 
+# roro neutral
+[#neutral] Roro: Wow... I didn't think such aggressive species were capable of love.
 Roro: But today I was proven wrong! I had no idea that THE rat princess Xiu was hiding a forbidden romance like this.
-Roro: If other rats or pigeons find out, these two might be in big trouble...
-Roro: I MUST PROTECT THEM!! MY OTP MUST SAIL!!!
-Xiu and Macaroon make one last loving confession to each other before entering a warm embrace. 
-You watch as Macaroon starts flapping her wings and flies away. Xiu then starts to scurry towards the RatLands (aka the tunnels).
+# roro nervous
+[#nervous] Roro: If other rats or pigeons find out, these two might be in big trouble...
+# roro mischievous
+[#mischievious] Roro: I MUST PROTECT THEM!! MY OTP MUST SAIL!!!
+Xiu and Macaron make one last loving confession to each other before entering a warm embrace. 
+# roro neutral
+[#neutral] You watch as Macaron starts flapping her wings and flies away. Xiu then starts to scurry towards the RatLands (aka the tunnels).
 Roro: I need to learn more about whatever is going on between these two!
 You start to follow Xiu towards the RatLands, determined to learn more about the forbidden romance. Little do you know, you're set to uncover the [b]real[/b] reason behind the Feather-Tail war! 
 $> debug("Setting seen_opening to true")

@@ -1,7 +1,6 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
-
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
 
@@ -72,6 +71,40 @@ var mutation_cooldown: Timer = Timer.new()
 
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
+
+# test - portrait
+@onready var portrait: TextureRect = %Portrait
+
+## Stores the speaking character. This is so the character can still show
+## while there is no "speaker".
+var current_character: String
+## Stores the character's expression so it only needs to be tagged once to change it.
+var expression := "neutral"
+
+const EXPRESSIONS = [
+	"neutral",
+	"happy",
+	"surprised",
+	"angry",
+	"thinking",
+	"mischievious",
+	"embarrassed",
+	"flustered",
+	"prideful",
+	"nervous",
+	"confused",
+]
+
+const BALLOON_CONFIG: Dictionary[String, DialogueBalloonConfig] = {
+	"roro": preload("uid://btgdtpx704y76"),
+	"macaron": preload("uid://c5age4tbqemmn"),
+	"xiu": preload("uid://bg8oqjc8u0bdi"),
+	"rat king": preload("uid://ctoywlikcndrr"),
+	"": preload("uid://btgdtpx704y76"),
+}
+
+## Reference to the panel container in order to change the theme to the character.
+@onready var panel: PanelContainer = $Balloon/MarginContainer/PanelContainer
 
 
 func _ready() -> void:
@@ -151,6 +184,8 @@ func apply_dialogue_line() -> void:
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
 
+	_update_character_portrait()
+	
 	# Show our balloon
 	balloon.show()
 	will_hide_balloon = false
@@ -182,6 +217,43 @@ func apply_dialogue_line() -> void:
 ## Go to the next line
 func next(next_id: String) -> void:
 	dialogue_line = await dialogue_resource.get_next_dialogue_line(next_id, temporary_game_states)
+
+
+## Updates the character portrait based on the character and any tags
+func _update_character_portrait() -> void:
+	if not portrait:
+		return
+	
+	if dialogue_line.character:
+		current_character = dialogue_line.character.to_lower()
+	
+	# If a tag with a dialogue line matches a string in EXPRESSIONS, 
+	# set the current expression to that string.
+	for tag in dialogue_line.tags:
+		if tag in EXPRESSIONS:
+			expression = tag
+			break
+	
+	# Update character portrait
+	match current_character:
+		"roro":
+			match expression:
+				"neutral":
+					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
+				_:
+					portrait.texture = load("res://icon.svg")
+			portrait.show()
+		_:
+			portrait.hide()
+	
+	var config: DialogueBalloonConfig = BALLOON_CONFIG.get(current_character)
+	if config:
+		# Update panel visual
+		panel.add_theme_stylebox_override("panel", config.panel)
+		
+		# Update colors
+		character_label.add_theme_color_override("default_color", config.name_color)
+		dialogue_label.add_theme_color_override("default_color", config.dialogue_color)
 
 
 #region Signals

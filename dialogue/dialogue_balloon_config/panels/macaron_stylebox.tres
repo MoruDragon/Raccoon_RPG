@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cpqqdmjjwu1a1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mykgs"]
+load_path = "res://.godot/imported/dialogue_boxes.png-6533d86f2a36a7e1f89c5c4d9fe4100b.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ajxf"]
+atlas = SubResource("CompressedTexture2D_mykgs")
+region = Rect2(99, 3, 91, 91)
+
+[resource]
+texture = SubResource("AtlasTexture_2ajxf")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
