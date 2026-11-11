@@ -1,0 +1,7 @@
+~ start
+Rat: Hello!
+Rat: I will say this line and wait until I am finished jumping to continue.
+$> jump()
+Rat: I'm back!
+Rat: I can also jump in the middle[$> jump()] of a dialogue line.
+Rat: But if I want to.. [$>> jump()]jump without interrupting my dialogue, I can do that too.
