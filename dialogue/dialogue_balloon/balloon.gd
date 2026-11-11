@@ -72,7 +72,8 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
-# test - portrait
+## Portrait of current character. Changes texture based on [member current_character] and
+## [member expression] through a match statement in [method _update_character_portrait].
 @onready var portrait: TextureRect = %Portrait
 
 ## Stores the speaking character. This is so the character can still show
@@ -81,6 +82,7 @@ var current_character: String
 ## Stores the character's expression so it only needs to be tagged once to change it.
 var expression := "neutral"
 
+## All expressions that characters can have. Add more as needed.
 const EXPRESSIONS = [
 	"neutral",
 	"happy",
@@ -95,6 +97,8 @@ const EXPRESSIONS = [
 	"confused",
 ]
 
+## Configurations for each character's visual style. Ctrl+Click
+## on [DialogueBalloonConfig] for more information.
 const BALLOON_CONFIG: Dictionary[String, DialogueBalloonConfig] = {
 	"roro": preload("uid://btgdtpx704y76"),
 	"macaron": preload("uid://c5age4tbqemmn"),
@@ -219,11 +223,14 @@ func next(next_id: String) -> void:
 	dialogue_line = await dialogue_resource.get_next_dialogue_line(next_id, temporary_game_states)
 
 
-## Updates the character portrait based on the character and any tags
+## Updates the character portrait based on the character and any tags.
 func _update_character_portrait() -> void:
+	# Exit early if there is no portrait to show.
 	if not portrait:
 		return
 	
+	# Stores the character name for upcoming dialogue lines in the variable current_character.
+	# Lowered so that it can match with keys in BALLOON_CONFIG.
 	if dialogue_line.character:
 		current_character = dialogue_line.character.to_lower()
 	
@@ -231,22 +238,27 @@ func _update_character_portrait() -> void:
 	# set the current expression to that string.
 	for tag in dialogue_line.tags:
 		if tag in EXPRESSIONS:
-			expression = tag
-			break
+			expression = tag	# Variable to store the current expression.
+			break				# Stop looking through the tags if an expression is found.
 	
-	# Update character portrait
+	# Update character portrait based on current_character and expression.
 	match current_character:
-		"roro":
+		"roro":	# Add more branches as more characters are added. 
 			match expression:
 				"neutral":
 					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
-				_:
+				"surprised":
 					portrait.texture = load("res://icon.svg")
+				_:	# Fallback sprite. 
+					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
 			portrait.show()
 		_:
 			portrait.hide()
 	
+	# Gets the configuration of balloon panel and font color that match the character.
+	# Uses the dictionary get method, which falls back to null if not found.
 	var config: DialogueBalloonConfig = BALLOON_CONFIG.get(current_character)
+	# Only change the visuals if a config exists
 	if config:
 		# Update panel visual
 		panel.add_theme_stylebox_override("panel", config.panel)
