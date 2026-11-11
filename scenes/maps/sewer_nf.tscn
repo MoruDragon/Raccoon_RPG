@@ -1,0 +1,243 @@
+[gd_scene format=4 uid="uid://8ii750xkq3jt"]
+
+[ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_j7jxv"]
+[ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="2_uf3e1"]
+[ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="3_imayl"]
+[ext_resource type="Texture2D" uid="uid://be71vso7ffm8r" path="res://icon.svg" id="4_imayl"]
+[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="5_r6dbc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imayl"]
+texture = ExtResource("1_j7jxv")
+separation = Vector2i(2, 2)
+texture_region_size = Vector2i(64, 64)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:5/animation_speed = 15.0
+0:5/animation_frame_0/duration = 1.0
+0:5/animation_frame_1/duration = 1.0
+0:5/animation_frame_2/duration = 1.0
+0:5/animation_frame_3/duration = 1.0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:2/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
+0:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18.5, 23, -32, 23, -32, -25, -18.5, -25)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -25, 32, -25, 32, 23, 20, 23)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(25, -32, 25, 32, -25, 32, -25, -32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:1/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -18.5, -25, -32, 25, -32, 25, -18.5)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(25, 20, 25, 32, -25, 32, -25, 20)
+5:1/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+0:7/animation_columns = 4
+0:7/animation_speed = 15.0
+0:7/animation_frame_0/duration = 1.0
+0:7/animation_frame_1/duration = 1.0
+0:7/animation_frame_2/duration = 1.0
+0:7/animation_frame_3/duration = 1.0
+0:7/animation_frame_4/duration = 1.0
+0:7/animation_frame_5/duration = 1.0
+0:7/animation_frame_6/duration = 1.0
+0:7/animation_frame_7/duration = 1.0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_r6dbc"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_imayl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
+texture = ExtResource("1_j7jxv")
+separation = Vector2i(2, 2)
+texture_region_size = Vector2i(64, 64)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:5/animation_speed = 15.0
+0:5/animation_frame_0/duration = 1.0
+0:5/animation_frame_1/duration = 1.0
+0:5/animation_frame_2/duration = 1.0
+0:5/animation_frame_3/duration = 1.0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
+0:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18.5, 23, -32, 23, -32, -25, -18.5, -25)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -25, 32, -25, 32, 23, 20, 23)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(25, -32, 25, 32, -25, 32, -25, -32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:1/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -18.5, -25, -32, 25, -32, 25, -18.5)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(25, 20, 25, 32, -25, 32, -25, 20)
+5:1/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+1:2/0 = 0
+7:0/0 = 0
+0:7/next_alternative_id = 4
+0:7/animation_columns = 4
+0:7/animation_speed = 50.0
+0:7/animation_frame_0/duration = 1.0
+0:7/animation_frame_1/duration = 1.0
+0:7/animation_frame_2/duration = 1.0
+0:7/animation_frame_3/duration = 1.0
+0:7/animation_frame_4/duration = 1.0
+0:7/animation_frame_5/duration = 1.0
+0:7/animation_frame_6/duration = 1.0
+0:7/animation_frame_7/duration = 1.0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:7/1 = 1
+0:7/3 = 3
+
+[sub_resource type="TileSet" id="TileSet_imayl"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_uf3e1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
+texture = ExtResource("1_j7jxv")
+separation = Vector2i(2, 2)
+texture_region_size = Vector2i(64, 64)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:5/animation_speed = 15.0
+0:5/animation_frame_0/duration = 1.0
+0:5/animation_frame_1/duration = 1.0
+0:5/animation_frame_2/duration = 1.0
+0:5/animation_frame_3/duration = 1.0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:2/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
+0:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18.5, 23, -32, 23, -32, -25, -18.5, -25)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -25, 32, -25, 32, 23, 20, 23)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(25, -32, 25, 32, -25, 32, -25, -32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:1/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -18.5, -25, -32, 25, -32, 25, -18.5)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(25, 20, 25, 32, -25, 32, -25, 20)
+5:1/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+0:7/animation_columns = 4
+0:7/animation_speed = 15.0
+0:7/animation_frame_0/duration = 1.0
+0:7/animation_frame_1/duration = 1.0
+0:7/animation_frame_2/duration = 1.0
+0:7/animation_frame_3/duration = 1.0
+0:7/animation_frame_4/duration = 1.0
+0:7/animation_frame_5/duration = 1.0
+0:7/animation_frame_6/duration = 1.0
+0:7/animation_frame_7/duration = 1.0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_2tr8x"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_7mycd")
+
+[node name="SewerNotFlooded" type="Node2D" unique_id=537667296]
+
+[node name="WaterLayer" type="TileMapLayer" parent="." unique_id=245681647]
+tile_set = SubResource("TileSet_r6dbc")
+
+[node name="GroundLayer2" type="TileMapLayer" parent="." unique_id=685883264]
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAIAAAABAAIAAAAAAAIAAAACAAIAAAAAAAIAAAADAAIAAAAAAAIAAAAEAAIAAAAAAAIAAAAFAAIAAAAAAAIAAAAGAAIAAAAAAAIAAAAHAAIAAAAAAAIAAAAIAAIAAAAAAAIAAAAJAAIAAAAAAAIAAAAKAAIAAAAAAAIAAAAFAAEAAAAAAAIAAAAFAAMAAAAAAAIAAAA=")
+tile_set = SubResource("TileSet_imayl")
+
+[node name="GroundLayer" type="TileMapLayer" parent="." unique_id=257440360]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAABAAAAAAABAAMAAAACAAAAAAAAAAUAAAADAAAAAAAAAAMAAAAAAAEAAAAAAAIAAAADAAEAAAAAAAIAAAACAAEAAAAAAAIAAAABAAEAAAAAAAIAAAAHAAEAAAAAAAIAAAAIAAEAAAAAAAIAAAAJAAEAAAAAAAIAAAAGAAAAAAAAAAMAAAAHAAAAAAABAAMAAAAIAAAAAAAAAAMAAAAJAAAAAAAAAAUAAAAKAAAAAAABAAMAAAAKAAEAAAAAAAIAAAAGAAEAAAAAAAIAAAAAAAIAAAAAAAYAAAABAAIAAAAAAAYAAAACAAIAAAAAAAYAAAADAAIAAAAAAAYAAAAGAAIAAAAAAAYAAAAHAAIAAAAAAAYAAAAIAAIAAAAAAAYAAAAJAAIAAAAAAAYAAAAKAAIAAAAAAAYAAAAEAAAAAAAAAAMAAAAFAAAAAAAAAAUAAAAEAAIAAAAAAAYAAAAAAAMAAAAAAAIAAAABAAMAAAAAAAIAAAACAAMAAAAAAAIAAAADAAMAAAAAAAIAAAAEAAEAAAAAAAIAAAAEAAMAAAAAAAIAAAAGAAMAAAAAAAIAAAAHAAMAAAAAAAIAAAAIAAMAAAAAAAIAAAAJAAMAAAAAAAIAAAAKAAMAAAAAAAIAAAAFAAEAAAAAAAYAAFAFAAMAAAAAAAYAAFAFAAIAAAAAAAYAAFA=")
+tile_set = SubResource("TileSet_2tr8x")
+
+[node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
+position = Vector2(34, 95)
+marker_tag = "go_sewer"
+target_scene_path = "uid://8oq7ftvplh6d"
+
+[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
+position = Vector2(51, 83)
+
+[node name="Mousehole1" type="Sprite2D" parent="." unique_id=82684682]
+position = Vector2(293, 90.00001)
+scale = Vector2(0.1875, 0.1640625)
+texture = ExtResource("4_imayl")
+
+[node name="Mousehole2" type="Sprite2D" parent="." unique_id=419095070]
+position = Vector2(415, 90)
+scale = Vector2(0.1875, 0.1640625)
+texture = ExtResource("4_imayl")
+
+[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
+position = Vector2(252, 88.99999)
+scale = Vector2(1, 0.871)

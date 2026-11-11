@@ -70,6 +70,8 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+# test - portrait
+@onready var portrait: TextureRect = $portrait
 
 func _ready() -> void:
 	balloon.hide()
@@ -141,6 +143,15 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	
+	
+	#jamie added this
+	match dialogue_line.character.to_lower():
+		"roro":
+			portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
+			portrait.show()
+		_:
+			portrait.hide()
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

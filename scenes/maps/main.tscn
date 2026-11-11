@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_00xaj"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_kvreu"]
-[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="3_qy6yc"]
+[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_00xaj"]
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="5_4jiwq"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="6_4h6cl"]
@@ -10,78 +10,73 @@
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
 [ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ss43a"]
 texture = ExtResource("1_00xaj")
 separation = Vector2i(2, 3)
 texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18.5, 23, -32, 23, -32, -25, -18.5, -25)
-1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -25, 32, -25, 32, 23, 20, 23)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(25, -32, 25, 32, -25, 32, -25, -32)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -18.5, -25, -32, 25, -32, 25, -18.5)
-5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(25, 20, 25, 32, -25, 32, -25, 20)
-6:0/0 = 0
-6:1/0 = 0
-5:1/0 = 0
-4:1/0 = 0
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-0:1/0 = 0
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:4/0 = 0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:5/animation_speed = 15.0
+0:5/animation_frame_0/duration = 1.0
+0:5/animation_frame_1/duration = 1.0
+0:5/animation_frame_2/duration = 1.0
+0:5/animation_frame_3/duration = 1.0
 0:5/0 = 0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:5/0 = 0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-2:5/0 = 0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:6/0 = 0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:7/animation_columns = 4
+0:7/animation_speed = 15.0
+0:7/animation_frame_0/duration = 1.0
+0:7/animation_frame_1/duration = 1.0
+0:7/animation_frame_2/duration = 1.0
+0:7/animation_frame_3/duration = 1.0
+0:7/animation_frame_4/duration = 1.0
+0:7/animation_frame_5/duration = 1.0
+0:7/animation_frame_6/duration = 1.0
+0:7/animation_frame_7/duration = 1.0
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-0:8/0 = 0
-0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
+0:1/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18.5, 23, -32, 23, -32, -25, -18.5, -25)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(20, -25, 32, -25, 32, 23, 20, 23)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(25, -32, 25, 32, -25, 32, -25, -32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:1/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, -18.5, -25, -32, 25, -32, 25, -18.5)
+5:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(25, 20, 25, 32, -25, 32, -25, 20)
+5:1/0 = 0
+6:0/0 = 0
+6:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_2tr8x"]
+[sub_resource type="TileSet" id="TileSet_00xaj"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7mycd")
+sources/0 = SubResource("TileSetAtlasSource_ss43a")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_choun"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m6k0o"]
 radius = 40.0
 
 [node name="Main" type="Node2D" unique_id=575015310]
@@ -89,21 +84,19 @@ radius = 40.0
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1201983216]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAEAAIAAAABAAAAAAAFAAIAAAADAAAAAAAMAAIAAAADAAAAABANAAIAAAABAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAAQAAIAAAADAAEAAAARAAIAAAAAAAAAAAASAAIAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAFAAMAAAAFAAAAAAAFAAQAAAACAAAAAAAFAAUAAAACAAAAAAAFAAYAAAACAAAAAAAFAAcAAAAFAAAAAAAFAAgAAAAEAAAAABAGAAgAAAABAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAADAAEAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAABAAAAAAAMAAgAAAAEAAAAAAAMAAcAAAAFAAAAAAAMAAYAAAACAAAAAAAMAAUAAAACAAAAAAAMAAQAAAACAAAAAAAMAAMAAAAFAAAAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAAKAAYAAAAEAAEAAAAJAAYAAAAFAAEAAAAIAAYAAAAEAAEAAAAHAAYAAAAFAAEAAAAHAAUAAAAFAAEAAAAIAAUAAAAEAAEAAAAJAAUAAAAFAAEAAAAKAAUAAAAFAAEAAAAKAAQAAAAFAAEAAAAJAAQAAAAEAAEAAAAIAAQAAAAEAAEAAAAHAAQAAAAFAAEAAAAGAAQAAAAAAAEAAAAGAAMAAAAAAAEAAAAHAAMAAAAEAAEAAAAIAAMAAAAEAAEAAAAJAAMAAAAEAAEAAAAKAAMAAAAEAAEAAAALAAMAAAAAAAEAAAALAAIAAAAAAAEAAAAKAAIAAAAFAAEAAAAJAAIAAAAFAAEAAAAIAAIAAAAFAAEAAAAHAAIAAAAFAAEAAAAGAAIAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAALAAYAAAAAAAEAAAALAAcAAAAAAAEAAAALAAUAAAAAAAEAAAALAAQAAAAAAAEAAAAHAAEAAAAEAAEAAAAIAAEAAAAFAAEAAAAJAAEAAAAFAAEAAAAKAAEAAAAEAAEAAAAGAAEAAAAAAAEAAAAGAAAAAAAAAAEAAAAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAALAAAAAAAAAAEAAAALAAEAAAAAAAEAAAAAAAMAAAAAAAEAAAABAAMAAAAAAAEAAAACAAMAAAAAAAEAAAADAAMAAAAAAAEAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAANAAMAAAAAAAEAAAANAAQAAAAAAAEAAAANAAUAAAAAAAEAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAAMAAkAAAAAAAEAAAALAAkAAAAAAAEAAAAKAAkAAAAAAAEAAAAJAAkAAAAAAAEAAAAIAAkAAAABAAEAAGAHAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAFAAkAAAAAAAEAAAAEAAkAAAAAAAEAAAAOAAMAAAAAAAEAAAAPAAMAAAAAAAEAAAAQAAMAAAAFAAAAAAARAAMAAAAAAAEAAAASAAMAAAAAAAEAAAASAAEAAAAAAAEAAAARAAEAAAAAAAEAAAAQAAEAAAAAAAEAAAAPAAEAAAAAAAEAAAAOAAEAAAAAAAEAAAANAAEAAAAAAAEAAAAMAAEAAAAAAAEAAAAFAAEAAAAAAAEAAAAEAAEAAAAAAAEAAAADAAEAAAAAAAEAAAACAAEAAAAAAAEAAAABAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAD//wEAAAAAAAEAAAD//wMAAAAAAAEAAAD//wIAAAAAAAAAAAADAAQAAAAAAAEAAAABAAYAAAADAAAAAAABAAcAAAAFAAAAAAABAAgAAAACAAAAAAABAAkAAAAFAAAAAAABAAoAAAAEAAAAABAAAAYAAAABAAAAAAD//wYAAAAAAAAAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAACAAoAAAABAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAACAAEAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAADAAkAAAAAAAEAAAACAAkAAAAAAAEAAAACAAgAAAAAAAEAAAADAAgAAAAAAAEAAAADAAcAAAAAAAEAAAACAAcAAAAAAAEAAAACAAYAAAAAAAEAAAADAAYAAAAAAAEAAAADAAUAAAAAAAEAAAACAAUAAAAAAAEAAAABAAUAAAAAAAEAAAAAAAUAAAAAAAEAAAACAAQAAAAAAAEAAAABAAQAAAAAAAEAAAAAAAQAAAAAAAEAAAD//wQAAAAAAAEAAAD//wUAAAAAAAEAAAD//wcAAAAAAAEAAAD//wgAAAAAAAEAAAD//wkAAAAAAAEAAAD//woAAAAAAAEAAAAQAAoAAAAGAAEAAAAPAAoAAAABAAAAAAARAAoAAAABAAAAAAAQAAkAAAAFAAAAAAAPAAkAAAAAAAEAAAARAAkAAAAAAAEAAAAOAAoAAAAAAAAAAAAQAAgAAAACAAAAAAAQAAcAAAACAAAAAAAQAAYAAAACAAAAAAAQAAUAAAACAAAAAAAQAAQAAAACAAAAAAAOAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAYAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAOAAUAAAAAAAEAAAAOAAYAAAAAAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAARAAQAAAAAAAEAAAARAAUAAAAAAAEAAAARAAYAAAAAAAEAAAARAAcAAAAAAAEAAAARAAgAAAAAAAEAAAASAAkAAAAAAAEAAAASAAgAAAAAAAEAAAASAAcAAAAAAAEAAAASAAYAAAAAAAEAAAASAAUAAAAAAAEAAAASAAQAAAAAAAEAAAASAAoAAAAAAAAAAAAMAAAAAAAAAAEAAAANAAAAAAAAAAEAAAAOAAAAAAAAAAEAAAAPAAAAAAAAAAEAAAAQAAAAAAAAAAEAAAARAAAAAAAAAAEAAAASAAAAAAAAAAEAAAAFAAAAAAAAAAEAAAAEAAAAAAAAAAEAAAADAAAAAAAAAAEAAAACAAAAAAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAD//wAAAAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAAFAP//AAAAAAEAAAAGAP//AAAAAAEAAAAHAP//AAAAAAEAAAAIAP//AAAAAAEAAAAJAP//AAAAAAEAAAAKAP//AAAAAAEAAAALAP//AAAAAAEAAAAMAP//AAAAAAEAAAANAP//AAAAAAEAAAAOAP//AAAAAAEAAAAPAP//AAAAAAEAAAAQAP//AAAAAAEAAAARAP//AAAAAAEAAAASAP//AAAAAAEAAAA=")
-tile_set = SubResource("TileSet_2tr8x")
+tile_set = SubResource("TileSet_00xaj")
 
 [node name="Rat" parent="." unique_id=1470715938 instance=ExtResource("2_kvreu")]
 position = Vector2(590, 320)
+dialogue_resource = ExtResource("4_utjhh")
 
-[node name="DialogueActionable2D" type="Area2D" parent="Rat" unique_id=547500483]
+[node name="InteractionArea" type="Area2D" parent="Rat" unique_id=616761707]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("3_qy6yc")
-dialogue_resource = ExtResource("4_utjhh")
-dialogue_cue = "start"
-metadata/_custom_type_script = "uid://cqcur1rm7433g"
+script = ExtResource("3_00xaj")
 
-[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/DialogueActionable2D" unique_id=547713839]
-shape = SubResource("CircleShape2D_choun")
+[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/InteractionArea" unique_id=597666751]
+shape = SubResource("CircleShape2D_m6k0o")
 
 [node name="Valve1" parent="." unique_id=1401522541 instance=ExtResource("5_4jiwq")]
 position = Vector2(865, 297)
@@ -124,7 +117,7 @@ valve_id = "V4"
 position = Vector2(1121, 223)
 
 [node name="SpawnMarker" parent="." unique_id=1224443294 instance=ExtResource("7_536tc")]
-position = Vector2(1121, 223)
+position = Vector2(1119, 221)
 marker_tag = "main_map2"
 target_scene_path = "uid://8oq7ftvplh6d"
 
@@ -133,3 +126,4 @@ position = Vector2(290, 292)
 
 [node name="OpeningDialogue" type="Node" parent="." unique_id=332815490]
 script = ExtResource("9_b02sy")
+dialogue_balloon = "uid://dhfxaraf4wwsk"
