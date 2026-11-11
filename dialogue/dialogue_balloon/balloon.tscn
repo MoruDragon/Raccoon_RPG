@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://guej1x4yrrjo"]
+[gd_scene format=3 uid="uid://dhfxaraf4wwsk"]
 
 [ext_resource type="Script" uid="uid://n60rfmp6qath" path="res://dialogue/dialogue_balloon/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://cui8lcw8iasi8" path="res://assets/roro_portraits/roro_neutral.png" id="4_nlsx6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncni0"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
@@ -22,7 +22,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7qt6"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
@@ -38,7 +38,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7twvs"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
@@ -54,7 +54,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8hn1"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -67,15 +67,15 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
-Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
-Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
-Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
-Button/styles/normal = SubResource("StyleBoxFlat_e0njw")
+Button/styles/disabled = SubResource("StyleBoxFlat_ncni0")
+Button/styles/focus = SubResource("StyleBoxFlat_c7qt6")
+Button/styles/hover = SubResource("StyleBoxFlat_7twvs")
+Button/styles/normal = SubResource("StyleBoxFlat_7twvs")
 MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_o8hn1")
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -113,12 +113,12 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
+[node name="Balloon" type="CanvasLayer" unique_id=38036521]
 layer = 100
 script = ExtResource("1_36de5")
 skip_action = &"ui_accept"
 
-[node name="Portrait" type="TextureRect" parent="." unique_id=1607525621]
+[node name="Portrait" type="TextureRect" parent="." unique_id=1044205447]
 unique_name_in_owner = true
 offset_left = 36.0
 offset_top = 206.0
@@ -137,7 +137,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
-metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon" unique_id=1302081376]
 layout_mode = 1
@@ -145,7 +144,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -215.0
+offset_top = -219.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -160,7 +159,6 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/MarginContainer" unique_id=1685890612]
 layout_mode = 2
-theme_override_constants/separation = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/MarginContainer/HBoxContainer" unique_id=1890134056]
 layout_mode = 2
@@ -171,11 +169,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/bold_italics_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
-theme_override_font_sizes/mono_font_size = 40
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -185,11 +179,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/MarginContainer/HBoxContainer" unique_id=418507161]
@@ -205,27 +195,29 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="." unique_id=2001168282 node_paths=PackedStringArray("response_template")]
+[node name="CenterContainer" type="CenterContainer" parent="Balloon" unique_id=1087901387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/CenterContainer" unique_id=1801308483 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-offset_left = 878.0
-offset_top = 428.0
-offset_right = 1082.0
-offset_bottom = 469.0
+layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
-[node name="ResponseExample" type="Button" parent="ResponsesMenu" unique_id=174798480]
+[node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1446810977]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = ExtResource("3_2ajxf")
-theme_override_styles/pressed = ExtResource("3_2ajxf")
-theme_override_styles/hover = ExtResource("3_2ajxf")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
 unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

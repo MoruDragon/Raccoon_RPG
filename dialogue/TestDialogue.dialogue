@@ -11,7 +11,6 @@ if GameState.save_resource.talked_to_rat:
 	Nathan: For more information see the online documentation.
 	=> END
 else:
-	do GameState._set_talked_to_rat()
 	Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
 	Nathan: Here are some choices.
 	- First one

@@ -119,10 +119,6 @@ _data = {
 [node name="Roro_Balloon" type="CanvasLayer" unique_id=38036521]
 layer = 100
 script = ExtResource("1_cdkxa")
-start_from_cue = null
-auto_start = null
-will_block_other_input = null
-next_action = null
 skip_action = &"ui_accept"
 
 [node name="Balloon" type="Control" parent="." unique_id=154399927]
