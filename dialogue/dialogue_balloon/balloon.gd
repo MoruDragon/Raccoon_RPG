@@ -72,8 +72,8 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
-## Portrait of current character. Changes texture based on [member current_character]
-## [member expression], in a match statement in [method _update_character_portrait].
+## Portrait of current character. Changes texture based on [member current_character] and
+## [member expression] through a match statement in [method _update_character_portrait].
 @onready var portrait: TextureRect = %Portrait
 
 ## Stores the speaking character. This is so the character can still show
