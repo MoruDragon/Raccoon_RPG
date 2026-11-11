@@ -1,0 +1,5 @@
+~ start
+Rat: Hello!
+Rat: I will say this line and wait until I am finished jumping to continue.
+$> jump()
+Rat: I'm back!

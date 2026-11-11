@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dkt80f48bks54"
+path="res://.godot/imported/pause_demo.dialogue-5c07d064f76ed356cf62a7d0ac28e843.tres"
+
+[deps]
+
+source_file="res://scenes/pause_demo/pause_demo.dialogue"
+dest_files=["res://.godot/imported/pause_demo.dialogue-5c07d064f76ed356cf62a7d0ac28e843.tres"]
+
+[params]
+
+defaults=true
