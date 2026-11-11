@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://cui8lcw8iasi8" path="res://assets/roro_portraits/roro_neutral.png" id="4_nlsx6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 content_margin_left = 20.0
@@ -196,6 +195,7 @@ theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
+auto_focus_first_item = false
 
 [node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1446810977]
 layout_mode = 2
@@ -203,20 +203,6 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
 unique_name_in_owner = true
-
-[node name="portrait" type="TextureRect" parent="." unique_id=1560541911]
-z_index = -1
-anchors_preset = -1
-anchor_left = 0.034
-anchor_top = 0.68700004
-anchor_right = 0.034
-anchor_bottom = 0.68700004
-offset_left = 2.831997
-offset_top = -369.17603
-offset_right = 355.832
-offset_bottom = 177.82397
-texture = ExtResource("4_nlsx6")
-expand_mode = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
