@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="3_vy4ey"]
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="4_ilaqv"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="6_5yy24"]
+[ext_resource type="PackedScene" uid="uid://celqf8s3k4agb" path="res://scenes/npc/xius_dad.tscn" id="6_vy4ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
 texture = ExtResource("1_j11o2")
@@ -257,7 +258,8 @@ texture_region_size = Vector2i(64, 64)
 1:6/0 = 0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 24.315277, 32, 21.583221, 32, 32, -32, 32)
+0:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(-32, -32, -32, -26.500923, 32, -25.954514, 32, -32)
 1:3/0 = 0
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 0.8196106, -32, 1.3660202)
 0:2/0 = 0
@@ -299,9 +301,15 @@ texture_region_size = Vector2i(64, 64)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -23.768867, -32, -24.861687, 32, -32, 32)
+2:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(22.676048, -32, 32, -32, 32, 32, 22.676048, 32)
 3:6/0 = 0
 4:6/0 = 0
 5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -24.315277, -32, -24.315277, -22.676048, -32, -23.222462)
+5:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(23.222458, -32, 32, -32, 32, -24.86169, 22.129639, -27.047337)
+5:6/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 16.665527, -24.861687, 16.665527, -25.408096, 32, -32, 32)
+5:6/0/physics_layer_0/polygon_3/points = PackedVector2Array(24.861687, 17.758347, 32, 17.211937, 32, 27.593742, 23.222458, 27.593742)
 2:4/0 = 0
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(20.510899, -32, 21.127766, 29.147068, 32, 32, 32, -32)
@@ -310,9 +318,11 @@ texture_region_size = Vector2i(64, 64)
 4:3/0 = 0
 3:3/0 = 0
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 7:6/0 = 0
 8:6/0 = 0
 9:6/0 = 0
+4:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qsuna"]
 tile_size = Vector2i(64, 64)
@@ -398,9 +408,9 @@ position = Vector2(131, 207)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1279535976]
 position = Vector2(-1, 0)
 zoom = Vector2(5, 5)
-limit_left = 29
+limit_left = 52
 limit_top = 1
-limit_right = 212
+limit_right = 203
 limit_bottom = 257
 
 [node name="SewerAmbience" type="AudioStreamPlayer" parent="." unique_id=511165923]
@@ -412,3 +422,7 @@ autoplay = true
 position = Vector2(132, 234)
 marker_tag = "xd_house"
 target_scene_path = "uid://dhaq3jbb42vhe"
+
+[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("6_vy4ey")]
+z_index = 4
+position = Vector2(133, 82)

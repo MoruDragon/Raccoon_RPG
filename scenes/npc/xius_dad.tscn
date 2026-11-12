@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://celqf8s3k4agb"]
+
+[ext_resource type="Script" uid="uid://cgu6e8d3jw1li" path="res://scenes/npc/npc.gd" id="1_ro0wy"]
+[ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="2_mx8xi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jykni"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(0, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ophlq"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(45, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4skc"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(90, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1k82"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(135, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csvpb"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(180, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc2n8"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(225, 450, 45, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoici"]
+atlas = ExtResource("2_mx8xi")
+region = Rect2(270, 450, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjft1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jykni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ophlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4skc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1k82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csvpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc2n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoici")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
+radius = 7.0
+height = 28.0
+
+[node name="NPC" type="StaticBody2D" unique_id=1401522541]
+collision_mask = 0
+script = ExtResource("1_ro0wy")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=224542822]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_rjft1")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8813671
+
+[node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=726418333]
+position = Vector2(1, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2tr8x")
