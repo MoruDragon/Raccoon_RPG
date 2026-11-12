@@ -1,23 +1,12 @@
 [gd_scene format=3 uid="uid://cds81j2cfcfsm"]
 
 [ext_resource type="Script" uid="uid://crg50hra4sj7j" path="res://scenes/valve_puzzle/valve.gd" id="1_xgvd7"]
-[ext_resource type="Texture2D" uid="uid://be71vso7ffm8r" path="res://icon.svg" id="2_xcy3o"]
+[ext_resource type="Texture2D" uid="uid://deitqxmkud6j5" path="res://assets/pipe_spritesheet.png" id="2_2iik6"]
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_5ehjv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b4jke"]
-atlas = ExtResource("2_xcy3o")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2tr8x"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b4jke")
-}],
-"loop": 1,
-"name": &"new_animation",
-"speed": 5.0
-}]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rphhr"]
+atlas = ExtResource("2_2iik6")
+region = Rect2(32.03852, 15.509164, 16.198658, 16.699902)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iygui"]
 radius = 40.0
@@ -30,12 +19,11 @@ height = 26.0
 collision_mask = 0
 script = ExtResource("1_xgvd7")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=224542822]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=128574865]
 texture_filter = 1
 position = Vector2(-4.7683716e-07, 4.7683716e-07)
-scale = Vector2(0.20312503, 0.20312503)
-sprite_frames = SubResource("SpriteFrames_2tr8x")
-animation = &"new_animation"
+scale = Vector2(1.078, 1.078)
+texture = SubResource("AtlasTexture_rphhr")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1056906699]
 collision_layer = 4

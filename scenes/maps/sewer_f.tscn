@@ -260,7 +260,8 @@ texture_region_size = Vector2i(64, 64)
 1:6/0 = 0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 24.315277, 32, 21.583221, 32, 32, -32, 32)
+0:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(-32, -32, -32, -26.500923, 32, -25.954514, 32, -32)
 1:3/0 = 0
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 0.8196106, -32, 1.3660202)
 0:2/0 = 0
@@ -302,9 +303,15 @@ texture_region_size = Vector2i(64, 64)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -23.768867, -32, -24.861687, 32, -32, 32)
+2:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(22.676048, -32, 32, -32, 32, 32, 22.676048, 32)
 3:6/0 = 0
 4:6/0 = 0
 5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -24.315277, -32, -24.315277, -22.676048, -32, -23.222462)
+5:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(23.222458, -32, 32, -32, 32, -24.86169, 22.129639, -27.047337)
+5:6/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 16.665527, -24.861687, 16.665527, -25.408096, 32, -32, 32)
+5:6/0/physics_layer_0/polygon_3/points = PackedVector2Array(24.861687, 17.758347, 32, 17.211937, 32, 27.593742, 23.222458, 27.593742)
 2:4/0 = 0
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(20.510899, -32, 21.127766, 29.147068, 32, 32, 32, -32)
@@ -313,6 +320,7 @@ texture_region_size = Vector2i(64, 64)
 4:3/0 = 0
 3:3/0 = 0
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 7:6/0 = 0
 8:6/0 = 0
 9:6/0 = 0
@@ -458,7 +466,7 @@ tile_set = SubResource("TileSet_imayl")
 
 [node name="WaterLayer" type="TileMapLayer" parent="." unique_id=245681647]
 position = Vector2(0, 8)
-tile_map_data = PackedByteArray("AAAGAAIAAAAAAAcAAFAGAAMAAAAAAAcAAFAGAAQAAAAAAAcAAFAGAAUAAAAAAAcAAFA=")
+tile_map_data = PackedByteArray("AAAGAAIAAAAAAAcAAFAGAAQAAAAAAAcAAFAGAAUAAAAAAAcAAFAGAAMAAAAAAAcAAFA=")
 tile_set = SubResource("TileSet_r6dbc")
 
 [node name="PipesLayer" type="TileMapLayer" parent="." unique_id=257440360]
@@ -470,7 +478,7 @@ tile_map_data = PackedByteArray("AAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAI
 tile_set = SubResource("TileSet_qsuna")
 
 [node name="PropsLayer" type="TileMapLayer" parent="." unique_id=1094405149]
-tile_map_data = PackedByteArray("AABUABwAAwAKAAMAAAB4ABwAAwAKAAMAAABUABkAAwARAAAAAAB4ABkAAwARAAAAAACrAFkAAwAOAAMAAACsAFwAAwAOAAMAABCvAFoAAwAOAAMAAACuAFwAAwAOAAMAAACuAFIAAwAMAAAAAACnAFYAAwAOAAIAAAA=")
+tile_map_data = PackedByteArray("AABUABkAAwARAAAAAAB4ABkAAwARAAAAAACrAFkAAwAOAAMAAACsAFwAAwAOAAMAABCvAFoAAwAOAAMAAACuAFwAAwAOAAMAAACuAFIAAwAMAAAAAACnAFYAAwAOAAIAAAA=")
 tile_set = SubResource("TileSet_65i8f")
 
 [node name="Pipes2Layer" type="TileMapLayer" parent="." unique_id=995406677]

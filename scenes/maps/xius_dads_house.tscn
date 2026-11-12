@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="2_5yy24"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="3_vy4ey"]
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="4_ilaqv"]
-[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="5_3ei66"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="6_5yy24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
@@ -233,6 +232,7 @@ texture_region_size = Vector2i(64, 64)
 1:2/0 = 0
 4:3/0 = 0
 3:3/0 = 0
+4:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_2tr8x"]
 tile_size = Vector2i(64, 64)
@@ -407,11 +407,6 @@ limit_bottom = 257
 stream = ExtResource("4_ilaqv")
 volume_db = -5.498
 autoplay = true
-
-[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("5_3ei66")]
-z_index = 6
-position = Vector2(132, 86)
-scale = Vector2(1, 0.871)
 
 [node name="XD_Marker" parent="." unique_id=1224443294 instance=ExtResource("6_5yy24")]
 position = Vector2(132, 234)
