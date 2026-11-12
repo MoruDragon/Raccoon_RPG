@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vqktnwuu4qm0"]
+
+[ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="1_1adsw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxcxf"]
+atlas = ExtResource("1_1adsw")
+region = Rect2(-0.13316965, 91.18949, 30.937654, 55.369576)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb7j1"]
+size = Vector2(8, 21)
+
+[node name="Stop" type="StaticBody2D" unique_id=644120265]
+
+[node name="StaticBody2D" type="Sprite2D" parent="." unique_id=340808443]
+texture = SubResource("AtlasTexture_nxcxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=944797190]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_eb7j1")

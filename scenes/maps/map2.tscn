@@ -128,10 +128,5 @@ position = Vector2(32, 224)
 marker_tag = "main_map2"
 target_scene_path = "uid://6j3wu1a1wl4v"
 
-[node name="GoToSewer(placeholder)" parent="." unique_id=1224443294 instance=ExtResource("7_ky2co")]
-position = Vector2(112, 478)
-marker_tag = "go_sewer"
-target_scene_path = "uid://dhaq3jbb42vhe"
-
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_ky2co")]
 position = Vector2(-45, 225)

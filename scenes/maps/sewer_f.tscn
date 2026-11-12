@@ -224,8 +224,8 @@ tile_set = SubResource("TileSet_2tr8x")
 
 [node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
 position = Vector2(34, 95)
-marker_tag = "go_sewer"
-target_scene_path = "uid://8oq7ftvplh6d"
+marker_tag = "sewer"
+target_scene_path = "uid://6j3wu1a1wl4v"
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
 position = Vector2(51, 83)
