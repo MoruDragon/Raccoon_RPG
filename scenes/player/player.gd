@@ -12,17 +12,26 @@ extends CharacterBody2D
 # Reference to the child Area2D node that scans for interactable targets.
 @onready var interaction_detector: Area2D = $InteractionDetector
 
+# Reference to the camera
+@onready var camera_2d: Camera2D = $Camera2D
+
+var viewport: Vector2
+
 # State flag to freeze player movement, inputs, and state changes during dialogue.
 var is_talking: bool = false
 
-		
 func _ready() -> void:
 	# Connect to the global signal provided by the Dialogue Manager autoload singleton.
 	# DialogueManager emits 'dialogue_ended' when a conversation balloon closes.
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
 	GameState.player = self
-	
+	viewport = get_viewport().get_visible_rect().size
+	#print(viewport.x, viewport.y)
+	camera_2d.limit_left = 0
+	camera_2d.limit_right = viewport.x
+	camera_2d.limit_top = 0
+	camera_2d.limit_bottom = viewport.y
 	# Set the initial visual state to the idle animation loop on scene load.
 	sprite.play("idle")
 	_apply_entry_position.call_deferred()
