@@ -3,7 +3,6 @@ extends Node
 var target_marker_tag: String = ""
 
 func transition_to_map(target_scene_path: String, marker_tag: String) -> void:
-	
 	if target_scene_path.is_empty():
 		push_error("[SceneManager] ERROR: target_scene_path is empty. Set it in the Inspector dock.")
 		return
@@ -13,6 +12,9 @@ func transition_to_map(target_scene_path: String, marker_tag: String) -> void:
 		return
 
 	target_marker_tag = marker_tag
+	change_scene.call_deferred(target_scene_path)
+
+func change_scene(target_scene_path: String) -> void:
 	var err: Error = get_tree().change_scene_to_file(target_scene_path)
 	if err != OK:
 		push_error("[SceneManager] ERROR: change_scene_to_file failed with error code: " + str(err))
