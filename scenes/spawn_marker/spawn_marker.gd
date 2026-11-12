@@ -42,7 +42,7 @@ func _on_body_exited(body: Node2D) -> void:
 		
 	is_player_inside = false
 	
-	await get_tree().create_timer(cooldown_delay).timeout
+	#await get_tree().create_timer(cooldown_delay).timeout
 	
 	if is_inside_tree() and not is_player_inside:
 		can_trigger = true

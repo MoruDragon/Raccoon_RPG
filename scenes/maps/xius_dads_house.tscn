@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="3_vy4ey"]
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="4_ilaqv"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="5_3ei66"]
+[ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="6_5yy24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
 texture = ExtResource("1_j11o2")
@@ -80,6 +81,10 @@ texture_region_size = Vector2i(64, 64)
 2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_imayl"]
 tile_size = Vector2i(64, 64)
@@ -164,7 +169,7 @@ texture = ExtResource("1_j11o2")
 separation = Vector2i(2, 2)
 texture_region_size = Vector2i(64, 64)
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 4.6444855, -32, 1.3660202)
 0:4/0 = 0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:5/animation_speed = 15.0
@@ -179,7 +184,7 @@ texture_region_size = Vector2i(64, 64)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 4.098076, 32, 4.098076, -32, 4.098076)
 0:2/0 = 0
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
@@ -239,22 +244,22 @@ texture = ExtResource("1_j11o2")
 separation = Vector2i(2, 2)
 texture_region_size = Vector2i(64, 64)
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, 32, 4.6444855, -32, 4.6444855)
 0:4/0 = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(19.397583, -32, 32, -32, 32, 32, 21.58323, 32)
 0:5/animation_speed = 15.0
 0:5/animation_frame_0/duration = 1.0
 0:5/animation_frame_1/duration = 1.0
 0:5/animation_frame_2/duration = 1.0
 0:5/animation_frame_3/duration = 1.0
 0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 4.6444855, -32, 3.5516663)
 1:6/0 = 0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 21.583221, -32, 17.758347)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 0.8196106, -32, 1.3660202)
 0:2/0 = 0
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -25, 32, -25, 32, 23, -32, 23)
@@ -299,10 +304,15 @@ texture_region_size = Vector2i(64, 64)
 5:6/0 = 0
 2:4/0 = 0
 1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(20.510899, -32, 21.127766, 29.147068, 32, 32, 32, -32)
 2:3/0 = 0
 1:2/0 = 0
 4:3/0 = 0
 3:3/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qsuna"]
 tile_size = Vector2i(64, 64)
@@ -334,7 +344,6 @@ texture_region_size = Vector2i(4, 4)
 56:13/size_in_atlas = Vector2i(8, 7)
 56:13/0 = 0
 56:13/0/z_index = 1
-56:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 65:12/size_in_atlas = Vector2i(10, 8)
 65:12/0 = 0
 64:0/size_in_atlas = Vector2i(4, 4)
@@ -349,7 +358,8 @@ texture_region_size = Vector2i(4, 4)
 69:5/0 = 0
 77:0/size_in_atlas = Vector2i(14, 9)
 77:0/0 = 0
-77:0/0/z_index = 1
+77:0/0/z_index = 4
+77:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.192814, -17.118116, 16.192814, -17.426552, 15.575947, -11.566296, -15.267509, -11.566296)
 77:14/size_in_atlas = Vector2i(15, 10)
 77:14/0 = 0
 42:21/0 = 0
@@ -382,15 +392,16 @@ tile_map_data = PackedByteArray("AAAGAAQAAwAqABUAAAATABAAAwA4AA0AABAWAA4AAwA4AA0
 tile_set = SubResource("TileSet_vpxn6")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("3_vy4ey")]
-position = Vector2(149, 146)
+z_index = 5
+position = Vector2(131, 207)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
-zoom = Vector2(4, 4)
-limit_left = 53
-limit_top = -1
-limit_right = 203
-limit_bottom = 258
-position_smoothing_enabled = true
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1279535976]
+position = Vector2(-1, 0)
+zoom = Vector2(5, 5)
+limit_left = 29
+limit_top = 1
+limit_right = 212
+limit_bottom = 257
 
 [node name="SewerAmbience" type="AudioStreamPlayer" parent="." unique_id=511165923]
 stream = ExtResource("4_ilaqv")
@@ -401,3 +412,8 @@ autoplay = true
 z_index = 6
 position = Vector2(132, 86)
 scale = Vector2(1, 0.871)
+
+[node name="XD_Marker" parent="." unique_id=1224443294 instance=ExtResource("6_5yy24")]
+position = Vector2(132, 234)
+marker_tag = "xd_house"
+target_scene_path = "uid://dhaq3jbb42vhe"

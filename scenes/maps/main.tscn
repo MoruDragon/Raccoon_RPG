@@ -160,7 +160,7 @@ tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAE
 tile_set = SubResource("TileSet_00xaj")
 
 [node name="BuildingsAndPropsLayer" type="TileMapLayer" parent="." unique_id=1199281701]
-tile_map_data = PackedByteArray("AAAoAAsAAwAQAAAAAAAHAAgAAwAMAAAAAAAOAAgAAwAKAAAAAAAEAAMAAAAAAAAAAAALAAMAAAAAAAAAAAASAAMAAAAAAAAAAAAPAAoAAwAQAAEAAAAOABIAAwAHAAAAAAAzAAQAAAAGAAAAAAAhAB4AAwAAAAAAAAApAB4AAwAAAAAAAAAmAB8AAwAQAAMAAAAcAAoAAwAFAAAAAAA=")
+tile_map_data = PackedByteArray("AAAoAAsAAwAQAAAAAAAHAAgAAwAMAAAAAAAOAAgAAwAKAAAAAAAEAAMAAAAAAAAAAAALAAMAAAAAAAAAAAASAAMAAAAAAAAAAAAPAAoAAwAQAAEAAAAOABIAAwAHAAAAAAAzAAQAAAAGAAAAAAAhAB4AAwAAAAAAAAApAB4AAwAAAAAAAAAmAB8AAwAQAAMAAAAcAAoAAwAFAAAAAAAIAAoAAwAOAAIAAAAVACIAAwATAAMAAAATACMAAwAOAAMAAAARACIAAwATAAMAAAAPACIAAwAQAAEAAAA=")
 tile_set = SubResource("TileSet_t1uei")
 
 [node name="Rat" parent="." unique_id=1470715938 instance=ExtResource("2_kvreu")]
@@ -192,7 +192,7 @@ position = Vector2(832, -90)
 valve_id = "V4"
 
 [node name="Node2D" parent="." unique_id=1294021697 instance=ExtResource("6_4h6cl")]
-position = Vector2(442, -66)
+position = Vector2(504, -74)
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
 position = Vector2(65, 355)
