@@ -610,3 +610,5 @@ position = Vector2(232, 296)
 scale = Vector2(0.635, 0.635)
 marker_tag = "sewer"
 target_scene_path = "uid://dhaq3jbb42vhe"
+
+[node name="Node" type="Node" parent="." unique_id=686568255]

@@ -170,8 +170,9 @@ func apply_dialogue_line() -> void:
 	is_waiting_for_input = false
 	balloon.focus_mode = Control.FOCUS_ALL
 	balloon.grab_focus()
-
-	character_label.visible = not dialogue_line.character.is_empty()
+	
+	## test for certain lines T_T - jamie
+	character_label.visible = not dialogue_line.character.is_empty() and not dialogue_line.has_tag("hide_name")
 	character_label.text = tr(dialogue_line.character, "dialogue")
 
 
@@ -248,9 +249,27 @@ func _update_character_portrait() -> void:
 				"neutral":
 					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
 				"surprised":
-					portrait.texture = load("res://icon.svg")
+					portrait.texture = load("res://assets/roro_portraits/roro_surprised.png")
+				"thinking":
+					portrait.texture = load("res://assets/roro_portraits/roro_thinking.png")
+				"nervous":
+					portrait.texture = load("res://assets/roro_portraits/roro_nervous.png")
+				"mischievious":
+					portrait.texture = load("res://assets/roro_portraits/roro_mischievous.png")
+				"happy":
+					portrait.texture = load("res://assets/roro_portraits/roro_happy.png")
 				_:	# Fallback sprite. 
 					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
+			portrait.show()
+		"macaron":
+			match expression:
+				"neutral":
+					portrait.texture = load("res://assets/macaron_portraits/macaron_neutral.png")
+			portrait.show()
+		"xiu":
+			match expression:
+				"neutral":
+					portrait.texture = load("res://assets/xiu_portraits/xiu_neutral.png")
 			portrait.show()
 		_:
 			portrait.hide()

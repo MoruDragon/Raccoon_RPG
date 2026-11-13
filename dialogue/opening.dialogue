@@ -7,7 +7,7 @@ What will today bring?
 [#neutral] A hero?
 Some scrumptious pasta.
 A nice orange drink.
-...If you know, you know
+...If you know, you know.
 $> pause_to_play_cutscene_animation("Fight Moving")
 # roro surprised
 [#surprised] Roro: Ah!
@@ -23,20 +23,22 @@ Paltry Pigeon: Ugh, the audacity!
 You ignore their feeble protests, winning the battle! 
 # You run, snatching the pizza away from the two and scurrying away behind a dumpster.
 # roro happy
-[#happy] You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
+[#hide_name] [#happy] Roro: You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
 As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
 # roro thinking
-[#thinking] Roro: Hmm, what does this say? 
-
-# NEWSPAPER PUZZLE STARTS HERE 
-You start trying to piece together the ripped up newspaper. Curiosity might've killed the cat, but you’re a raccoon!
+[#thinking] Hmm, what does this say? 
+You pick up the newspaper and start to read. Curiosity might've killed the cat, but you’re a raccoon!
 # roro surprised
-[#surprised] Roro: Wow, they are still going at it? How many years have the rats and pigeons been fighting for? I forget. Not my dumpster, not my trash. 
+[#surprised] Roro: Yadah, yadah, yadah, new freeway being built finally. 
+Roro: Wait, they are selling rye bread for $60??? Who is dumb enough to buy that?
+As you continue to read you come across an article describing recent sightings of rats and pigeons fighting. 
+Roro: Wow, lotsa big words here.
+“LAND V. SKY RATS, WHO WILL WIN! Scientists in New York City have seen a startling rise the war-like violence is between pigeons and rats. Many civilians have reported seeing rats and pigeons fighting across entire streets, delaying traffic for hours. This indicates a positive correlation between the city's overall mass hysteria and the ecological...” 
+The rest of the words blur together, as you wisely decide to not read anymore, lest you get a headache with all the big words.
+Roro: They're still going at it? How many years have the rats and pigeons been fighting for? I forget. Not my dumpster, not my trash. I value my piece of mind ya know.
 # roro thinking
-[#thinking] You continue to put together the article. 
-Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and he’ll fix it quickly.
-# NEWSPAPER PUZZLE ENDS HERE
-
+[#thinking] You continue to read the article and come across another article describing problems involving the skyscraper lights and tunnel system plumbing. 
+Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and he’ll fix it quickly!
 # roro happy
 [#happy] With the newspaper now finished, you lick your paws clean from the pizza sauce and lift your nose to the sky.
 # roro surprised
@@ -45,7 +47,7 @@ Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and h
 [#neutral] You follow your nose, deeper into the alleyway, ready to feast on the dessert. But suddenly a loud BANG is heard, followed by a smaller bang. 
 You stop midstep and whip your head over to the noise. Your interest is piqued and you immediately change course. 
 As you continue deeper into the alleyway, you can pick up pieces of a hushed conversation. 
-Macaron: Are you sure? I don't want to take food away from you...
+[#neutral] Macaron: Are you sure? I don't want to take food away from you...
 Xiu: Yes, Macaron!! I made this for you!
 Macaron: You made it?!
 Xiu: I poured my heart and soul into this pie, because [i]you're[/i] the apple of [i]my[/i] eye.
@@ -54,7 +56,7 @@ Macaron's feathers explode up into her face, prompting her to hide them.
 # roro surprised
 [#surprised] Roro: Woah… This is beautiful! To share food with your mortal enemy under the cover of alleyway darkness!!!!!
 You continue to watch their conversation and it’s filled with LOVE.
-Macaron: W-Well, I made you this!
+[#neutral] Macaron: W-Well, I made you this!
 The pigeon thrusts a meticulously beak(?)-crafted flower crown into Xiu's paws.
 Xiu: Wow, flowers? 
 # roro neutral

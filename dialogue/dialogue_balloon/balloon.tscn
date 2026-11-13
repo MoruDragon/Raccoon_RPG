@@ -120,10 +120,10 @@ skip_action = &"ui_accept"
 
 [node name="Portrait" type="TextureRect" parent="." unique_id=1044205447]
 unique_name_in_owner = true
-offset_left = 36.0
-offset_top = 206.0
-offset_right = 196.0
-offset_bottom = 464.0
+offset_left = 31.0
+offset_top = 62.0
+offset_right = 447.0
+offset_bottom = 688.0
 texture = ExtResource("4_nlsx6")
 expand_mode = 1
 stretch_mode = 5
@@ -180,6 +180,11 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/MarginContainer/HBoxContainer" unique_id=418507161]
