@@ -250,6 +250,8 @@ func _update_character_portrait() -> void:
 	# Update character portrait based on current_character and expression.
 	match current_character:
 		"roro":	# Add more branches as more characters are added. 
+			portrait.scale = Vector2(1.0, 1.0)
+			portrait.position = Vector2(0, 70)
 			match expression:
 				"neutral":
 					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_neutral.png")
@@ -267,21 +269,25 @@ func _update_character_portrait() -> void:
 					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_neutral.png")
 			portrait.show()
 		"macaron":
+			portrait.scale = Vector2(1.5, 1.5)
+			portrait.position = Vector2(-150, 60)
 			match expression:
 				"neutral":
 					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_neutral.png")
 				"surprised":
-					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_surprised.png")
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_surprised.png")
 				"prideful":
 					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_prideful.png")
 				"happy":
 					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_happy.png")
 				"flustered":
-					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_flustered.png")
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_flustered.png")
 				"angry":
 					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_angry.png")
 			portrait.show()
 		"xiu":
+			portrait.scale = Vector2(1.2, 1.2)
+			portrait.position = Vector2(-60, 60)
 			match expression:
 				"neutral":
 					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_neutral.png")
