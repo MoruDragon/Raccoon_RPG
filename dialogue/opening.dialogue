@@ -8,22 +8,27 @@ What will today bring?
 Some scrumptious pasta.
 A nice orange drink.
 ...If you know, you know.
-$> pause_to_play_cutscene_animation("Fight Moving")
+$> pause_to_play_cutscene_anim("Fight Moving")
 # roro surprised
-[#surprised] Roro: Ah!
+[#surprised] Roro: [$> play_cutscene_anim("Roro Jump Back")]Ah!
 A feathered ruffian and furry rat totally knock you over!
 They're fighting over a stale New York Pizza!
 Roro: Wow, such bad taste! I need it MORE THAN THEM!
 # roro neutral
+$> play_cutscene_anim("Roro Joins In")
 [#neutral] They briefly paused in shock, watching you jump in as well!
 # angry rat npc portrait
 [#angry] Random Rat: Ey, yo, grab yo own grub!
 # angry pigeon npc portrait
 Paltry Pigeon: Ugh, the audacity!
+$> play_cutscene_anim("Roro Runs")
 [#hide_name] Roro: You ignore their feeble protests, winning the battle! 
 # You run, snatching the pizza away from the two and scurrying away behind a dumpster.
 # roro happy
-[#hide_name] [#happy] Roro: You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
+[#hide_name] [#happy] Roro: You can hear the two start bickering behind you but you don’t care!
+You dig into the stale pizza with a satisfied smile on your face. 
+### After anim Roro Runs
+$> wait_for_cutscene_anim("Roro Runs")
 As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
 # roro thinking
 [#thinking] Hmm, what does this say? 

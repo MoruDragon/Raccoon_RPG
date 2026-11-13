@@ -330,6 +330,7 @@ animations = [{
 [sub_resource type="Animation" id="Animation_qy6yc"]
 resource_name = "Fight"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -394,6 +395,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_utjhh"]
 resource_name = "Fight Moving"
 length = 1.5
+capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -401,10 +403,10 @@ tracks/0/path = NodePath("FeatheredRuffian:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(663, 184), Vector2(694, 155)]
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector2(694, 155)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -425,10 +427,10 @@ tracks/2/path = NodePath("FurryRat:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(631, 184), Vector2(662, 155)]
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector2(662, 155)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -449,10 +451,10 @@ tracks/4/path = NodePath("Pizza:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(648, 184), Vector2(679, 155)]
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector2(679, 155)]
 }
 
 [sub_resource type="Animation" id="Animation_6mcao"]
@@ -517,23 +519,266 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(648, 184)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(716, 159)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Player/AnimatedSprite2D:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Player/AnimatedSprite2D:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("FeatheredRuffian:flip_h")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Player/Camera2D:zoom")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Player/Camera2D:offset")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_536tc"]
+resource_name = "Roro Joins In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(746, 159), Vector2(695, 150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FeatheredRuffian:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(694, 155), Vector2(660, 168)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FeatheredRuffian:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FeatheredRuffian:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"idle", &"walk"]
+}
+
+[sub_resource type="Animation" id="Animation_4h6cl"]
+resource_name = "Roro Jump Back"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.1, 0.16666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1.0000015, 1),
+"update": 0,
+"values": [Vector2(716, 159), Vector2(722, 157), Vector2(731, 150), Vector2(740, 157), Vector2(746, 159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player/AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_imbm3"]
+resource_name = "Roro Runs"
+length = 6.3333335
+step = 0.1667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.5, 3.5, 4.5, 5.5, 6.3333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 0.36602148, 1.0000002),
+"update": 0,
+"values": [Vector2(695, 150), Vector2(695, 175), Vector2(480, 360), Vector2(480, 480), Vector2(360, 480), Vector2(360, 590), Vector2(325, 590)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player/AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pizza:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.5, 3.5, 4.5, 5.5, 6.3333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 0.36602154, 0.99999994),
+"update": 0,
+"values": [Vector2(679, 155), Vector2(679, 180), Vector2(464, 365), Vector2(464, 485), Vector2(344, 485), Vector2(344, 595), Vector2(309, 595)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player/AnimatedSprite2D:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.3333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player/Camera2D:zoom")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 6.3333335),
+"transitions": PackedFloat32Array(1.3195081, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(4, 4)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player/Camera2D:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 6.3333335),
+"transitions": PackedFloat32Array(1.3195081, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-20, 30)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utjhh"]
 _data = {
 &"Fight": SubResource("Animation_qy6yc"),
 &"Fight Moving": SubResource("Animation_utjhh"),
-&"RESET": SubResource("Animation_6mcao")
+&"RESET": SubResource("Animation_6mcao"),
+&"Roro Joins In": SubResource("Animation_536tc"),
+&"Roro Jump Back": SubResource("Animation_4h6cl"),
+&"Roro Runs": SubResource("Animation_imbm3")
 }
 
 [node name="Main" type="Node2D" unique_id=575015310]
 
 [node name="MainLayer" type="TileMapLayer" parent="." unique_id=1201983216]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAABAAYAAAAAAAAAAAABAAcAAAAAAAEAAAABAAgAAAAAAAEAAAABAAkAAAAAAAEAAAACAAEAAAAAAAEAAAACAAIAAAAAAAEAAAACAAMAAAAAAAEAAAACAAQAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAAAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAEAAAADAAMAAAAAAAEAAAADAAQAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAAAAAADAAcAAAAAAAEAAAADAAgAAAAAAAEAAAADAAkAAAAAAAEAAAAEAAEAAAAAAAEAAAAEAAIAAAAAAAEAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAkAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAEAAAAFAAYAAAABAAAAAAAFAAcAAAAAAAEAAAAFAAgAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAEAAAACAAAAAAAGAAIAAAAFAAAAAAAGAAQAAAACAAAAAAAGAAUAAAAFAAAAAAAGAAYAAAAGAAEAAAAGAAcAAAAFAAAAAAAGAAgAAAACAAAAAAAGAAkAAAACAAAAAAAHAAUAAAAAAAEAAAAHAAYAAAABAAAAAAAHAAcAAAAAAAEAAAAHAAgAAAAAAAEAAAAIAAUAAAAAAAEAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAEAAAAIAAgAAAAEAAEAAAAJAAUAAAAAAAEAAAAJAAYAAAAAAAAAAAAJAAgAAAAEAAEAAAAKAAUAAAAAAAEAAAAKAAYAAAAAAAAAAAAKAAgAAAAEAAEAAAALAAEAAAAAAAEAAAALAAIAAAAAAAEAAAALAAYAAAAAAAAAAAALAAgAAAAAAAEAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAEAAAAMAAYAAAAEAAAAAAAMAAgAAAAAAAEAAAAMAAkAAAAAAAEAAAAAAAAAAAAGAAAAADABAAAAAAAGAAAAADACAAAAAAAGAAAAADADAAAAAAAGAAAAADAEAAAAAAAGAAAAADAFAAAAAAAGAAAAADAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAALAAAAAAAAAAEAAAAMAAAAAAAAAAEAAAAGAAAAAAACAAAAAAAJAAkAAAAEAAEAAAAKAAkAAAAEAAEAAAALAAkAAAAAAAEAAAAIAAkAAAAEAAEAAAAHAAkAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAALAAcAAAAAAAEAAAAMAAcAAAAAAAEAAAALAAMAAAAGAAAAAGALAAQAAAAGAAAAAGALAAUAAAAGAAAAAGAMAAMAAAAGAAEAAAAMAAQAAAAGAAEAAAAMAAUAAAAGAAEAAAAGAAMAAAACAAAAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAANAAAAAAAAAAEAAAANAAEAAAAAAAEAAAANAAIAAAAAAAEAAAANAAMAAAAGAAEAAAANAAQAAAAGAAEAAAANAAUAAAAGAAEAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAAOAAAAAAAAAAEAAAAOAAEAAAAAAAEAAAAOAAIAAAAAAAEAAAAOAAMAAAAGAAAAAFAOAAQAAAAGAAAAAFAOAAUAAAAGAAAAAFAOAAYAAAAAAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAAOAAkAAAAAAAEAAAAPAAAAAAAAAAEAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAEAAAAPAAMAAAAAAAEAAAAPAAQAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAYAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAkAAAAAAAEAAAAIAAEAAAAAAAEAAAAIAAIAAAAAAAEAAAAIAAMAAAAAAAEAAAAIAAQAAAAAAAEAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAEAAAAAAAEAAAAKAAIAAAAAAAEAAAAKAAMAAAAAAAEAAAAKAAQAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAJAAMAAAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAEAAAABAAEAAAAAAAEAAAABAAIAAAAAAAEAAAABAAMAAAAAAAEAAAABAAQAAAAAAAEAAAABAAUAAAAAAAEAAAABAAYAAAAAAAAAAAABAAcAAAAAAAEAAAABAAgAAAAAAAEAAAABAAkAAAAAAAEAAAACAAEAAAAAAAEAAAACAAIAAAAAAAEAAAACAAMAAAAAAAEAAAACAAQAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAAAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAEAAAADAAMAAAAAAAEAAAADAAQAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAAAAAADAAcAAAAAAAEAAAADAAgAAAAAAAEAAAADAAkAAAAAAAEAAAAEAAEAAAAAAAEAAAAEAAIAAAAAAAEAAAAEAAMAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAkAAAAAAAEAAAAFAAEAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAMAAAAAAAEAAAAFAAQAAAAAAAEAAAAFAAYAAAABAAAAAAAFAAcAAAAAAAEAAAAFAAgAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAEAAAACAAAAAAAGAAIAAAAFAAAAAAAGAAQAAAACAAAAAAAGAAUAAAAFAAAAAAAGAAYAAAAGAAEAAAAGAAcAAAAFAAAAAAAGAAgAAAACAAAAAAAGAAkAAAACAAAAAAAHAAUAAAAAAAEAAAAHAAYAAAABAAAAAAAHAAcAAAAAAAEAAAAHAAgAAAAAAAEAAAAIAAUAAAAAAAEAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAEAAAAIAAgAAAAEAAEAAAAJAAUAAAAAAAEAAAAJAAYAAAAAAAAAAAAJAAgAAAAEAAEAAAAKAAUAAAAAAAEAAAAKAAYAAAAAAAAAAAAKAAgAAAAEAAEAAAALAAEAAAAAAAEAAAALAAIAAAAAAAEAAAALAAYAAAAAAAAAAAALAAgAAAAAAAEAAAAMAAEAAAAAAAEAAAAMAAIAAAAAAAEAAAAMAAYAAAAEAAAAAAAMAAgAAAAAAAEAAAAMAAkAAAAAAAEAAAAAAAAAAAAGAAAAADABAAAAAAAGAAAAADACAAAAAAAGAAAAADADAAAAAAAGAAAAADAEAAAAAAAGAAAAADAFAAAAAAAGAAAAADAHAAAAAAAAAAEAAAAIAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAKAAAAAAAAAAEAAAALAAAAAAAAAAEAAAAMAAAAAAAAAAEAAAAGAAAAAAACAAAAAAAJAAkAAAAFAAEAAAAKAAkAAAAEAAEAAAALAAkAAAAAAAEAAAAIAAkAAAAEAAEAAAAHAAkAAAAAAAEAAAAJAAcAAAAAAAEAAAAKAAcAAAAAAAEAAAALAAcAAAAAAAEAAAAMAAcAAAAAAAEAAAALAAMAAAAGAAAAAGALAAQAAAAGAAAAAGALAAUAAAAGAAAAAGAMAAMAAAAGAAEAAAAMAAQAAAAGAAEAAAAMAAUAAAAGAAEAAAAGAAMAAAACAAAAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAANAAAAAAAAAAEAAAANAAEAAAAAAAEAAAANAAIAAAAAAAEAAAANAAMAAAAGAAEAAAANAAQAAAAGAAEAAAANAAUAAAAGAAEAAAANAAYAAAAAAAEAAAANAAcAAAAAAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAAOAAAAAAAAAAEAAAAOAAEAAAAAAAEAAAAOAAIAAAAAAAEAAAAOAAMAAAAGAAAAAFAOAAQAAAAGAAAAAFAOAAUAAAAGAAAAAFAOAAYAAAAAAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAAOAAkAAAAAAAEAAAAPAAAAAAAAAAEAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAEAAAAPAAMAAAAAAAEAAAAPAAQAAAAAAAEAAAAPAAUAAAAAAAEAAAAPAAYAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAkAAAAAAAEAAAAIAAEAAAAAAAEAAAAIAAIAAAAAAAEAAAAIAAMAAAAAAAEAAAAIAAQAAAAAAAEAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAEAAAAAAAEAAAAKAAIAAAAAAAEAAAAKAAMAAAAAAAEAAAAKAAQAAAAAAAEAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAJAAMAAAAAAAEAAAACAAoAAAAAAAEAAAADAAoAAAAAAAEAAAAEAAoAAAAAAAEAAAAFAAoAAAAAAAEAAAAHAAoAAAAAAAEAAAAIAAoAAAAFAAEAAAAJAAoAAAAEAAEAAAAKAAoAAAAEAAEAAAALAAoAAAAAAAEAAAAMAAoAAAAAAAEAAAANAAoAAAAAAAEAAAAOAAoAAAAAAAEAAAAPAAoAAAAAAAEAAAABAAoAAAAAAAEAAAAAAAoAAAAAAAEAAAAGAAoAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_00xaj")
 
 [node name="BuildingsAndPropsLayer" type="TileMapLayer" parent="." unique_id=1199281701]
-tile_map_data = PackedByteArray("AAAHAAgAAwAMAAAAAAAOAAgAAwAKAAAAAAAEAAMAAAAAAAAAAAALAAMAAAAAAAAAAAASAAMAAAAAAAAAAAAPAAoAAwAQAAEAAAAOABIAAwAHAAAAAAAzAAQAAAAGAAAAAAAhAB4AAwAAAAAAAAApAB4AAwAAAAAAAAAmAB8AAwAQAAMAAAAcAAoAAwAFAAAAAAAIAAoAAwAOAAIAAAAVACIAAwATAAMAAAATACMAAwAOAAMAAAARACIAAwATAAMAAAAPACIAAwAQAAEAAAA=")
+tile_map_data = PackedByteArray("AAAHAAgAAwAMAAAAAAAOAAgAAwAKAAAAAAAEAAMAAAAAAAAAAAALAAMAAAAAAAAAAAASAAMAAAAAAAAAAAAPAAoAAwAQAAEAAAAOABIAAwAHAAAAAAAzAAQAAAAGAAAAAAAhAB4AAwAAAAAAAAApAB4AAwAAAAAAAAAmAB8AAwAQAAMAAAAcAAoAAwAFAAAAAAAIAAoAAwAOAAIAAAAOACIAAwATAAMAAAAQACIAAwAQAAEAAAASACIAAwATAAMAAAARACQAAwAOAAMAAAA=")
 tile_set = SubResource("TileSet_t1uei")
 
 [node name="Rat" parent="." unique_id=1470715938 instance=ExtResource("2_kvreu")]
@@ -570,6 +815,9 @@ position = Vector2(504, -74)
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
 position = Vector2(716, 159)
 
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
+frame_progress = 0.0
+
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1877514388]
 zoom = Vector2(1.5, 1.5)
 limit_left = 0
@@ -594,6 +842,7 @@ position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_k5lje")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.4152285
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2104677649]
 position = Vector2(663, 184)
@@ -612,3 +861,5 @@ marker_tag = "sewer"
 target_scene_path = "uid://dhaq3jbb42vhe"
 
 [node name="Node" type="Node" parent="." unique_id=686568255]
+
+[editable path="Player"]
