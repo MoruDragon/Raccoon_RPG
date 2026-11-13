@@ -95,6 +95,9 @@ const EXPRESSIONS = [
 	"prideful",
 	"nervous",
 	"confused",
+	"sad",
+	"nervous",
+	"loving",
 ]
 
 ## Configurations for each character's visual style. Ctrl+Click
@@ -104,6 +107,8 @@ const BALLOON_CONFIG: Dictionary[String, DialogueBalloonConfig] = {
 	"macaron": preload("uid://c5age4tbqemmn"),
 	"xiu": preload("uid://bg8oqjc8u0bdi"),
 	"rat king": preload("uid://ctoywlikcndrr"),
+	"random rat": preload("uid://bg8oqjc8u0bdi"),
+	"paltry pigeon": preload("uid://c5age4tbqemmn"),
 	"": preload("uid://btgdtpx704y76"),
 }
 
@@ -247,29 +252,41 @@ func _update_character_portrait() -> void:
 		"roro":	# Add more branches as more characters are added. 
 			match expression:
 				"neutral":
-					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_neutral.png")
 				"surprised":
-					portrait.texture = load("res://assets/roro_portraits/roro_surprised.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_surprised.png")
 				"thinking":
-					portrait.texture = load("res://assets/roro_portraits/roro_thinking.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_thinking.png")
 				"nervous":
-					portrait.texture = load("res://assets/roro_portraits/roro_nervous.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_nervous.png")
 				"mischievious":
-					portrait.texture = load("res://assets/roro_portraits/roro_mischievous.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_mischievous.png")
 				"happy":
-					portrait.texture = load("res://assets/roro_portraits/roro_happy.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_happy.png")
 				_:	# Fallback sprite. 
-					portrait.texture = load("res://assets/roro_portraits/roro_neutral.png")
+					portrait.texture = load("res://assets/character portraits/roro_portraits/roro_neutral.png")
 			portrait.show()
 		"macaron":
 			match expression:
 				"neutral":
-					portrait.texture = load("res://assets/macaron_portraits/macaron_neutral.png")
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_neutral.png")
 			portrait.show()
 		"xiu":
 			match expression:
 				"neutral":
-					portrait.texture = load("res://assets/xiu_portraits/xiu_neutral.png")
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_neutral.png")
+				"surprised":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_surprised.png")
+				"nervous":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_nervous.png")
+				"sad":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_sad.png")
+				"loving":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_loving.png")
+				"happy":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_happy.png")
+				"flustered":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_flustered.png")
 			portrait.show()
 		_:
 			portrait.hide()

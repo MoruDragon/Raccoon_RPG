@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n248j5blq0w1"
-path="res://.godot/imported/roro_happy.png-97478ebd1016cf70e0a5aec94bfca976.ctex"
+uid="uid://cjax26co4bl4q"
+path="res://.godot/imported/xiu_surprised.png-5aedde6127bdd93bf1ec000cdcf3b94e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roro_portraits/roro_happy.png"
-dest_files=["res://.godot/imported/roro_happy.png-97478ebd1016cf70e0a5aec94bfca976.ctex"]
+source_file="res://assets/character portraits/xiu_portraits/xiu_surprised.png"
+dest_files=["res://.godot/imported/xiu_surprised.png-5aedde6127bdd93bf1ec000cdcf3b94e.ctex"]
 
 [params]
 

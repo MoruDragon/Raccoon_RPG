@@ -20,7 +20,7 @@ Roro: Wow, such bad taste! I need it MORE THAN THEM!
 [#angry] Random Rat: Ey, yo, grab yo own grub!
 # angry pigeon npc portrait
 Paltry Pigeon: Ugh, the audacity!
-You ignore their feeble protests, winning the battle! 
+[#hide_name] Roro: You ignore their feeble protests, winning the battle! 
 # You run, snatching the pizza away from the two and scurrying away behind a dumpster.
 # roro happy
 [#hide_name] [#happy] Roro: You can hear the two start bickering behind you but you don’t care! You dig into the stale pizza with a satisfied smile on your face. 
@@ -60,9 +60,9 @@ You continue to watch their conversation and it’s filled with LOVE.
 The pigeon thrusts a meticulously beak(?)-crafted flower crown into Xiu's paws.
 Xiu: Wow, flowers? 
 # roro neutral
-[#neutral] Roro: How the heck did she find flowers in the concrete jungle?
+[#surprised] Roro: How the heck did she find flowers in the concrete jungle?
 # roro surprised
-[#surprised] Macaron: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
+[#neutral] Macaron: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
 Xiu bashfully starts twirling her tail while looking demure. Her flustered gaze was directed downward, overwhelmed by the display of affection. 
 Xiu: Oooooh! 
 Roro: Jeez, even my parents weren’t this mushy gushy with each other!

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8afl3bmfatcq"
-path="res://.godot/imported/macaron_neutral.png-af726b7a3b2ba870a6ab7e0b8524b0b7.ctex"
+uid="uid://n248j5blq0w1"
+path="res://.godot/imported/roro_happy.png-af4c5a7f6dc4329fd05976bb25ded336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/macaron_portraits/macaron_neutral.png"
-dest_files=["res://.godot/imported/macaron_neutral.png-af726b7a3b2ba870a6ab7e0b8524b0b7.ctex"]
+source_file="res://assets/character portraits/roro_portraits/roro_happy.png"
+dest_files=["res://.godot/imported/roro_happy.png-af4c5a7f6dc4329fd05976bb25ded336.ctex"]
 
 [params]
 

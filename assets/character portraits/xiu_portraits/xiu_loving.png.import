@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cui8lcw8iasi8"
-path="res://.godot/imported/roro_neutral.png-6ca3656be08bbf0c619b79614409fcb2.ctex"
+uid="uid://bd0yv6oaocqv1"
+path="res://.godot/imported/xiu_loving.png-faf9668f860426abe9030eebc1fce98b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roro_portraits/roro_neutral.png"
-dest_files=["res://.godot/imported/roro_neutral.png-6ca3656be08bbf0c619b79614409fcb2.ctex"]
+source_file="res://assets/character portraits/xiu_portraits/xiu_loving.png"
+dest_files=["res://.godot/imported/xiu_loving.png-faf9668f860426abe9030eebc1fce98b.ctex"]
 
 [params]
 

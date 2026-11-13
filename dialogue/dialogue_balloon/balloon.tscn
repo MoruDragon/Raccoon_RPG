@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="StyleBox" uid="uid://dluk1luet13wf" path="res://dialogue/dialogue_balloon_config/panels/roro_stylebox.tres" id="3_2ajxf"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://cui8lcw8iasi8" path="res://assets/roro_portraits/roro_neutral.png" id="4_nlsx6"]
+[ext_resource type="Texture2D" uid="uid://cui8lcw8iasi8" path="res://assets/character portraits/roro_portraits/roro_neutral.png" id="4_nlsx6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncni0"]
 content_margin_left = 20.0

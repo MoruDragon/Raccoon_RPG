@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2d8vqr51li0e"
-path="res://.godot/imported/roro_mischievous.png-bdb27f688513da0e770b853978bf8c00.ctex"
+uid="uid://cui8lcw8iasi8"
+path="res://.godot/imported/roro_neutral.png-5cef519fb0f5f13bd83e43a8a4bbc77c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roro_portraits/roro_mischievous.png"
-dest_files=["res://.godot/imported/roro_mischievous.png-bdb27f688513da0e770b853978bf8c00.ctex"]
+source_file="res://assets/character portraits/roro_portraits/roro_neutral.png"
+dest_files=["res://.godot/imported/roro_neutral.png-5cef519fb0f5f13bd83e43a8a4bbc77c.ctex"]
 
 [params]
 

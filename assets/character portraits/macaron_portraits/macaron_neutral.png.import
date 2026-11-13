@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjw20nvol2r2n"
-path="res://.godot/imported/roro_nervous.png-b2d218364c7563d0d6d3aff36ad2a491.ctex"
+uid="uid://8afl3bmfatcq"
+path="res://.godot/imported/macaron_neutral.png-c8010c5d326e9c9b61c8938450340308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roro_portraits/roro_nervous.png"
-dest_files=["res://.godot/imported/roro_nervous.png-b2d218364c7563d0d6d3aff36ad2a491.ctex"]
+source_file="res://assets/character portraits/macaron_portraits/macaron_neutral.png"
+dest_files=["res://.godot/imported/macaron_neutral.png-c8010c5d326e9c9b61c8938450340308.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mect0usommj5"
-path="res://.godot/imported/roro_thinking.png-ccd375b9916ccfa0aea40a2dc0987ab1.ctex"
+uid="uid://ci3e7abgkvk4v"
+path="res://.godot/imported/roro_surprised.png-fb0f5dabd83abc780556fc4830a36460.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roro_portraits/roro_thinking.png"
-dest_files=["res://.godot/imported/roro_thinking.png-ccd375b9916ccfa0aea40a2dc0987ab1.ctex"]
+source_file="res://assets/character portraits/roro_portraits/roro_surprised.png"
+dest_files=["res://.godot/imported/roro_surprised.png-fb0f5dabd83abc780556fc4830a36460.ctex"]
 
 [params]
 

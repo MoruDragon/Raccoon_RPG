@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6bbbvqdsc3gc"
-path="res://.godot/imported/xiu_neutral.png-d2828f4ce9363842039dc0044c142a86.ctex"
+uid="uid://ypa6cy2x637c"
+path="res://.godot/imported/xiu_flustered.png-09555872bb6fa8d9547ad5f4b62d0129.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/xiu_portraits/xiu_neutral.png"
-dest_files=["res://.godot/imported/xiu_neutral.png-d2828f4ce9363842039dc0044c142a86.ctex"]
+source_file="res://assets/character portraits/xiu_portraits/xiu_flustered.png"
+dest_files=["res://.godot/imported/xiu_flustered.png-09555872bb6fa8d9547ad5f4b62d0129.ctex"]
 
 [params]
 
