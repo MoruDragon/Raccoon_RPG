@@ -270,6 +270,16 @@ func _update_character_portrait() -> void:
 			match expression:
 				"neutral":
 					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_neutral.png")
+				"surprised":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_surprised.png")
+				"prideful":
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_prideful.png")
+				"happy":
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_happy.png")
+				"flustered":
+					portrait.texture = load("res://assets/character portraits/xiu_portraits/xiu_flustered.png")
+				"angry":
+					portrait.texture = load("res://assets/character portraits/macaron_portraits/macaron_angry.png")
 			portrait.show()
 		"xiu":
 			match expression:
