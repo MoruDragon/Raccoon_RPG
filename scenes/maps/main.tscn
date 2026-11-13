@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://6j3wu1a1wl4v"]
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_00xaj"]
+[ext_resource type="Script" uid="uid://buiod741emmcj" path="res://scenes/maps/main.gd" id="1_4h6cl"]
+[ext_resource type="AudioStream" uid="uid://26k8l0rpkfra" path="res://audio/City_Temp.wav" id="2_536tc"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_kvreu"]
 [ext_resource type="Texture2D" uid="uid://b5p3imfuy1hil" path="res://assets/building_sprites.png" id="2_qy6yc"]
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_00xaj"]
@@ -771,6 +773,8 @@ _data = {
 }
 
 [node name="Main" type="Node2D" unique_id=575015310]
+script = ExtResource("1_4h6cl")
+background_music = ExtResource("2_536tc")
 
 [node name="MainLayer" type="TileMapLayer" parent="." unique_id=1201983216]
 texture_filter = 1

@@ -21,6 +21,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 ValvePuzzleManager="*uid://mbilr2rkpjd3"
 SceneManager="*uid://bktvek3csjq0o"
 GameState="*uid://cqlrtxbwcrb1w"
+AudioManager="*uid://ckvpy8l1kio37"
 
 [dialogue_manager]
 

@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dhaq3jbb42vhe"]
 
+[ext_resource type="Script" uid="uid://dl6u2edgv0qg3" path="res://scenes/maps/sewer_f.gd" id="1_14n0g"]
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_j7jxv"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="2_uf3e1"]
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="2_xy6br"]
@@ -461,6 +462,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xy6br")
 
 [node name="SewerFlooded" type="Node2D" unique_id=537667296]
+script = ExtResource("1_14n0g")
+background_music = ExtResource("6_xy6br")
 
 [node name="BelowLayer" type="TileMapLayer" parent="." unique_id=685883264]
 position = Vector2(0, 8)
