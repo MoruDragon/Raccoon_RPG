@@ -3,6 +3,7 @@ extends Marker2D
 @export var marker_tag: String = ""
 @export_file("*.tscn") var target_scene_path: String = ""
 @export var cooldown_delay: float = 0.01
+@export var manhole_sfx: AudioStream
 
 @onready var trigger_area: Area2D = $Area2D
 
@@ -34,6 +35,7 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if can_trigger:
 		can_trigger = false
+		AudioManager.play_sfx(manhole_sfx)
 		SceneManager.transition_to_map(target_scene_path, marker_tag)
 
 func _on_body_exited(body: Node2D) -> void:

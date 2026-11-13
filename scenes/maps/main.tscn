@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="10_utjhh"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
+[ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ss43a"]
 texture = ExtResource("1_00xaj")
@@ -843,6 +844,7 @@ position = Vector2(232, 296)
 scale = Vector2(0.635, 0.635)
 marker_tag = "sewer"
 target_scene_path = "uid://dhaq3jbb42vhe"
+manhole_sfx = ExtResource("14_4jiwq")
 
 [node name="Node" type="Node" parent="." unique_id=686568255]
 

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="2_xy6br"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="3_imayl"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="5_r6dbc"]
+[ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="6_65i8f"]
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="6_xy6br"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="7_qsuna"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="8_14n0g"]
@@ -418,6 +419,7 @@ tile_set = SubResource("TileSet_7ydh6")
 position = Vector2(52, 180)
 marker_tag = "sewer"
 target_scene_path = "uid://6j3wu1a1wl4v"
+manhole_sfx = ExtResource("6_65i8f")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
 position = Vector2(147, 180)

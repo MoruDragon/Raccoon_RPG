@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg0e3uuw72wsi"
+path="res://.godot/imported/Sewer Manhole.mp3-5fb8c21199c1133d7bfaf2f8e3eb45b8.mp3str"
+
+[deps]
+
+source_file="res://audio/SFX/Sewer Manhole.mp3"
+dest_files=["res://.godot/imported/Sewer Manhole.mp3-5fb8c21199c1133d7bfaf2f8e3eb45b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

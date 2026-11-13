@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b7lyl83biay8j"]
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_j11o2"]
+[ext_resource type="Script" uid="uid://b4j6tfifo85um" path="res://scenes/maps/xius_dads_house.gd" id="1_vy4ey"]
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="2_5yy24"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="3_vy4ey"]
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="4_ilaqv"]
@@ -382,6 +383,8 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_745t8")
 
 [node name="XiusDadsHouse" type="Node2D" unique_id=537667296]
+script = ExtResource("1_vy4ey")
+background_music = ExtResource("4_ilaqv")
 
 [node name="BelowLayer" type="TileMapLayer" parent="." unique_id=685883264]
 tile_set = SubResource("TileSet_imayl")
