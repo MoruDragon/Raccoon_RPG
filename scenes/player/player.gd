@@ -75,6 +75,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		# Retrieve all Area2D shapes currently inside the interaction trigger zone.
 		var overlapping_areas: Array[Area2D] = interaction_detector.get_overlapping_areas()
+		# Sort overlapping areas by distance to players, so the first area
+		# checked is the closest and not the first one that started overlapping
+		overlapping_areas.sort_custom(func(a, b): 
+			return (global_position.distance_to(a.global_position) < 
+					global_position.distance_to(b.global_position)))
 		
 		for area in overlapping_areas:
 			# Duck typing: verify the target area contains an 'interact' method before invoking.
