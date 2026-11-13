@@ -6,8 +6,6 @@
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_00xaj"]
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="3_utjhh"]
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
-[ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="5_4jiwq"]
-[ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="6_4h6cl"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
 [ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
@@ -793,24 +791,6 @@ script = ExtResource("3_00xaj")
 [node name="TriggerCollision" type="CollisionShape2D" parent="Rat/InteractionArea" unique_id=597666751]
 position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_m6k0o")
-
-[node name="Valve1" parent="." unique_id=1401522541 instance=ExtResource("5_4jiwq")]
-position = Vector2(764, -92)
-
-[node name="Valve2" parent="." unique_id=1868940086 instance=ExtResource("5_4jiwq")]
-position = Vector2(913, -144)
-valve_id = "V2"
-
-[node name="Valve3" parent="." unique_id=421308508 instance=ExtResource("5_4jiwq")]
-position = Vector2(654, -49)
-valve_id = "V3"
-
-[node name="Valve4" parent="." unique_id=542227964 instance=ExtResource("5_4jiwq")]
-position = Vector2(832, -90)
-valve_id = "V4"
-
-[node name="Node2D" parent="." unique_id=1294021697 instance=ExtResource("6_4h6cl")]
-position = Vector2(504, -74)
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
 position = Vector2(716, 159)
