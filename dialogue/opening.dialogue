@@ -7,7 +7,8 @@ What will today bring?
 [#neutral] A hero?
 Some scrumptious pasta.
 A nice orange drink.
-...If you know, you know.
+...If you know, you know
+$> pause_to_play_cutscene_animation("Fight Moving")
 # roro surprised
 [#surprised] Roro: Ah!
 A feathered ruffian and furry rat totally knock you over!

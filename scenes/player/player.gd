@@ -18,6 +18,7 @@ var is_talking: bool = false
 func _ready() -> void:
 	# Connect to the global signal provided by the Dialogue Manager autoload singleton.
 	# DialogueManager emits 'dialogue_ended' when a conversation balloon closes.
+	DialogueManager.dialogue_started.connect(_on_dialogue_started)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
 	GameState.player = self
@@ -87,6 +88,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_dialogue_ended(_resource: Resource) -> void:
 	# Restore player movement, inputs, and interaction capability.
 	is_talking = false
+
+func _on_dialogue_started(_resource: Resource) -> void:
+	is_talking = true
 
 func _apply_entry_position() -> void:
 	if SceneManager.target_marker_tag.is_empty():
