@@ -391,37 +391,43 @@ tile_size = Vector2i(16, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xy6br")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7yxi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxxps"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(0, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jpb5p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekbp3"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(16, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onaxd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7yxi"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(32, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ggk8i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpb5p"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(48, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g1ybv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_onaxd"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(64, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xrnme"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggk8i"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(80, 64, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5f56w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ybv"]
 atlas = ExtResource("10_ekbp3")
 region = Rect2(96, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2tr8x"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxxps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekbp3")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p7yxi")
 }, {
@@ -436,26 +442,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g1ybv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xrnme")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5f56w")
 }],
-"loop": 1,
+"loop": 2,
 "name": &"default",
-"speed": 12.0
+"speed": 10.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rphhr"]
-size = Vector2(9, 289.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_65i8f"]
-size = Vector2(717, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh30o"]
-size = Vector2(74, 16)
 
 [node name="SewerFlooded" type="Node2D" unique_id=537667296]
 script = ExtResource("1_14n0g")
@@ -858,14 +849,16 @@ region_enabled = true
 region_rect = Rect2(0, 0, 14, 14)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ValvePuzzlePipes" unique_id=1027223355]
+texture_repeat = 2
 position = Vector2(267, -236)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
-frame_progress = 0.4517559
+frame_progress = 0.66943103
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ValvePuzzlePipes" unique_id=777313481]
+texture_repeat = 2
 position = Vector2(267, -89)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
-frame_progress = 0.621222
+frame_progress = 0.54058826
 
 [node name="Valve1" parent="." unique_id=825065482 instance=ExtResource("7_qsuna")]
 position = Vector2(291, 338)
@@ -883,6 +876,7 @@ position = Vector2(358, 277)
 valve_id = "V4"
 
 [node name="Water" type="Node2D" parent="." unique_id=1332662157]
+visible = false
 position = Vector2(416, 123)
 rotation = 1.5707964
 
@@ -904,21 +898,3 @@ position = Vector2(255.99998, -3.0517578e-05)
 position = Vector2(680, 29)
 marker_tag = "xd_house"
 target_scene_path = "uid://b7lyl83biay8j"
-
-[node name="LeftWall" type="StaticBody2D" parent="." unique_id=733670761]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=2125572957]
-position = Vector2(-6, 247.375)
-shape = SubResource("RectangleShape2D_rphhr")
-
-[node name="BottomWall" type="StaticBody2D" parent="." unique_id=1340558835]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=1606830100]
-position = Vector2(357.5, 390)
-shape = SubResource("RectangleShape2D_65i8f")
-
-[node name="TopWall" type="StaticBody2D" parent="." unique_id=1114188330]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=209137702]
-position = Vector2(682, -45)
-shape = SubResource("RectangleShape2D_kh30o")
