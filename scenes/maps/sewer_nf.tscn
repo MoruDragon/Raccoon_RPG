@@ -224,9 +224,10 @@ tile_set = SubResource("TileSet_2tr8x")
 position = Vector2(34, 95)
 marker_tag = "go_sewer"
 target_scene_path = "uid://8oq7ftvplh6d"
+cooldown_delay = null
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
-position = Vector2(51, 83)
+position = Vector2(99, 86)
 
 [node name="Mousehole1" type="Sprite2D" parent="." unique_id=82684682]
 position = Vector2(293, 90.00001)

@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://g0ta64y8u3sy" path="res://audio/Campfire_Creeps.wav" id="6_xy6br"]
 [ext_resource type="PackedScene" uid="uid://cds81j2cfcfsm" path="res://scenes/valve_puzzle/valve.tscn" id="7_qsuna"]
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="8_14n0g"]
+[ext_resource type="Texture2D" uid="uid://deitqxmkud6j5" path="res://assets/pipe_spritesheet.png" id="9_vxxps"]
+[ext_resource type="Texture2D" uid="uid://bxofbbhse4ar6" path="res://assets/emote_spritesheet.png" id="10_ekbp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
 texture = ExtResource("1_j7jxv")
@@ -241,10 +243,10 @@ texture_region_size = Vector2i(64, 64)
 3:6/0 = 0
 4:6/0 = 0
 5:6/0 = 0
-5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -24.315277, -32, -24.315277, -22.676048, -32, -23.222462)
-5:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(23.222458, -32, 32, -32, 32, -24.86169, 22.129639, -27.047337)
-5:6/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 16.665527, -24.861687, 16.665527, -25.408096, 32, -32, 32)
-5:6/0/physics_layer_0/polygon_3/points = PackedVector2Array(24.861687, 17.758347, 32, 17.211937, 32, 27.593742, 23.222458, 27.593742)
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -23, -32, -23, -25, -32, -25)
+5:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(23, -32, 32, -32, 32, -25, 23, -25)
+5:6/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 17, -23, 17, -23, 32, -32, 32)
+5:6/0/physics_layer_0/polygon_3/points = PackedVector2Array(23, 17, 32, 17, 32, 32, 23, 32)
 2:4/0 = 0
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(20.510899, -32, 21.127766, 29.147068, 32, 32, 32, -32)
@@ -389,6 +391,63 @@ tile_size = Vector2i(16, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xy6br")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7yxi"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpb5p"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onaxd"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggk8i"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ybv"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrnme"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f56w"]
+atlas = ExtResource("10_ekbp3")
+region = Rect2(96, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2tr8x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7yxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpb5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onaxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggk8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1ybv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrnme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f56w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rphhr"]
 size = Vector2(9, 289.25)
 
@@ -451,40 +510,395 @@ stream = ExtResource("6_xy6br")
 volume_db = -5.498
 autoplay = true
 
+[node name="ValvePuzzlePipes" type="Node2D" parent="." unique_id=276010805]
+position = Vector2(88, 339)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=730960309]
+position = Vector2(188, -234)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=160753053]
+position = Vector2(185, -226)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 0, 12, 12)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1690226882]
+position = Vector2(171, -196)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 10)
+
+[node name="Sprite2D5" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=341885135]
+position = Vector2(171, -209)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D15" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1623969424]
+position = Vector2(267, -210)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D16" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1451144781]
+position = Vector2(267, -226)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D9" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=812300544]
+position = Vector2(137, -175)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D18" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=309268429]
+position = Vector2(137, -159)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D19" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1043462850]
+position = Vector2(137, -79)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D21" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1746111986]
+position = Vector2(137, -63)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D45" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1341749260]
+position = Vector2(137, -47)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D22" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1905159949]
+position = Vector2(137, -31)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D23" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1376778250]
+position = Vector2(137, -15)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D51" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1320368096]
+position = Vector2(137, -143)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D52" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=610632680]
+position = Vector2(137, -127)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D53" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=789354140]
+position = Vector2(137, -111)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D54" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=906916139]
+position = Vector2(137, -95)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D41" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=416009827]
+position = Vector2(267, -79)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D42" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=530715678]
+position = Vector2(267, -47)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D43" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1595380836]
+position = Vector2(267, -31)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D44" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1354668422]
+position = Vector2(267, -15)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D47" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=851413138]
+position = Vector2(203, 18)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D48" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1332138024]
+position = Vector2(203, 33)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D49" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=733020244]
+position = Vector2(203, 49)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D50" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=2117449589]
+position = Vector2(203, 65)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D24" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1475986541]
+position = Vector2(138, -1)
+scale = Vector2(-1, 1)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 12)
+
+[node name="Sprite2D39" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1390053829]
+position = Vector2(265, -64)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 16, 18, 12)
+
+[node name="Sprite2D46" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=601950134]
+position = Vector2(151, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D40" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1200504402]
+position = Vector2(266, -1)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 12)
+
+[node name="Sprite2D6" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1094396909]
+position = Vector2(155, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D20" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=262957109]
+position = Vector2(140, -61)
+rotation = -1.5707964
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(46, 0, 18, 12)
+
+[node name="Sprite2D10" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=757801818]
+position = Vector2(187, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D11" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=355744936]
+position = Vector2(203, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D25" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=578792508]
+position = Vector2(154, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D26" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=694379707]
+position = Vector2(157, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D27" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=812058998]
+position = Vector2(170, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D28" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1086024328]
+position = Vector2(171, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D29" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1052949976]
+position = Vector2(186, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D30" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=2050224008]
+position = Vector2(187, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D31" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1547684857]
+position = Vector2(202, 5)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(48, 1, 16, 10)
+
+[node name="Sprite2D32" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1116959679]
+position = Vector2(203, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D33" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=827556754]
+position = Vector2(218, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D34" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1429039415]
+position = Vector2(219, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D35" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1608024205]
+position = Vector2(234, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D36" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1485014174]
+position = Vector2(235, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D37" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1452256166]
+position = Vector2(250, 2)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D38" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1688625137]
+position = Vector2(251, -63)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D12" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1531382098]
+position = Vector2(219, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D13" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1303651997]
+position = Vector2(235, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D14" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=2133357855]
+position = Vector2(251, -193)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(16, 6, 16, 6)
+
+[node name="Sprite2D7" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1726375469]
+position = Vector2(140, -189)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(34, 0, 14, 14)
+
+[node name="Sprite2D17" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=106410755]
+position = Vector2(174, -219)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(34, 0, 14, 14)
+
+[node name="Sprite2D8" type="Sprite2D" parent="ValvePuzzlePipes" unique_id=1961122253]
+position = Vector2(265, -195)
+texture = ExtResource("9_vxxps")
+region_enabled = true
+region_rect = Rect2(0, 0, 14, 14)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ValvePuzzlePipes" unique_id=1027223355]
+position = Vector2(267, -236)
+sprite_frames = SubResource("SpriteFrames_2tr8x")
+frame_progress = 0.4517559
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ValvePuzzlePipes" unique_id=777313481]
+position = Vector2(267, -89)
+sprite_frames = SubResource("SpriteFrames_2tr8x")
+frame_progress = 0.621222
+
 [node name="Valve1" parent="." unique_id=825065482 instance=ExtResource("7_qsuna")]
-position = Vector2(88, 260)
+position = Vector2(291, 338)
 
 [node name="Valve2" parent="." unique_id=891405599 instance=ExtResource("7_qsuna")]
-position = Vector2(238, 257)
+position = Vector2(357, 148)
 valve_id = "V2"
 
 [node name="Valve3" parent="." unique_id=1266735120 instance=ExtResource("7_qsuna")]
-position = Vector2(88, 339)
+position = Vector2(222, 276)
 valve_id = "V3"
 
 [node name="Valve4" parent="." unique_id=1194892538 instance=ExtResource("7_qsuna")]
-position = Vector2(237, 337)
+position = Vector2(358, 277)
 valve_id = "V4"
 
-[node name="Node2D" parent="." unique_id=1294021697 instance=ExtResource("8_14n0g")]
+[node name="Water" type="Node2D" parent="." unique_id=1332662157]
 position = Vector2(416, 123)
 rotation = 1.5707964
 
-[node name="Node2D2" parent="." unique_id=1867710810 instance=ExtResource("8_14n0g")]
-position = Vector2(416, 187)
-rotation = 1.5707964
+[node name="Node2D" parent="Water" unique_id=1294021697 instance=ExtResource("8_14n0g")]
 
-[node name="Node2D3" parent="." unique_id=980446478 instance=ExtResource("8_14n0g")]
-position = Vector2(416, 251)
-rotation = 1.5707964
+[node name="Node2D2" parent="Water" unique_id=1867710810 instance=ExtResource("8_14n0g")]
+position = Vector2(64, 0)
 
-[node name="Node2D4" parent="." unique_id=1763627036 instance=ExtResource("8_14n0g")]
-position = Vector2(416, 315)
-rotation = 1.5707964
+[node name="Node2D3" parent="Water" unique_id=980446478 instance=ExtResource("8_14n0g")]
+position = Vector2(128, 0)
 
-[node name="Node2D5" parent="." unique_id=1530560545 instance=ExtResource("8_14n0g")]
-position = Vector2(416, 379)
-rotation = 1.5707964
+[node name="Node2D4" parent="Water" unique_id=1763627036 instance=ExtResource("8_14n0g")]
+position = Vector2(191.99998, 0)
+
+[node name="Node2D5" parent="Water" unique_id=1530560545 instance=ExtResource("8_14n0g")]
+position = Vector2(255.99998, -3.0517578e-05)
 
 [node name="XD_Marker" parent="." unique_id=1639969450 instance=ExtResource("3_imayl")]
 position = Vector2(680, 29)

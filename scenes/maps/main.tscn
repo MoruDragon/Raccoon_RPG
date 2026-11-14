@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://26k8l0rpkfra" path="res://audio/City_Temp.wav" id="2_536tc"]
 [ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_kvreu"]
 [ext_resource type="Texture2D" uid="uid://b5p3imfuy1hil" path="res://assets/building_sprites.png" id="2_qy6yc"]
-[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_00xaj"]
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="3_utjhh"]
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
@@ -152,9 +151,6 @@ texture = ExtResource("3_utjhh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kvreu")
 sources/3 = SubResource("TileSetAtlasSource_qy6yc")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_m6k0o"]
-radius = 40.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5lje"]
 atlas = ExtResource("3_utjhh")
@@ -811,11 +807,6 @@ tile_set = SubResource("TileSet_t1uei")
 position = Vector2(573, 547)
 dialogue_resource = ExtResource("4_utjhh")
 
-[node name="InteractionArea" type="Area2D" parent="Rat" unique_id=616761707]
-position = Vector2(-1, 0)
-collision_layer = 4
-collision_mask = 0
-script = ExtResource("3_00xaj")
 
 [node name="TriggerCollision" type="CollisionShape2D" parent="Rat/InteractionArea" unique_id=597666751]
 position = Vector2(1, 0)
