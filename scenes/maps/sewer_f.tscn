@@ -876,7 +876,6 @@ position = Vector2(358, 277)
 valve_id = "V4"
 
 [node name="Water" type="Node2D" parent="." unique_id=1332662157]
-visible = false
 position = Vector2(416, 123)
 rotation = 1.5707964
 
