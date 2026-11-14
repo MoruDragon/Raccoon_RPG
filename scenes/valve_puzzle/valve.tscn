@@ -5,11 +5,11 @@
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_5ehjv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iygui"]
-radius = 40.0
+radius = 10.440307
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
-radius = 13.0
-height = 26.0
+radius = 8.0
+height = 16.0
 
 [node name="Valve" type="StaticBody2D" unique_id=1401522541]
 collision_mask = 0
