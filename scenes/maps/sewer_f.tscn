@@ -447,14 +447,6 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }]
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rphhr"]
-size = Vector2(9, 289.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_65i8f"]
-size = Vector2(717, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh30o"]
-size = Vector2(74, 16)
 
 [node name="SewerFlooded" type="Node2D" unique_id=537667296]
 script = ExtResource("1_14n0g")
@@ -905,21 +897,3 @@ position = Vector2(255.99998, -3.0517578e-05)
 position = Vector2(680, 29)
 marker_tag = "xd_house"
 target_scene_path = "uid://b7lyl83biay8j"
-
-[node name="LeftWall" type="StaticBody2D" parent="." unique_id=733670761]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=2125572957]
-position = Vector2(-6, 247.375)
-shape = SubResource("RectangleShape2D_rphhr")
-
-[node name="BottomWall" type="StaticBody2D" parent="." unique_id=1340558835]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=1606830100]
-position = Vector2(357.5, 390)
-shape = SubResource("RectangleShape2D_65i8f")
-
-[node name="TopWall" type="StaticBody2D" parent="." unique_id=1114188330]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=209137702]
-position = Vector2(682, -45)
-shape = SubResource("RectangleShape2D_kh30o")
