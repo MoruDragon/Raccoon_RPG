@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://deitqxmkud6j5" path="res://assets/pipe_spritesheet.png" id="2_2iik6"]
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="3_5ehjv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rphhr"]
-atlas = ExtResource("2_2iik6")
-region = Rect2(32.03852, 15.509164, 16.198658, 16.699902)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_iygui"]
 radius = 40.0
 
@@ -21,9 +17,10 @@ script = ExtResource("1_xgvd7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=128574865]
 texture_filter = 1
-position = Vector2(-4.7683716e-07, 4.7683716e-07)
 scale = Vector2(1.078, 1.078)
-texture = SubResource("AtlasTexture_rphhr")
+texture = ExtResource("2_2iik6")
+region_enabled = true
+region_rect = Rect2(32, 16, 16, 16)
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1056906699]
 collision_layer = 4

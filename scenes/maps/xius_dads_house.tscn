@@ -397,7 +397,7 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_2tr8x")
 
 [node name="GroundLayer" type="TileMapLayer" parent="." unique_id=319776540]
-tile_map_data = PackedByteArray("AAAAAAEAAAABAAQAAAAAAAIAAAABAAQAAAAAAAMAAAABAAQAAAABAAEAAAAAAAIAAAABAAIAAAAAAAIAAAABAAMAAAAAAAIAAAACAAEAAAAAAAIAAAACAAIAAAAAAAIAAAACAAMAAAAAAAIAAAADAAEAAAABAAQAADADAAIAAAABAAQAADADAAMAAAABAAQAADABAAAAAAAAAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAQAADAAAAAAAAABAAQAAAAAAAQAAAABAAQAAAADAAQAAAABAAQAADAAAAUAAAABAAQAAAADAAUAAAABAAQAADABAAQAAAAAAAIAAAACAAQAAAAAAAIAAAACAAUAAAAAAAIAAAABAAUAAAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAAAAEAAAABAAQAAAAAAAIAAAABAAQAAAAAAAMAAAABAAQAAAABAAEAAAAAAAIAAAABAAIAAAAAAAIAAAABAAMAAAAAAAIAAAACAAEAAAAAAAIAAAACAAIAAAAAAAIAAAACAAMAAAAAAAIAAAADAAEAAAABAAQAADADAAIAAAABAAQAADADAAMAAAABAAQAADABAAAAAAAAAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAQAADAAAAAAAAABAAQAAAA=")
 tile_set = SubResource("TileSet_qsuna")
 
 [node name="PropsLayer" type="TileMapLayer" parent="." unique_id=1094405149]
@@ -406,16 +406,15 @@ tile_set = SubResource("TileSet_vpxn6")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("3_vy4ey")]
 z_index = 5
-position = Vector2(133, 296)
+position = Vector2(131, 207)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1279535976]
-position = Vector2(1, 2)
+position = Vector2(-1, 0)
 zoom = Vector2(5, 5)
 limit_left = 52
 limit_top = 1
 limit_right = 203
-limit_bottom = 350
-position_smoothing_enabled = true
+limit_bottom = 257
 
 [node name="SewerAmbience" type="AudioStreamPlayer" parent="." unique_id=511165923]
 stream = ExtResource("4_ilaqv")
@@ -423,7 +422,7 @@ volume_db = -5.498
 autoplay = true
 
 [node name="XD_Marker" parent="." unique_id=1224443294 instance=ExtResource("6_5yy24")]
-position = Vector2(126, 350)
+position = Vector2(132, 234)
 marker_tag = "xd_house"
 target_scene_path = "uid://dhaq3jbb42vhe"
 
