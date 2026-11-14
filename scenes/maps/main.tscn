@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
 [ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
+[ext_resource type="Script" uid="uid://sxljoefs0fn6" path="res://scenes/npc/item.gd" id="9_utjhh"]
+[ext_resource type="Resource" uid="uid://mncbt0t28n6b" path="res://dialogue/pizzaInteract.dialogue" id="10_4h6cl"]
+[ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="10_4jiwq"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="10_utjhh"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
 [ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
@@ -152,6 +155,9 @@ sources/3 = SubResource("TileSetAtlasSource_qy6yc")
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5lje"]
 atlas = ExtResource("3_utjhh")
 region = Rect2(256.54337, 0.5889864, 16.056458, 15.484363)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
+radius = 7.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3f035"]
 atlas = ExtResource("12_qy6yc")
@@ -1227,20 +1233,30 @@ script = ExtResource("9_b02sy")
 texture_filter = 1
 position = Vector2(648, 184)
 texture = SubResource("AtlasTexture_k5lje")
+script = ExtResource("9_utjhh")
+dialogue_resource = ExtResource("10_4h6cl")
+
+[node name="Area2D" type="Area2D" parent="OpeningCutscene/Pizza" unique_id=676388685]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("10_4jiwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Pizza/Area2D" unique_id=380354168]
+shape = SubResource("CircleShape2D_2tr8x")
 
 [node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1240057643]
 position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_qy6yc")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.25235486
+frame_progress = 0.6782394
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2104677649]
 position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.19308078
+frame_progress = 0.6189795
 flip_h = true
 
 [node name="Xiu" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=96721137]
@@ -1248,14 +1264,14 @@ position = Vector2(572, 545)
 sprite_frames = SubResource("SpriteFrames_k5lje")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.44622368
+frame_progress = 0.87209284
 
 [node name="Macaron" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2121170661]
 position = Vector2(614, 543)
 sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.9896948
+frame_progress = 0.41558456
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=1248671818]
