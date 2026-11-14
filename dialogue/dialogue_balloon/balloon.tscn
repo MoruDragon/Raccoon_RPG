@@ -194,7 +194,9 @@ size_flags_vertical = 8
 
 [node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/MarginContainer/HBoxContainer/Control" unique_id=2091292889]
 unique_name_in_owner = true
-polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
+position = Vector2(-20.303223, 0)
+scale = Vector2(1.512753, 1.5857197)
+polygon = PackedVector2Array(-7.071121, -6.3963428, 10.105527, 18.75292, 27.894938, -6.730436, 10.521696, 5.5330305)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/MarginContainer/HBoxContainer/Control" unique_id=1602634471]
 libraries/ = SubResource("AnimationLibrary_1337t")

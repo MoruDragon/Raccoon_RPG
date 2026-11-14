@@ -9,9 +9,9 @@
 [ext_resource type="Resource" uid="uid://blusyatljnsww" path="res://dialogue/rat_dialogue.dialogue" id="4_utjhh"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
-[ext_resource type="PackedScene" uid="uid://6ydw7log00uf" path="res://scenes/npc/macaron.tscn" id="9_4h6cl"]
 [ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="10_utjhh"]
+[ext_resource type="Script" uid="uid://c7vmsql27mewa" path="res://scenes/maps/feathered_ruffian.gd" id="12_4jiwq"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
 [ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
 
@@ -376,6 +376,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(648, 184), Vector2(648, 184), Vector2(635, 184), Vector2(635, 184), Vector2(648, 184)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FeatheredRuffian:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_utjhh"]
@@ -809,15 +821,14 @@ position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_k5lje")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.8409213
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2104677649]
 position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.2724396
 flip_h = true
+script = ExtResource("12_4jiwq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=1248671818]
 libraries/ = SubResource("AnimationLibrary_utjhh")

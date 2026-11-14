@@ -178,13 +178,13 @@ dialogue_resource = ExtResource("3_q2q7p")
 animation = &"walk"
 frame_progress = 0.0
 
-[node name="InteractionArea" type="Area2D" parent="Rat" unique_id=616761707]
+[node name="TriggerCollision2" type="CollisionShape2D" parent="Rat/InteractionArea" parent_id_path=PackedInt32Array(1470715938, 986399630) index="1" unique_id=597666751]
+shape = SubResource("CircleShape2D_m6k0o")
+
+[node name="InteractionArea2" type="Area2D" parent="Rat" unique_id=616761707]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_ype0x")
-
-[node name="TriggerCollision" type="CollisionShape2D" parent="Rat/InteractionArea" unique_id=597666751]
-shape = SubResource("CircleShape2D_m6k0o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rat" unique_id=1796500050]
 root_node = NodePath("../..")
