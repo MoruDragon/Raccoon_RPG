@@ -1,0 +1,14 @@
+~ start
+if not GameState.save_data.ate_the_pizza
+	A [[Hard Earned|Delicious|Scrumptious]], slice of pizza.
+	Eat the Pizza?
+	- Eat It
+		$> GameState.save_data.ate_the_pizza = true
+		=> end_dialogue
+	- Step Away => end_dialogue
+else
+	You ate your pizza already.
+	=> end_dialogue
+
+~ end_dialogue
+=> END

@@ -52,26 +52,34 @@ Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and h
 [#neutral] You follow your nose, deeper into the alleyway, ready to feast on the dessert. But suddenly a loud BANG is heard, followed by a smaller bang. 
 You stop midstep and whip your head over to the noise. Your interest is piqued and you immediately change course. 
 As you continue deeper into the alleyway, you can pick up pieces of a hushed conversation. 
+$> play_cutscene_anim("Pan to Lovers")
 [#neutral] Macaron: Are you sure? I don't want to take food away from you...
 Xiu: Yes, Macaron!! I made this for you!
 Macaron: You made it?!
 Xiu: I poured my heart and soul into this pie, because [i]you're[/i] the apple of [i]my[/i] eye.
 Macaron: Coo!!!
 Macaron's feathers explode up into her face, prompting her to hide them.
+$> play_cutscene_anim("Pan to Roro")
 # roro surprised
 [#surprised] Roro: Woah… This is beautiful! To share food with your mortal enemy under the cover of alleyway darkness!!!!!
 You continue to watch their conversation and it’s filled with LOVE.
+$> play_cutscene_anim("Pan to Lovers")
 [#neutral] Macaron: W-Well, I made you this!
 The pigeon thrusts a meticulously beak(?)-crafted flower crown into Xiu's paws.
-Xiu: Wow, flowers? 
+Xiu: Wow, flowers?
 # roro neutral
+$> play_cutscene_anim("Pan to Roro") 
 [#surprised] Roro: How the heck did she find flowers in the concrete jungle?
 # roro surprised
+$> play_cutscene_anim("Pan to Lovers")
 [#neutral] Macaron: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
 Xiu bashfully starts twirling her tail while looking demure. Her flustered gaze was directed downward, overwhelmed by the display of affection. 
 Xiu: Oooooh! 
+$> play_cutscene_anim("Pan to Roro")
 Roro: Jeez, even my parents weren’t this mushy gushy with each other!
+$> play_cutscene_anim("Pan to Lovers")
 Macaron and Xiu continue to profess their love to each other as you watch from your super secret hiding place, the disturbed dumpster. 
+$> play_cutscene_anim("Pan to Roro")
 # roro neutral
 [#neutral] Roro: Wow... I didn't think such aggressive species were capable of love.
 Roro: But today I was proven wrong! I had no idea that THE rat princess Xiu was hiding a forbidden romance like this.
@@ -81,6 +89,8 @@ Roro: But today I was proven wrong! I had no idea that THE rat princess Xiu was 
 [#mischievious] Roro: I MUST PROTECT THEM!! MY OTP MUST SAIL!!!
 Xiu and Macaron make one last loving confession to each other before entering a warm embrace. 
 # roro neutral
+$> play_cutscene_anim("Pan to Lovers")
+$> play_cutscene_anim("Lovers Leave")
 [#neutral] You watch as Macaron starts flapping her wings and flies away. Xiu then starts to scurry towards the RatLands (aka the tunnels).
 Roro: I need to learn more about whatever is going on between these two!
 You start to follow Xiu towards the RatLands, determined to learn more about the forbidden romance. Little do you know, you're set to uncover the [b]real[/b] reason behind the Feather-Tail war! 

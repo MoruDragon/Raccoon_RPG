@@ -447,6 +447,7 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rphhr"]
 size = Vector2(9, 289.25)
 
@@ -481,28 +482,6 @@ tile_set = SubResource("TileSet_65i8f")
 position = Vector2(0.23, -48.3)
 tile_map_data = PackedByteArray("AAAuAAEAAAAAAAQAADAuAAAAAAAAAAQAADAuAAIAAAAAAAQAADAuAAMAAAAAAAQAADAuAAQAAAAAAAQAADAuAAUAAAAAAAQAADAmAAEAAAAAAAQAAAAmAAAAAAAAAAQAAAAuAAYAAAAAAAQAADAWAAEAAAAAAAQAAAAdAAEAAAAAAAQAADAWAAAAAAAAAAQAAAAdAAAAAAAAAAQAADA=")
 tile_set = SubResource("TileSet_7ydh6")
-
-[node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
-position = Vector2(52, 180)
-marker_tag = "sewer"
-target_scene_path = "uid://6j3wu1a1wl4v"
-manhole_sfx = ExtResource("6_65i8f")
-
-[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
-position = Vector2(147, 180)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
-position = Vector2(-2, 2)
-zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = 7
-limit_right = 719
-limit_bottom = 385
-position_smoothing_enabled = true
-
-[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
-position = Vector2(256, 156)
-scale = Vector2(1, 0.871)
 
 [node name="SewerAmbience" type="AudioStreamPlayer" parent="." unique_id=511165923]
 stream = ExtResource("6_xy6br")
@@ -900,6 +879,28 @@ position = Vector2(191.99998, 0)
 
 [node name="Node2D5" parent="Water" unique_id=1530560545 instance=ExtResource("8_14n0g")]
 position = Vector2(255.99998, -3.0517578e-05)
+
+[node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
+position = Vector2(147, 180)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
+position = Vector2(-2, 2)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 7
+limit_right = 719
+limit_bottom = 385
+position_smoothing_enabled = true
+
+[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
+position = Vector2(256, 156)
+scale = Vector2(1, 0.871)
+
+[node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
+position = Vector2(52, 180)
+marker_tag = "sewer"
+target_scene_path = "uid://6j3wu1a1wl4v"
+manhole_sfx = ExtResource("6_65i8f")
 
 [node name="XD_Marker" parent="." unique_id=1639969450 instance=ExtResource("3_imayl")]
 position = Vector2(680, 29)
