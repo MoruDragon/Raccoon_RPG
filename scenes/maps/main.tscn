@@ -162,39 +162,55 @@ region = Rect2(256.54337, 0.5889864, 16.056458, 15.484363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h6cl"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(0, 314, 32, 24)
+region = Rect2(0, 321, 32, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_536tc"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(32, 314, 32, 24)
+region = Rect2(32, 321, 32, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_imbm3"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(64, 314, 32, 24)
+region = Rect2(64, 321, 32, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b02sy"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(96, 314, 32, 24)
+region = Rect2(96, 321, 32, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8465s"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(128, 314, 32, 24)
+region = Rect2(128, 321, 32, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tg1g"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(0, 338, 32, 24)
+region = Rect2(0, 344, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7goih"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(32, 338, 32, 24)
+region = Rect2(32, 344, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4pg4"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(64, 338, 32, 24)
+region = Rect2(64, 344, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_typ5x"]
 atlas = ExtResource("12_qy6yc")
-region = Rect2(96, 338, 32, 24)
+region = Rect2(96, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ajgt"]
+atlas = ExtResource("12_qy6yc")
+region = Rect2(0, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ssx"]
+atlas = ExtResource("12_qy6yc")
+region = Rect2(32, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6pji"]
+atlas = ExtResource("12_qy6yc")
+region = Rect2(64, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x34it"]
+atlas = ExtResource("12_qy6yc")
+region = Rect2(96, 344, 32, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k5lje"]
 animations = [{
@@ -235,7 +251,19 @@ animations = [{
 "name": &"walk",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ajgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ssx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6pji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x34it")
+}],
 "loop": 1,
 "name": &"walk_back",
 "speed": 5.0
@@ -826,14 +854,14 @@ position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_k5lje")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.8409213
+frame_progress = 0.18263972
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2104677649]
 position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.2724396
+frame_progress = 0.2516146
 flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=1248671818]
