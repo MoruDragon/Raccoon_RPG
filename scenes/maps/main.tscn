@@ -469,6 +469,33 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="Animation" id="Animation_7goih"]
+resource_name = "Camera Normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player/Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5547847, 1),
+"update": 0,
+"values": [Vector2(-20, 30), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player/Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5547847, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(3, 3)]
+}
+
 [sub_resource type="Animation" id="Animation_qy6yc"]
 resource_name = "Fight"
 length = 4.0
@@ -613,7 +640,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_3f035"]
 resource_name = "Lovers Leave"
-length = 7.0
+length = 7.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -621,7 +648,7 @@ tracks/0/path = NodePath("../Player/Camera2D:zoom")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5.9988956),
+"times": PackedFloat32Array(0, 7.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(4, 4), Vector2(4, 4)]
@@ -633,10 +660,10 @@ tracks/1/path = NodePath("../Player/Camera2D:offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.53896326, 1.2666667, 2.5, 4.1, 5.133333, 6.233333, 6.9666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.53333336, 1.2333333, 2.0666666, 3.4333334, 4.6, 5.133333, 6.2, 6.5, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 0.5358867, 1),
 "update": 0,
-"values": [Vector2(292.895, -39.89), Vector2(292.895, -39.89), Vector2(171.3, -66.535), Vector2(56.63, -79.865), Vector2(12.115, -193.835), Vector2(-19.95, -232.8), Vector2(-76.26, -260.635), Vector2(0, 16)]
+"values": [Vector2(265, -10), Vector2(265, -10), Vector2(171.3, -38.565), Vector2(162.556, -82.244), Vector2(30.529, -103.541), Vector2(12.115, -193.835), Vector2(-19.95, -232.8), Vector2(-76.26, -260.635), Vector2(-76.26, -260.635), Vector2(-20, 30)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -657,10 +684,10 @@ tracks/3/path = NodePath("Xiu:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.53333336, 1.2333333, 2.4666667, 4, 5, 6.2),
-"transitions": PackedFloat32Array(1, 1, 0.73204285, 0.5743493, 0.7845841, 0.8408964, 0.8705508),
+"times": PackedFloat32Array(0, 0.53333336, 1.2333333, 2.0666666, 3.4333334, 4.6, 6.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1.0000001, 1, 0.8705508),
 "update": 0,
-"values": [Vector2(572, 545), Vector2(572, 545), Vector2(472.155, 489.31), Vector2(363.855, 457.37), Vector2(345.29, 373.06), Vector2(318.845, 310.85), Vector2(233.015, 297.475)]
+"values": [Vector2(572, 545), Vector2(572, 545), Vector2(506, 539.89), Vector2(472.155, 479.315), Vector2(357.015, 474.34), Vector2(352.595, 373.06), Vector2(233.015, 297.475)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -681,10 +708,10 @@ tracks/5/path = NodePath("Macaron:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 2.0333333),
+"times": PackedFloat32Array(0, 0.1, 4),
 "transitions": PackedFloat32Array(0.4506253, 1.0717733, 0.5000002),
 "update": 0,
-"values": [Vector2(614, 543), Vector2(614, 539.725), Vector2(1128.06, 327.115)]
+"values": [Vector2(614, 543), Vector2(614, 539.725), Vector2(1061.605, 327.115)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -723,9 +750,37 @@ tracks/8/keys = {
 "values": [true, true, true, true, true, true, false]
 }
 
+[sub_resource type="Animation" id="Animation_7tg1g"]
+resource_name = "NPCs Move Offscreen"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FurryRat:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(662, 155), Vector2(670, -28)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FeatheredRuffian:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(663, 184), Vector2(696, -28)]
+}
+
 [sub_resource type="Animation" id="Animation_4jiwq"]
 resource_name = "Pan to Lovers"
-length = 0.3
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -733,7 +788,7 @@ tracks/0/path = NodePath("../Player/Camera2D:zoom")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(4, 4), Vector2(4, 4)]
@@ -745,15 +800,15 @@ tracks/1/path = NodePath("../Player/Camera2D:offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.50000006, 1),
 "update": 0,
-"values": [Vector2(-20, 30), Vector2(292.895, -39.89)]
+"values": [Vector2(-20, 30), Vector2(265, -10)]
 }
 
 [sub_resource type="Animation" id="Animation_b02sy"]
 resource_name = "Pan to Roro"
-length = 0.3
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -761,7 +816,7 @@ tracks/0/path = NodePath("../Player/Camera2D:zoom")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(4, 4), Vector2(4, 4)]
@@ -773,10 +828,10 @@ tracks/1/path = NodePath("../Player/Camera2D:offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(292.895, -39.89), Vector2(-20, 30)]
+"values": [Vector2(265, -10), Vector2(-20, 30)]
 }
 
 [sub_resource type="Animation" id="Animation_6mcao"]
@@ -875,7 +930,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"walk"]
+"values": [&"idle"]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -1178,17 +1233,48 @@ tracks/5/keys = {
 "values": [Vector2(0, 0), Vector2(-20, 30)]
 }
 
+[sub_resource type="Animation" id="Animation_8465s"]
+resource_name = "Roro Turns Around"
+step = 0.1667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(330, 590)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player/AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utjhh"]
 _data = {
+&"Camera Normal": SubResource("Animation_7goih"),
 &"Fight": SubResource("Animation_qy6yc"),
 &"Fight Moving": SubResource("Animation_utjhh"),
 &"Lovers Leave": SubResource("Animation_3f035"),
+&"NPCs Move Offscreen": SubResource("Animation_7tg1g"),
 &"Pan to Lovers": SubResource("Animation_4jiwq"),
 &"Pan to Roro": SubResource("Animation_b02sy"),
 &"RESET": SubResource("Animation_6mcao"),
 &"Roro Joins In": SubResource("Animation_536tc"),
 &"Roro Jump Back": SubResource("Animation_4h6cl"),
-&"Roro Runs": SubResource("Animation_imbm3")
+&"Roro Runs": SubResource("Animation_imbm3"),
+&"Roro Turns Around": SubResource("Animation_8465s")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_536tc"]
@@ -1214,7 +1300,17 @@ tile_set = SubResource("TileSet_t1uei")
 position = Vector2(716, 159)
 
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
-frame_progress = 0.0
+animation = &"idle"
+frame_progress = 0.875357
+
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1929554871]
+visible = false
+
+[node name="InteractionDetector" parent="Player" index="2" unique_id=1248960068]
+visible = false
+
+[node name="CollisionShape2D" parent="Player/InteractionDetector" index="0" unique_id=1826520272]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1877514388]
 zoom = Vector2(1.5, 1.5)
@@ -1250,14 +1346,14 @@ position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_qy6yc")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.6782394
+frame_progress = 0.44478342
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2104677649]
 position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.6189795
+frame_progress = 0.7334675
 flip_h = true
 
 [node name="Xiu" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=96721137]
@@ -1265,14 +1361,12 @@ position = Vector2(572, 545)
 sprite_frames = SubResource("SpriteFrames_k5lje")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.87209284
 
 [node name="Macaron" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2121170661]
 position = Vector2(614, 543)
 sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.41558456
 flip_h = true
 script = ExtResource("12_4jiwq")
 
@@ -1309,7 +1403,7 @@ shape = SubResource("RectangleShape2D_imbm3")
 [node name="BottomWall" type="StaticBody2D" parent="." unique_id=91896130]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=1684885803]
-position = Vector2(521, 714)
+position = Vector2(521, 658)
 shape = SubResource("RectangleShape2D_imbm3")
 
 [editable path="Player"]

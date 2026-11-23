@@ -29,6 +29,7 @@ $> play_cutscene_anim("Roro Runs")
 You dig into the stale pizza with a satisfied smile on your face. 
 ### After anim Roro Runs
 $> wait_for_cutscene_anim("Roro Runs")
+$> play_cutscene_anim("NCPs Move Offscreen")
 As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
 # roro thinking
 [#thinking] Hmm, what does this say? 
@@ -50,6 +51,7 @@ Roro: Hmmm. Problems in the city, what else is new? Just call Mamdani over and h
 [#surprised] You sniff the air and GASP, the smell of a lovely apple pie enters your nostrils. 
 # roro neutral
 [#neutral] You follow your nose, deeper into the alleyway, ready to feast on the dessert. But suddenly a loud BANG is heard, followed by a smaller bang. 
+$> play_cutscene_anim("Roro Turns Around")
 You stop midstep and whip your head over to the noise. Your interest is piqued and you immediately change course. 
 As you continue deeper into the alleyway, you can pick up pieces of a hushed conversation. 
 $> play_cutscene_anim("Pan to Lovers")
@@ -90,10 +92,11 @@ Roro: But today I was proven wrong! I had no idea that THE rat princess Xiu was 
 Xiu and Macaron make one last loving confession to each other before entering a warm embrace. 
 # roro neutral
 $> play_cutscene_anim("Pan to Lovers")
-$> play_cutscene_anim("Lovers Leave")
-[#neutral] You watch as Macaron starts flapping her wings and flies away. Xiu then starts to scurry towards the RatLands (aka the tunnels).
+[#neutral] You watch as Macaron starts flapping her wings and flies away. [$> play_cutscene_anim("Lovers Leave")] Xiu then starts to scurry towards the RatLands (aka the tunnels).
 Roro: I need to learn more about whatever is going on between these two!
 You start to follow Xiu towards the RatLands, determined to learn more about the forbidden romance. Little do you know, you're set to uncover the [b]real[/b] reason behind the Feather-Tail war! 
+$> wait_for_cutscene_anim("Lovers Leave")
+$> play_cutscene_anim("Camera Normal")
 $> debug("Setting seen_opening to true")
 $> GameState.save_data.seen_opening = true
 => END
