@@ -3,13 +3,13 @@ You and Xiu finally reach the entrance of the tunnel system... without Xiu knowi
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
 #neutral xiu expression
 [#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
-Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
+[#hide_name] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
 #surprised roro expression
 [#surprised] Roro: !!! You knew?!
-Xiu: Well… I didn’t want to make you feel bad, but yes I did. 
+[#neutral] Xiu: Well… I didn’t want to make you feel bad, but yes I did. 
 Roro: But, I'm so sneaky!
 Xiu: Of course you are! I just have really good hearing! But if it was anyone else they totally would not have heard you at all my friend! 
-You feel your heart still at the kindness of her words. You've never felt so heard and acknowledged before!
+[#hide_name] Roro: You feel your heart still at the kindness of her words. You've never felt so heard and acknowledged before!
 Roro: This only makes me [i]more[/i] determined to help you!
 Xiu: Oh? How are you going to do that, friend?
 You take her paws into your paws and fall to your back paws.
@@ -24,7 +24,7 @@ Roro: And let me just say, I know this love is pure because I would never share 
 Xiu: … Well… that is very kind of you to say, friend.
 Roro: I support you two!! I've never seen such strong romance blossom, especially in the midst of such a huge war. 
 Roro: I know it will be hard for the two of you, but I'm determined to do anything I can to help!
-Xiu's tail swayed as she looked away, seemingly embarrassed by your loud proclamations.
+[#hide_name] [#nervous] Xiu: Xiu's tail swayed as she looked away, seemingly embarrassed by your loud proclamations.
 #embarrassed xiu expression 
 [#embarrassed] Xiu: That's very sweet, but can we please use our inside voices? 
 Roro: Oh! Yeah of course sorry. I got excited. 
