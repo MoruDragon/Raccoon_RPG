@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bxsj1sncsh6v8"
+path="res://.godot/imported/xiudadscene.dialogue-7e218616eef301dc80ff454ab30fc657.tres"
+
+[deps]
+
+source_file="res://dialogue/xiudadscene.dialogue"
+dest_files=["res://.godot/imported/xiudadscene.dialogue-7e218616eef301dc80ff454ab30fc657.tres"]
+
+[params]
+
+defaults=true

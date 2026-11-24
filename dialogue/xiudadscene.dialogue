@@ -1,0 +1,59 @@
+~ xiudadstart
+# [SCENE: Xiu's Living Room, with a big couch for the dad...]
+#happy xiu expression
+[#happy] Xiu: Father! I am home and I have brought a friend!
+Xiu’s Father: Huh?
+Xiu’s father turns around and finds his daughter and a raccoon in his house! He stares at you, hard.
+Xiu's Father: Huh. Ain't your friend a lil big for a rat?
+Xiu: Father this is Roro, she is a raccoon! She is a master plumber, in fact she is the only master plumber in New York!
+Xiu Father: Well ain't that nice, huh?
+#happy roro expression
+[#happy] Roro: Nice to meet ya, Papa Xiu!
+Xiu's Father: Huh?
+Roro: [i]NICE TO MEET YA, PAPA XIU![/i]
+Xiu winced at your volume, while her dad stared at you, unphased.
+Xiu's Father: Why are ya whisperin'?
+... You think about the irony of Xiu's excellent ears paired with her father's... questionable hearing.
+Xiu: Well, my friend here fixed one of the entrance pipes! 
+Roro: YES SIR, IT SHOULDN'T BOTHER ANYONE EVER AGAIN, SIR!
+Xiu's Father: Huh. 
+… You think that was maybe excitement?
+Xiu's Father: Well, if yer so great, can ya fix this other pipe over 'ere, huh?
+Xiu's Father: Here, I put it on yer map for ya. Shouldn't be hard to miss.
+#embarrassed xiu expression
+[#nervous] Xiu: Father! We shouldn't shamelessly ask that...
+Xiu's Father: Well, sugarcube, we ain't really rich on options here. Ya know yer aunt damn near almost died the other day.
+Xiu: Yes… I know, father…
+Roro: WELL, PAPA XIU, SHE WON’T DIE ON MAH WATCH.
+Xiu’s Father: ... huh. Ya like watches?
+Xiu's Father: You know what, since you fixed up that lil' pipe for us, I've got somethin' for you.
+#happy roro expression
+[#happy] Roro: WOW REALLY.
+Xiu's Father: 'Course! I ain't gon' let ya solve our problems for free, now. We rats got honor, ye hear!
+Roro: HEARD! 
+Papa Xiu hands you a mysterious device.
+#thinking roro expression 
+[#thinking] Roro: Wow, this looks like...
+Roro: What is this.
+Xiu: It's like an RV plane!
+Roro: A what.
+Roro: Can I eat it?
+Xiu's Father: HA! Nah, stripes. This thing here can let ya fly up.
+#surprised roro expression 
+[#surprised] Roro: WOAH.
+Xiu's Father: Ain't nobody here cares 'bout flying up to those damn pigeons no more. Not after what they've done to us.
+Xiu: ...
+Xiu's Father: So you'd be doin' me a grand favor by takin' this off mah hands.
+Jetpack Received! You now have access to the Pigeon's Realm!
+#happy xiu expression
+[#happy] Xiu: Thank you, so much, again, Roro. 
+#neutral roro expression 
+[#neutral] Roro: It’s no problem! That was nothing for me!
+Xiu: Well, I'll show Roro the way out. We've been taking up a lot of her time.
+Xiu's Father: Ah, alright. Stay safe out there, sugarcube.
+Xiu: I will, father.
+# GAMEPLAY xiu leaves and player follows her back into the tunnel. 
+
+# we need a save here 
+
+=> END

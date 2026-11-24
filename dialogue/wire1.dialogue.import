@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bwn822hr854c6"
+path="res://.godot/imported/wire1.dialogue-0a823721a4702239a963585431478373.tres"
+
+[deps]
+
+source_file="res://dialogue/wire1.dialogue"
+dest_files=["res://.godot/imported/wire1.dialogue-0a823721a4702239a963585431478373.tres"]
+
+[params]
+
+defaults=true

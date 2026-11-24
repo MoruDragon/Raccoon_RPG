@@ -1,0 +1,188 @@
+~ wirestart
+#[SCENE: SIDEWALK]
+[#hide_name] Roro: You leave the tunnel system and return to the sidewalk, letter clenched in your paws, enthused to complete the quest the Xiu has given you. 
+Determined, you start assembling the RV plane wings Xiu’s father gave you. 
+... Alas, determination does not compensate for ability.
+# [RV assembly puzzle?]
+
+Roro: Jeez, does this even go here???
+Roro: … what is this supposed to do??
+Roro: Is this edible? 
+
+# puzzle solved
+
+After a few misplaced bites and lots of confusion, the RV plane was finally assembled and you prepare to take flight up to Pigeon Land.
+Roro: Okay, I totally got this. I'm not nervous at all. 
+Roro: Why would I be? It's not like I've been stuck on land my entire life. I'm actually THE flying expert!!!
+# cue player to walk to glowing square / area to fly up??
+
+You take a deep breath and start running down the sidewalk. With a final push of your backpaws, the plane wings start to glow and your paws start lifting off the ground.
+Roro: OH MY GOD, IT WORKED!!!!
+
+#[SCENE: NYC APARTMENTS/SKYSCRAPERS]
+# make roro sprite spin / sway in dizziness
+#neutral pigeon npc expression
+Roro: I think I’m going to vomit up my pizza… 
+Guide: Coo! Who are you coo!
+Your mind works fast to come up with a convincing lie.
+Roro: Oh… I am the plumber! The plumber sent for Macaron’s toiletry troubles.
+Guide: … 
+Roro: …
+You start to sweat a bit as this pigeon stares into your soul 
+Guide: Coo! Well why didn’t you say so? Macaron has been complaining non-stop about that blasted system, especially since they’ve been grounded!
+Roro: Oh, haha yeah! I'll fix it right up, easy peasy.
+Guide: Follow me, coo!
+Roro: Alright!!
+Roro: (Wow, I'm so convincing!)
+
+#[SCENE: WALKING THROUGH THE NPC APARTMENTS/SKYSCRAPERS]
+After walking through the Pigeon Lands, you and the tour guide pigeon come to a stop in front of a beautiful nest decked out with newspapers, coins, twigs, feathers, and flowers.
+...
+Unfortunately, much of the beautiful nest is stuck within a HVAC air duct with a fan spinning overhead, trapping Macaron inside. 
+There is a window in the HVAC air duct that allows you to see Macaron, who is ruffling her feathers in anger. 
+Guide: Welp, here we are. Good luck with those toiletry issues!
+
+# The pigeon then flies away, leaving you with a very angry Macaron. 
+
+#macaron angry expression
+
+[#angry] Macaron: Huff, who are you? 
+[#hide_name] Roro: Before you could answer, the pigeon quickly intercepted.
+Macaron: Here to gawk at my suffering? You vermin!
+Roro: … Uh no? I’m here to help you.
+Macaron: Coo! Well I don’t need your help, I can figure out how to get out on my own. I am MORE than capable of such a simpleton task.
+Macaron ruffles their feathers (collar) angrily and gives out another huff. She also takes out a wine glass and takes a sip.
+[#hide_name] Roro: Huh, you didn’t know pigeons could drink. 
+Roro: Well, I guess I won’t help you.
+Macaron: Good! 
+# mischievous roro expression
+[#mischievous] Roro: And I guess I won’t give you this beautiful, heartfelt, LOVING letter from Xiu.
+[#hide_name] Macaron: Macaron suddenly stops drinking from her glass.
+Roro: Since you DON'T want help, I’ll just take this letter back to her… and tell her the LOVE OF HER LIFE… didn’t want her letter.
+Macaron: NO, I DO, I REALLY WANT HER LETTER. 
+Roro: That’s what I thought! Now stop having a cooing fit and tell me how to get you outta here!!!!
+
+# move macaron sprite closer to window "Macaron comes closer to the glass of her HVAC air prison looking flustered after you bring up her lover"
+
+#macaron flustered expression
+Macaron: Fine. I will admit defeat and tell you all I know.
+The fanciful bird let out a dramatic sigh, then spoke with the ennui of a bird being held hostage for way too long.
+Macaron: I need to fly through that vent to claim freedom, yet that infernal fan is stopping me! Find a way to turn it off so I can soar once again.
+[#hide_name] Roro: You nodded enthusiastically, the gears spinning in your head.
+Roro: Understood! You can count on me, I am a master electrician.
+Macaron: Master electrician? How did you receive that title?
+Roro: The community college, duh.
+#macaron surprised expression 
+Macaron: I did not expect you to hold a degree. You are full of surprises, you vermin.
+Roro: (What the heck is a degree?)
+Roro: … I’m just going to start trying to figure this out. You be quiet!
+#macaron angry expression
+[#angry] Macaron: Coo!!!!!
+
+#WIRE PUZZLE STARTS HERE
+
+#thinking/pondering roro expression
+#start of wire puzzle
+[#thinking] Roro: Okay, I got this! Remember, I am now... a master electrician.
+Roro: A little bit of this… a little bit of that?
+Macaron: Coo! Are you almost done? 
+Roro: IN A MINUTE.
+Macaron: You're making me doubt your skills, vermin! 
+#solves puzzle
+#happy roro expression 
+[#happy] Roro: Oh! OH YES, I’M AMAZING!
+#neutral roro expression 
+[#neutral] Roro: I am definitely adding this to my LockedIn.
+#end of wire puzzle 
+
+Macaron: About time! I am free.
+# Macaron flies out through the hole that the fan was blocking and lands gracefully beside you.
+#happy macaron expression 
+[#happy] Macaron: Thank you, my furry vermin, your help is most appreciated. 
+Roro: Of course! Anything for my ship to sail!
+#loving stare macaron expression
+[#flustered] Macaron: Yes, me and Xiu are a beautiful vessel of love.
+#surprised roro expression 
+[#surprised] Roro: … Wow, okay. Didn’t know you could make that face, but whatever!
+# neutral macaron expression 
+[#neutral] Macaron: Coo! I shall ignore your comment. Now give me Xiu’s letter. I must know what she has said!
+#neutral roro expression 
+[#neutral] Roro: Oh, yeah. Here ya go!
+# prideful macaron expression 
+[#prideful] Macaron: Coo!
+Macaron snatched the letter out of your paws.
+Roro: (She must be excited. Hella rude, though!)
+# flustered macaron expression 
+[#flustered] Macaron: Oh, Xiu...
+The bird's eyes moved quickly across the letter. It almost seems like she's rereading it, with how her eyes seem to restart at different areas of the letter.
+# happy macaron expression 
+[#happy] Macaron: Her way with words moves my heart like no other!
+Macaron: I must write a reply, post haste!
+Macaron: Wait right here vermin, I will be back quickly!
+Macaron hops (flies?) away to collect her tools to write a letter back to Xiu.
+# macaron flies back into the window
+Roro: Wow. I didn’t know pigeons could move so quickly.
+Roro: Now, what do I do?
+#mischievous roro expression 
+[#mischievous] Roro: Let’s look around.
+
+# You come across two pigeons talking about something and you decide to eavesdrop. 
+#neutral pigeon npc 
+Birdie: I still don’t get why we are fighting with the rats.
+#neutral pigeon 2
+Pidge: Yeah, me neither. Do you even know what they did to us?
+#neutral roro expression 
+Birdie: Well no, not really, but it must’ve been really bad for us to hate them so... 
+Pidge: Queen Eclaire and King Cannele sure do hate them, that’s for sure!
+Birdie: But why? What is the reason?
+Pidge: Hmmmmm, I think the rats stole something most dear to us. Therefore we must fight them!
+Birdie: I see… wait, who’s that?
+#surprised roro expression 
+[#hide_name] [#surprised] Roro: Looks like those pigeons have seen you eavesdropping… embarrassing.
+#angry pigeon 2
+Pidge: Coo! Who are you?
+#angry pigeon npc 
+Birdie: Coo indeed! Don’t you know it’s rude to eavesdrop.
+#nervous roro expression 
+[#nervous] Roro: Well then, don’t talk so loud!
+Birdie and Pidge in unison: COO!
+# They fly away
+# thinking roro expression 
+[#hide_name] [#thinking] Roro: Hm. Seems like the pigeons don't even know why they hate rats so much.
+Roro: Weird...
+# happy macaron expression 
+[#happy] Macaron: Coo! I am back my little vermin .
+Roro: Uh my name is Roro, you can stop calling me vermin.
+Macaron: But vermin has such a nice ring to it!
+Macaron: No matter, here is my letter for Xiu. Handle it with care.
+#neutral roro expression 
+[#hide_name] Macaron: Macaron uncharacteristically, gently, hands you a letter.
+Roro: Of course, I'll make sure nothing bad happens to it!
+#happy macaron expression 
+#surprised roro expression 
+[#happy] Macaron: Thank you, little vermin. Your dedication to our love is almost as beautiful as Xiu, my beloved treasure. 
+[#surprised] Roro: Your words are beautiful. It almost brought a tear to my eye! 
+Macaron: Yes, our love is beautiful. And it is also fleeting especially since the war between our people is getting more serious
+#neutral roro expression 
+[#neutral] Roro: Yeah. How did the pigeons and rats even start fighting in the first place?
+#neutral macaron expression 
+[#neutral] Macaron: The rats stole a precious pigeon heirloom and have hidden it away in their tunnel labyrinth. 
+Roro: Oh…
+Macaron: Yes…
+Roro: But, how did they even get up to the pigeon lands in the first place? Isn’t that a really long journey? 
+Macaron: A very long and dangerous journey. Rats do not dare venture outside of their lands. It’s also a well known fact that most rats are afraid of heights. 
+#thinking/pondering roro expression 
+[#thinking] Roro: But, if that's true, then how did the rats even manage to steal your heirlooms?
+Macaron: … Well they… uh they…. They did somehow! And for no reason as well!
+Roro: Hmmmm.
+#prideful macaron expression 
+[#prideful] Macaron: Xiu might know more. She does love to read. Such an elegant hobby!
+Macaron: The rats have managed to save many of their historical records as well about the past between our people. 
+Roro: Good to know! 
+#neutral macaron expression 
+[#neutral] Macaron: Yes, but now is not the time for a history lesson, little vermin!
+Macaron: Make haste and deliver my letter, Xiu must be waiting for my reply, and I hate to make her wait. 
+Roro: YES MA’AM, I AM OFF.
+You scurry away with the letter and a new objective to learn more about why the rats would steal from the pigeons.
+
+=> END

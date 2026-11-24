@@ -1,0 +1,300 @@
+~ tunnelstart
+You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
+Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
+#neutral xiu expression
+[#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
+[#hide_name] [#surprised] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
+#surprised roro expression
+Roro: !!! You knew?!
+[#neutral] Xiu: Well… I didn’t want to make you feel bad, but yes I did. 
+Roro: But, I'm so sneaky!
+Xiu: Of course you are! I just have really good hearing! But if it was anyone else they totally would not have heard you at all my friend! 
+[#hide_name] Roro: You feel your heart still at the kindness of her words. You've never felt so heard and acknowledged before!
+Roro: This only makes me [i]more[/i] determined to help you!
+Xiu: Oh? How are you going to do that, friend?
+You take her paws into your paws and fall to your back paws.
+Roro: I know… about something… I shouldn’t.
+#nervous xiu expression
+[#hide_name] [#nervous] Xiu: Her face warps into slight unease, as she waits for your explanation. You feel your heart clench at her concerned expression.
+Roro: But- LET ME FINISH. 
+Xiu: I am… listening friend. 
+Roro: I saw who you met in secret… with the delicious smelling pie.
+Xiu: !
+Roro: And let me just say, I know this love is pure because I would never share food with anyone!
+Xiu: … Well… that is very kind of you to say, friend.
+Roro: I support you two!! I've never seen such strong romance blossom, especially in the midst of such a huge war. 
+Roro: I know it will be hard for the two of you, but I'm determined to do anything I can to help!
+[#hide_name] [#nervous] Xiu: Xiu's tail swayed as she looked away, seemingly embarrassed by your loud proclamations.
+#embarrassed xiu expression -  changed it to nervous cuz we didnt have an embarrassed sprite
+Xiu: That's very sweet, but can we please use our inside voices? 
+Roro: Oh! Yeah of course sorry. I got excited. 
+[#hide_name] Roro: Your voice lowered to a conspiratorial whisper.
+Roro: Romance just does that to me. 
+[#hide_name] Xiu: Xiu gives out a little laugh and her tail sways a little more in embarrassment. 
+Xiu: It's okay, I understand. I get like that, too… especially when I am with her.
+[#hide_name] Xiu: Her paws hold each other in comfort as she considers your words.
+Xiu: To be honest... I am really scared about the future. I don't know how long this can last... I just know that I don't want what I have with her to ever end.
+Xiu: If you really mean your words... Then, I would really appreciate your help. 
+Roro: OF COURSE!! 
+[#hide_name] Xiu: Xiu's ears twitch as she bears a tight smile. You lower your tone in shame. 
+Roro: O-Of course. I will help in anyway I can, Xiu.
+#neutral xiu expression
+[#neutral] Xiu: Ah, you already know my name? Where have my manners been this whole time?
+Xiu: Friend, what's your name?
+[#hide_name] Roro: Oh my gosh, Xiu's asking you for your name!!! Be cool!!
+Roro: It’s Roro.
+Xiu: Roro! What a lovely name.
+[#hide_name] Roro: SHE THINKS YOUR NAME IS LOVELY!!! 
+Roro: I will never let you down, Xiu.
+Xiu: How very kind of you.
+[#hide_name] Roro: Suddenly, you hear a creak above you. 
+Xiu: Hmm. Those pipes, again...
+Roro: What's been happening with them?
+Xiu: Recently, a lot of my family has been victims of the pipes flooding our home. 
+Xiu: So far, it's just been blocking out a lot of our pathways. But, I'm worried that it might escalate.
+Xiu: If I lost anyone here... I don't think I would be able to forgive myself for pursuing a silly romance at a time like this. 
+Roro: !!! 
+[#hide_name] Roro: Oh no, a threat to your OTP!!! You have to fix this NOW!
+#neutral roro expression
+[#neutral] Roro: Don’t worry, Xiu. I took a plumbing class at the local community college. You can count on me!
+Xiu: Oh, I couldn't possibly ask that of you, Roro!
+[#hide_name] Roro: She used your name!!
+Roro: No, I couldn't possibly leave you (and your relationship) in such dire conditions! I [i]will[/i] fix this! I'm the best plumber in New York City!
+#happy roro expression
+#happy xiu expression
+[#happy] Xiu: Wow, I had no idea! I apologize for underestimating you, Roro. If you really could help, my family and I would be most grateful. 
+#nervous roro expression
+[#happy] Roro: (I'm a liar!! I'm a liar and a fraud!! There's no way I can let her down now!! I don’t even know what community college is!!!!)
+[#hide_name] Roro: The pipes give another groan overhead. You might not know a lot about pipes, but anyone could tell that it's about to burst.
+Xiu: I think we should depart now. This place isn't exactly the safest. 
+Xiu: If you'd like, I could introduce you to my family!
+Roro: Woah, what an honor! Lead the way, Xiu!
+# WITHIN THE GAMEPLAY: Xiu starts to lead the way to another tunnel but oh no! The pipe suddenly bursts! Water starts filling the area and you are unable to follow Xiu who is on the other side. 
+# [SCENE: SUBWAY TUNNELS... but with a bursted pipe and leaking water!]
+Xiu: Oh no! Roro! Are you okay?
+Roro: I’m fine! Don’t worry, I’m a master plumber. I got this!!! 
+#nervous roro expression
+[#nervous] Roro: (I am so cooked).
+#Start of plumbing puzzle
+#thinking roro expression
+[#thinking] Roro: Maybe if I just turn some pipes around, it'll fix itself!
+Roro: I can do this. I'm a nimble raccoon!
+#Solves Puzzle
+#surprised roro expression
+[#surprised] Roro: Oh my god I actually did it??
+Roro: WOW! Maybe I AM the best plumber in New York!
+Roro: I can put this on my LockedIn!
+#End of plumbing puzzle
+#happy xiu expression
+[#happy] Xiu: Roro! I am so glad you’re okay! 
+#happy roro expression
+[#happy] Roro: Of course I am, Xiu. All those years at community college really paid off. Never doubt me!
+Xiu: Let’s continue on. My family will be so excited to meet a master plumber!
+Roro: Yes!
+Roro: (YES!! I'M NO LONGER A LIAR OR A FRAUD. I HAVE CREDIBILITY!!)
+#Gameplay: They go to meet Xiu’s family. 
+
+=> END
+
+#  play this after we meet xiu's dad, should have a save condition or smth so it plays this after we go back out rn its currently playing the tunnelstart ^ 
+~ afterxiudad
+# [SCENE: Subway Tunnels]
+Xiu pulls you aside with something tucked behind her back. 
+#flustered xiu expression
+[#flustered] Xiu: Roro, before you go may I ask you for a favor? 
+#happy roro expression
+[#happy] Roro: Of course! Anything to help you, Xiu!
+#flustered xiu expression
+[#flustered] Xiu: I have… a letter for you to deliver to Macaron. If you could please deliver it to her. 
+#neutral roro expression
+[#neutral] Roro: You can leave that letter in my capable paws Xiu!
+#happy xiu expression
+[#happy] Xiu: Thank you, Roro, safe travels.
+
+=> END
+
+~ tunnel2 
+#[SCENE: SIDEWALK]
+[#hide_name] Roro: You float down from the sky, letter in paw. 
+#thinking roro expression 
+Roro: Hmmm. Learned new things about this whole war… 
+Roro: Don’t know how to feel about that…
+#mischievous roro expression
+Roro: BUT, I do know who I can ask!
+Roro: Oh, Xiu!!
+
+# [SCENE: SUBWAY TUNNELS]
+#Fade to black, appears back in tunnel system 
+#happy roro expression
+Roro: Xiu!! I have something for you!
+You scamper towards Xiu’s fathers house.
+
+# i have no clue what the writers wanted for here im gonna guess a cutscene to xiu's dad area - jamie
+#sad xiu’s dad expression
+Xiu’s Father: WAAAH!!!! WAAAH!!!!
+#nervous roro expression
+Roro: Huh?
+Xiu’s Father: THE HORROR! THE ABSOLUTE HORROR. 
+You reach Xiu’s Dad's house and see him crying outside the door.
+Roro: What happened?? Where's Xiu? 
+#confused xiu’s dad face
+Xiu’s Father: Huh?
+Roro: Xiu! Your daughter? Where is she?
+#neutral xiu’s dad face
+Xiu’s Father: …
+#neutral roro expression
+Roro: …
+#sad xiu’s dad face
+Xiu’s Father: WAAAAAHHHHHH!!!!
+#surprised roro expression
+Roro: WHAT HAPPENED?
+Xiu’s Father: T-the rat king took her.
+#nervous roro expression
+Roro: The rat king? I didn’t even know you guys had a monarchy down here.
+#confused xiu’s dad face
+Xiu's Father: A what now?
+Roro: Oh... it's just something I learned about in community college.
+Xiu’s Father: Something you learned with immunity knowledge?
+#neutral xiu’s dad face
+Xiu's Father: Are ya sick, kid?
+Roro: WE ARE FOCUSING ON THE WRONG THINGS!
+Roro: How do I get to the rat king?
+Xiu’s Father: Oh… those people. If ya find them, tell them to head to couples therapy. They need it. BAD!
+Xiu’s Father: But just head through the tunnel on my left. They should be there
+Roro: Oh, is Xiu over there? I'm looking for her.
+#sad xiu’s dad face
+Xiu’s Father: OH XIU MY BEAUTIFUL DAUGHTER 
+Roro: Uh okay I’m off, to SAVE YOUR DAUGHTER.
+Xiu’s Father: Thank you, stripes! Good luck!!
+
+# [SCENE: SUBWAY TUNNELS]
+You continue down the subway tunnels.
+Roro: Oh god, is that another flood? 
+Roro: Everything here is so faulty!
+Roro: It's a good thing I'm here to save the day!
+
+# 2nd valve puzzle start
+#thinking roro expression
+Roro: You know, I think I'm actually getting better at fixing these pipes!
+Roro: ARGHHH, WHY'S IT SO HARDDDD.
+Roro: Who made this. WHO? I DEMAND ANSWERS!! 
+Roro: Where's Mamdani when you REALLY need him?
+# solved 2nd valve puzzle 
+#mischievous roro expression
+Roro: YES! I’M IN!
+Roro: FEAR NOT, XIU, FOR I WILL SAVE YOU FROM THE RAT KING! 
+# You enter the now solved valve and are met with THE RAT KING. 
+
+#neutral roro expression
+Rat King: Who goes there? 
+Roro: Uh… me?
+Rat King: Okay… me! Why are you here, me?
+Roro: It’s kinda creepy how you all talk in-sync but also a little impressive.
+Rat King: Thank you for noticing me!
+#nervous xiu expression
+Xiu: Roro! What are you doing here?
+Roro: Xiu! Why, of course, I am here to save you!
+Xiu: Oh, Roro, you shouldn’t have, the rat king is far too dangerous! 
+Xiu: Even for a master plumber like you…
+Roro: I don’t need to be a master plumber to free you, Xiu. 
+You pull out Macaron’s love letter.
+#mischievous roro expression
+Roro: I just need to be really good at LOVE!
+#embarrassed xiu expression
+Xiu: Roro… is that!
+Rat King: What is that creature holding? 
+Roro: I AM HOLDING THE GREATEST LOVE STORY OF ALL TIME
+#flustered xiu expression
+Xiu: Roro, wait, that's private! 
+Rat King: No matter! We don’t care what you have to say, you little creature! 
+#surprised roro expression
+Rat King: Xiu has broken rat code… talking to a pigeon.
+#nervous xiu expression
+Xiu: ! 
+Rat King: AND HOLDING FEATHERS AND PAWS WITH SAID PIGEON.
+Xiu: Roro, did you...
+Roro: What?! No, I would never. 
+Xiu: But, how else did they...
+#neutral roro expression
+Roro: I WILL FIX THIS! WITH MY MASTER PLUMBER ELECTRICIAN LOVE STORY EXPERTISE!
+Roro: MY LOCKEDIN PROFILE WILL BE SO STACKED!!
+Rat King: Nobody is as locked-in as us!!
+Roro: NUH UH, MY OTP IS.
+#embarrassed xiu expression
+Xiu: Oh Roro… please stop.
+# Rat King Knows cause the secret boss the cat is a major snitch btw
+# you read parts of macaron's letter to rat king + xiu and depending on the words you pick / highlight, you will convince rat king into releasing xiu
+
+Roro: "To..."
+- "Xiu..."
+	=> wrong_words
+- "the most beautiful rat in all the lands..."
+	=> right_words
+
+~ wrong_words
+Roro: "You are much smarter than you look!"
+Roro: "Your beauty is something I cherish. You clean up very nicely for a rat."
+Roro: "I love you Xiu. Forever and ever!"
+Roro: "Sincerely, your lover, Macaron."
+Rat King: Hah? That's your pathetic excuse of love?
+Xiu: Did Macaron really write that...? I don't want to believe it.
+#nervous roro expression
+Roro: Uh. wait no… WAIT SHE REALLY DIDN’T SAY THAT.
+Rat King: Disgusting, really, that your so called “lover” had this little creature deliver that. 
+Xiu: …
+Roro: Xiu! That’s really not what she wrote I swear. 
+#sad xiu expression
+Xiu: Maybe I should stay here with the Rat King… just for a bit. 
+Rat King: Well… we do have some room.
+#nervous roro expression
+Roro: WAIT NO, STOP IT. 
+#neutral xiu expression
+Xiu: Roro, my friend, I suggest you leave and tell Macaron that… we maybe need a break.
+Roro: NO! Let me go outside and catch my breath. I was just nervous ya know!
+Roro: Couldn’t really uh… read. Ya know she writes it cursive, that's really hard!
+# You leave the valve, but once you come back inside you can try again. If you don't come back, you've locked yourself into the bad end.
+=> END
+
+~ right_words
+Roro: "Words cannot describe how enamored I am with you! Your intellect is something to applaud."
+Roro: "Not only is your knowledge most attractive, your beauty is something I cherish."
+Roro: "From your clothes, to your fur, to your alluring eyes I cannot help but fall more and more in love with you."
+Roro: "I love you Xiu. Forever and ever!"
+Roro: "Sincerely, your lover, Macaron."
+Rat King: W-wow… I never knew love so pure could exist…
+#happy roro expression
+Roro: Yes, so pure. It brings a tear to my eye. 
+#neutral xiu expression
+Xiu curtsied, tilting her head down into a slight bow. 
+Xiu: Your graces, please. I must go see my love. She needs me… I need her…
+Rat King: ...
+Roro: …
+Rat King: I will allow it. 
+Xiu: !
+Roro: !
+Rat King: GO! Before I change my mind…
+Roro: You do not have to tell me twice. LETS GO 
+Xiu: T-thank you, your graces.
+With one last curtsy, because you're very polite, you and Xiu scamper off to the exit of the Rat Kings lair.
+Rat King: … 
+Rat King: That little creature was right… there love is quite nice 
+Rat King: Maybe we should get some couples therapy. 
+Rat King 1: Yeah, I second that. 
+Rat King 2: We really do need it.
+=> END
+
+# uhhhhh put a condition here idk how tho somene help lol !!
+
+# if player comes back to talk to the rat king
+#thinking roro expression
+Roro: Wait, how did you know they were dating?
+Rat King: Well aren't you curious, little creature.
+Rat King: I'm not much inclined to expose my source of information. 
+Rat King: I will say though, gossip sure is some [i]catty[/i] business.
+#neutral roro expression
+Rat King: OH HO HO HO HO HO HO!
+Roro: ... 
+Roro: Alright, dude.
+
+=> END
+

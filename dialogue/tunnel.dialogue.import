@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bsvosn280oweb"
+path="res://.godot/imported/tunnel.dialogue-ec98b5c3ef04b673807a80d312b858bd.tres"
+
+[deps]
+
+source_file="res://dialogue/tunnel.dialogue"
+dest_files=["res://.godot/imported/tunnel.dialogue-ec98b5c3ef04b673807a80d312b858bd.tres"]
+
+[params]
+
+defaults=true
