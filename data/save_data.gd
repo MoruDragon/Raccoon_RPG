@@ -5,6 +5,7 @@ class_name SaveData
 @export var talked_to_rat := false
 @export var ate_the_pizza := false
 @export var seen_opening := false
+@export var dummy_dialogue_tester := 1
 @export var current_map: String
 @export var valve_puzzle_states: Dictionary = {
 	"V1": false,
