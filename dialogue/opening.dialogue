@@ -1,4 +1,6 @@
 ~ start
+if GameState.save_data.dummy_dialogue_tester == 4:
+	=> test
 # roro happy expression
 [#happy] Roro: It's such a beautiful day today! The sun is shining, my toes are curling, and I'm ready to steal some unfortunate soul's lunch!
 Your mouth salivates thinking about your culinary options. 
@@ -98,3 +100,7 @@ $> debug("Setting seen_opening to true")
 $> GameState.save_data.seen_opening = true
 => END
 
+~ test
+Roro: Test dialogue reached
+$> GameState.save_data.seen_opening = true
+=> END
