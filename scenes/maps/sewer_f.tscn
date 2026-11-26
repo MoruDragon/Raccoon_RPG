@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://bs0qs43w3s2q5" path="res://scenes/valve_puzzle/water.tscn" id="8_14n0g"]
 [ext_resource type="Texture2D" uid="uid://deitqxmkud6j5" path="res://assets/pipe_spritesheet.png" id="9_vxxps"]
 [ext_resource type="Texture2D" uid="uid://bxofbbhse4ar6" path="res://assets/emote_spritesheet.png" id="10_ekbp3"]
+[ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="13_jpb5p"]
+[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="14_onaxd"]
+[ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="15_ggk8i"]
+[ext_resource type="Resource" uid="uid://bsvosn280oweb" path="res://dialogue/tunnel.dialogue" id="15_onaxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uf3e1"]
 texture = ExtResource("1_j7jxv")
@@ -457,6 +461,273 @@ size = Vector2(717, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kh30o"]
 size = Vector2(74, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f035"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(0, 320, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n4rw"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(32, 320, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llvgi"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(64, 320, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoy6m"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(96, 320, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ajgt"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(128, 320, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ssx"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(0, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6pji"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(32, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x34it"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(64, 344, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_houre"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(96, 344, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1ybv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f035")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n4rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llvgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoy6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ajgt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ssx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6pji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x34it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_houre")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekmyj"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(0, 394, 32, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bp00"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(32, 394, 32, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e82bx"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(64, 394, 32, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifwqt"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(96, 394, 32, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrlrc"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(0, 421, 32, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1hhk"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(32, 421, 32, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_556x0"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(64, 421, 32, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nmb4"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(96, 421, 32, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx5es"]
+atlas = ExtResource("15_ggk8i")
+region = Rect2(128, 421, 32, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrnme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekmyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bp00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e82bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifwqt")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrlrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1hhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_556x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nmb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx5es")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_onaxd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Xiu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23, 143)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-64, 145)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Xiu/Sprite2D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ggk8i"]
+resource_name = "roro_stalk"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Xiu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(23, 143), Vector2(83, 143), Vector2(227, 151)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-64, 145), Vector2(-64, 145), Vector2(149, 163)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_g1ybv"]
+resource_name = "xiu_turn "
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Xiu/Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g1ybv"]
+_data = {
+&"RESET": SubResource("Animation_onaxd"),
+&"roro_stalk": SubResource("Animation_ggk8i"),
+&"xiu_turn ": SubResource("Animation_g1ybv")
+}
+
 [node name="SewerFlooded" type="Node2D" unique_id=537667296]
 script = ExtResource("1_14n0g")
 background_music = ExtResource("6_xy6br")
@@ -881,23 +1152,23 @@ position = Vector2(191.99998, 0)
 position = Vector2(255.99998, -3.0517578e-05)
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
-position = Vector2(147, 180)
+position = Vector2(-64, 145)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
 position = Vector2(-2, 2)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = 7
 limit_right = 719
 limit_bottom = 385
 position_smoothing_enabled = true
 
-[node name="NPC" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
-position = Vector2(256, 156)
-scale = Vector2(1, 0.871)
+[node name="Xiu" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
+position = Vector2(23, 143)
 
 [node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
-position = Vector2(52, 180)
+position = Vector2(51, 226)
 marker_tag = "sewer"
 target_scene_path = "uid://6j3wu1a1wl4v"
 manhole_sfx = ExtResource("6_65i8f")
@@ -924,3 +1195,33 @@ shape = SubResource("RectangleShape2D_65i8f")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=209137702]
 position = Vector2(682, -45)
 shape = SubResource("RectangleShape2D_kh30o")
+
+[node name="OpeningCutscene" type="Node2D" parent="." unique_id=153782941]
+script = ExtResource("13_jpb5p")
+starting_animations = Array[String](["roro_stalk"])
+
+[node name="OpeningDialogue" type="Node" parent="OpeningCutscene" unique_id=220360555]
+script = ExtResource("14_onaxd")
+opening_dialogue = ExtResource("15_onaxd")
+
+[node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1623056312]
+position = Vector2(631, 184)
+sprite_frames = SubResource("SpriteFrames_g1ybv")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=35204892]
+position = Vector2(663, 184)
+sprite_frames = SubResource("SpriteFrames_xrnme")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=856649868]
+libraries/ = SubResource("AnimationLibrary_g1ybv")
+
+[node name="Camera2D" type="Camera2D" parent="OpeningCutscene" unique_id=1197313805]
+position = Vector2(188, 177)
+zoom = Vector2(3, 3)
+
+[editable path="Xiu"]

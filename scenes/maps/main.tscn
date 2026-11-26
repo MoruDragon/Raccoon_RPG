@@ -1131,6 +1131,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_4h6cl"]
 resource_name = "Roro Jump Back"
 length = 0.2
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1301,7 +1302,7 @@ position = Vector2(716, 159)
 
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
 animation = &"idle"
-frame_progress = 0.875357
+frame_progress = 0.0
 
 [node name="CollisionShape2D" parent="Player" index="1" unique_id=1929554871]
 visible = false
@@ -1354,7 +1355,6 @@ position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.7334675
 flip_h = true
 
 [node name="Xiu" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=96721137]

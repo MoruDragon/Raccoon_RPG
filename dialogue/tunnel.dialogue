@@ -1,7 +1,8 @@
-~ tunnelstart
+~ start
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
-#neutral xiu expression
+#neutral xiu expression 
+$> play_cutscene_anim("xiu_turn ")
 [#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
 [#hide_name] [#surprised] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
 #surprised roro expression
