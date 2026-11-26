@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://fpqibonp5h71"]
 
 [ext_resource type="Texture2D" uid="uid://tnmdwpr85aes" path="res://assets/map_tile_spritesheet.png" id="1_ac3f0"]
-[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/npc.tscn" id="2_c5k5b"]
+[ext_resource type="PackedScene" uid="uid://d1wk285ajamh7" path="res://scenes/npc/pale_rat_npc.tscn" id="2_c5k5b"]
 [ext_resource type="Script" uid="uid://ctnuam32gs7f4" path="res://scenes/pause_demo/rat_demo.gd" id="3_c5k5b"]
 [ext_resource type="Resource" uid="uid://dkt80f48bks54" path="res://scenes/pause_demo/pause_demo.dialogue" id="3_q2q7p"]
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="4_ype0x"]
