@@ -1322,6 +1322,7 @@ position_smoothing_enabled = true
 
 [node name="OpeningCutscene" type="Node2D" parent="." unique_id=26977137]
 script = ExtResource("10_utjhh")
+starting_animations = Array[String](["Fight"])
 
 [node name="OpeningDialogue" type="Node" parent="OpeningCutscene" unique_id=332815490]
 script = ExtResource("9_b02sy")
