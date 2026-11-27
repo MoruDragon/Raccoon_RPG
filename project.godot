@@ -30,7 +30,6 @@ runtime/balloon_path="uid://dhfxaraf4wwsk"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 
