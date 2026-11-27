@@ -86,10 +86,16 @@ texture_region_size = Vector2i(64, 64)
 3:3/0 = 0
 4:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jiwq"]
+texture = ExtResource("3_utjhh")
+texture_region_size = Vector2i(64, 64)
+2:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_00xaj"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ss43a")
+sources/1 = SubResource("TileSetAtlasSource_4jiwq")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvreu"]
 texture = ExtResource("2_qy6yc")
@@ -1356,6 +1362,12 @@ script = ExtResource("10_4jiwq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Pizza/Area2D" unique_id=380354168]
 shape = SubResource("CircleShape2D_2tr8x")
+
+[node name="Newspaper" type="Sprite2D" parent="OpeningCutscene" unique_id=175574777]
+
+[node name="Area2D" type="Area2D" parent="OpeningCutscene/Newspaper" unique_id=418011233]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Newspaper/Area2D" unique_id=487350899]
 
 [node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1240057643]
 position = Vector2(631, 184)
