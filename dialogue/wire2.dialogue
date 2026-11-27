@@ -1,30 +1,30 @@
 ~ wire2
 #[SCENE: SIDEWALK]
 #happy roro expression
-Roro: I am so glad that's over!!
+[#happy] Roro: I am so glad that's over!!
 #happy xiu expression
-Xiu: Oh Roro! Thank you so much for rescuing me! 
-Xiu pulls you into a hug. GASP!!
+[#happy] Xiu: Oh Roro! Thank you so much for rescuing me! 
+[#hide_name] Roro: Xiu pulls you into a hug. GASP!!
 Roro: O-of course Xiu! Anything for my OTP.
 Xiu: Now what do we do, Roro? 
 #thinking roro expression
-Roro: Hmm... I left her when she was up at her nest.
-Xiu: Isn't that up in the sky? How did you get up there?
-Roro: Yes! Your dad's invention was AMAZING! I can FLY NOW!!
-Xiu: Wow, that's fantastic! 
+[#thinking] Roro: Hmm... I left her when she was up at her nest.
+[#surprised] Xiu: Isn't that up in the sky? How did you get up there?
+[#neutral] Roro: Yes! Your dad's invention was AMAZING! I can FLY NOW!!
+[#neutral] Xiu: Wow, that's fantastic! 
 Roro: With this, I can head up to the sky and get Macaron to come down to you! 
 #flustered xiu expression
-Xiu's face lights up with excitement, her tail swaying slightly. 
-It warms your heart to see your OTP remain strong.
+[#hide_name] [#flustered] Xiu: Xiu's face lights up with excitement, her tail swaying slightly. 
+[#hide_name] Roro: It warms your heart to see your OTP remain strong.
 Roro: Also...
 #neutral xiu expression
 Roro: I think something fishy is going on. I wanna get answers.
-Xiu: I see… well if you must go, do be careful, Roro. I sense that something is brewing behind the scenes.
+[#neutral] Xiu: I see… well if you must go, do be careful, Roro. I sense that something is brewing behind the scenes.
 Roro: Oh, I will be super careful! I promise! Wish me luck, Xiu!!
 Xiu: Good luck, Roro!
 
 #[SCENE: NYC APARTMENTS/SKYSCRAPERS]
-Roro: That… [i]huff[/i]… trip… [i]HUFF[/i]… does not get any easier
+Roro: That… [i]huff[/i]… trip… [i]HUFF[/i]… does not get any easier.
 #angry pigeon npc expression
 Guide: Coo! It’s you again.
 #surprised roro expression

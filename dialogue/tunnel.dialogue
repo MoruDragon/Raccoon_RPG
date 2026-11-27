@@ -1,8 +1,15 @@
-~ start
+
+if GameState.save_data.dummy_dialogue_tester == 5:
+	=> afterxiudad
+#else:
+#	=> start
+
+~ tunnelstart
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
 #neutral xiu expression 
-$> play_cutscene_anim("xiu_turn ")
+#$> play_cutscene_anim("xiu_turn ") 
+# this no work still - jamie
 [#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
 [#hide_name] [#surprised] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
 #surprised roro expression
@@ -70,6 +77,7 @@ Roro: No, I couldn't possibly leave you (and your relationship) in such dire con
 Xiu: I think we should depart now. This place isn't exactly the safest. 
 Xiu: If you'd like, I could introduce you to my family!
 Roro: Woah, what an honor! Lead the way, Xiu!
+
 # WITHIN THE GAMEPLAY: Xiu starts to lead the way to another tunnel but oh no! The pipe suddenly bursts! Water starts filling the area and you are unable to follow Xiu who is on the other side. 
 # [SCENE: SUBWAY TUNNELS... but with a bursted pipe and leaking water!]
 Xiu: Oh no! Roro! Are you okay?

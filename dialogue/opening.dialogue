@@ -56,18 +56,18 @@ As you continue deeper into the alleyway, you can pick up pieces of a hushed con
 $> play_cutscene_anim("Pan to Lovers")
 [#neutral] Macaron: Are you sure? I don't want to take food away from you...
 Xiu: Yes, Macaron!! I made this for you!
-Macaron: You made it?!
-Xiu: I poured my heart and soul into this pie, because [i]you're[/i] the apple of [i]my[/i] eye.
-Macaron: Coo!!!
+[#surprised] Macaron: You made it?!
+[#loving] Xiu: I poured my heart and soul into this pie, because [i]you're[/i] the apple of [i]my[/i] eye.
+[#flustered] Macaron: Coo!!!
 Macaron's feathers explode up into her face, prompting her to hide them.
 $> play_cutscene_anim("Pan to Roro")
 # roro surprised
 [#surprised] Roro: Woah… This is beautiful! To share food with your mortal enemy under the cover of alleyway darkness!!!!!
 You continue to watch their conversation and it’s filled with LOVE.
 $> play_cutscene_anim("Pan to Lovers")
-[#neutral] Macaron: W-Well, I made you this!
+[#flustered] Macaron: W-Well, I made you this!
 The pigeon thrusts a meticulously beak(?)-crafted flower crown into Xiu's paws.
-Xiu: Wow, flowers?
+[#happy] Xiu: Wow, flowers?
 # roro neutral
 $> play_cutscene_anim("Pan to Roro") 
 [#surprised] Roro: How the heck did she find flowers in the concrete jungle?
@@ -75,11 +75,11 @@ $> play_cutscene_anim("Pan to Roro")
 $> play_cutscene_anim("Pan to Lovers")
 [#neutral] Macaron: I scoured every sky, from dusk to dawn, just to find flowers to rival your beaut!
 Xiu bashfully starts twirling her tail while looking demure. Her flustered gaze was directed downward, overwhelmed by the display of affection. 
-Xiu: Oooooh! 
+[#flustered] Xiu: Oooooh! 
 $> play_cutscene_anim("Pan to Roro")
 Roro: Jeez, even my parents weren’t this mushy gushy with each other!
 $> play_cutscene_anim("Pan to Lovers")
-Macaron and Xiu continue to profess their love to each other as you watch from your super secret hiding place, the disturbed dumpster. 
+[#hide_name] Roro: Macaron and Xiu continue to profess their love to each other as you watch from your super secret hiding place, the disturbed dumpster. 
 $> play_cutscene_anim("Pan to Roro")
 # roro neutral
 [#neutral] Roro: Wow... I didn't think such aggressive species were capable of love.

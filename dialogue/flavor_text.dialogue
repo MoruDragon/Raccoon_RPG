@@ -23,3 +23,61 @@
 % This building reminds you of home. Calm, comfy, and warm. 
 % You look through the window and see a rat! The rat waves at you but immediately runs away.
 => END
+
+~ skyscraper_interaction
+# ill separate these when we get the props set up - jamie
+% You look over the side of the building. Everyone looks so small from up here!
+% The breeze feels even better from above. 
+% Woah be careful! Don’t want you to fall. 
+% You wonder how little Pigeons get the courage to fly from this height. 
+% You reach your paw out and... WOAH, HEY, BACK UP; YOU ALMOST FELL!!!
+% What’s this little contraption? You slap it with your paw… nothing happens!
+% Aw look, it’s a bunch of junk! Pigeon junk, to be precise!
+% …Hello? ... The little box does nothing… 
+% You use the little fan to cool yourself off. Wow, so nice!
+% You poke the contraption and it gives a small wheeze? 
+=> END
+
+~ tunnel_interaction
+# ill separate these when we get the props set up - jamie
+% This yellow looks really weird. Someone should repaint it!
+% A block of cheese! Yum!
+% This trash bag is leaking something, you should walk away. 
+% You notice that there is a small hole in the couch. Huh, that sucks. 
+% The rat carpet is actually really cute! Even though it’s covered in dirt.
+% The water is rushing too fast for you to pass!
+% EW! The tunnel water splashed on you back up!
+% What is this little brown splotch on the ground? The answer remains unsolved. 
+% You inpsect the pipes and they give a little creak!
+% What type of tool is this? You do not know, you are a raccoon after all!
+=> END
+
+~ pigeon_interaction
+% Pigeon: Coo! Coo! Coo! Good things must be said three times! 
+% Pigeon: Why, hello little one.
+% Pigeon: Who are you? You are no pigeon!
+% Pigeon: LaLaLaLa… Hey! Don’t interrupt me. I am practicing… LaLaLaLa…
+% Pigeon: Macaron is so pretty. I wonder if she’s single and ready to mingle?
+% Pigeon: This morning I accidentally landed on a rat… Okay, it wasn’t an accident; it was really funny!
+% Pigeon: I wonder what species of bird those big iron ones are. Ya know, the ones that fly overhead all hours of the day!
+% Pigeon: Are you a rat! EW, GET AWAY FROM ME. COO!
+% Pigeon: I hope we are able to defeat the rats. They have done horrible things!
+% Pigeon: You got any birdseed? I’m starving!
+=> END
+
+~ rat_interaction
+% Rat: What are you looking at!
+% Rat: Wow, what lovely stripes you have!
+% Rat: I wish I had a big slab of gouda right now…
+% Rat: Those annoying pigeons keep me up all night with their cooing! COO!
+% Rat: I miss the sunlight…
+% Rat: I could really go for a pretzel right now.
+% Rat: Are you a rat?!? Wow, I didn’t know we came in that size!
+% Rat: Meow… meow… Huh? Oh, I’m practicing scary sounds for the scary sounds competition!
+% Rat: A pigeon landed on me this morning. I hate them so much.
+% Rat: I love your mask! Where did you get it? I want it for Ratoween this year!
+=> END
+
+
+
+

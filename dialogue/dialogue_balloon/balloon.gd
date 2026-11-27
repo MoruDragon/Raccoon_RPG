@@ -109,6 +109,7 @@ const BALLOON_CONFIG: Dictionary[String, DialogueBalloonConfig] = {
 	"rat king": preload("uid://ctoywlikcndrr"),
 	"random rat": preload("uid://bg8oqjc8u0bdi"),
 	"paltry pigeon": preload("uid://c5age4tbqemmn"),
+	"xiu's dad": preload("uid://bg8oqjc8u0bdi"),
 	"": preload("uid://btgdtpx704y76"),
 }
 
