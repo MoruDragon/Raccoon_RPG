@@ -4,7 +4,10 @@ class_name SaveData
 # Put other save states here
 @export var talked_to_rat := false
 @export var ate_the_pizza := false
+
 @export var seen_opening := false
+@export var seen_tunnel := false
+
 @export var dummy_dialogue_tester := 5
 @export var current_map: String
 @export var valve_puzzle_states: Dictionary = {

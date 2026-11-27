@@ -31,7 +31,7 @@ $> play_cutscene_anim("Roro Runs")
 You dig into the stale pizza with a satisfied smile on your face. 
 ### After anim Roro Runs
 $> wait_for_cutscene_anim("Roro Runs")
-$> play_cutscene_anim("NCPs Move Offscreen")
+$> play_cutscene_anim("NPCs Move Offscreen")
 As you continue to eat your meal, a heap of dirty newspapers get launched into YOUR dumpster! You look over, appalled, and see an offensive article ripped to shreds. 
 # roro thinking
 [#thinking] Hmm, what does this say? 

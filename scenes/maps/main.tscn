@@ -7,17 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://d1mws0wy2xixh" path="res://assets/props_spritesheet.png" id="3_utjhh"]
 [ext_resource type="PackedScene" uid="uid://cndxq4rqsbjlh" path="res://scenes/spawn_marker/spawn_marker.tscn" id="7_536tc"]
 [ext_resource type="PackedScene" uid="uid://c4j313gclo7q5" path="res://scenes/player/player.tscn" id="8_imbm3"]
-[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="9_b02sy"]
 [ext_resource type="Script" uid="uid://sxljoefs0fn6" path="res://scenes/npc/item.gd" id="9_utjhh"]
 [ext_resource type="Resource" uid="uid://mncbt0t28n6b" path="res://dialogue/pizzaInteract.dialogue" id="10_4h6cl"]
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="10_4jiwq"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="10_utjhh"]
-[ext_resource type="Script" uid="uid://c7vmsql27mewa" path="res://scenes/maps/feathered_ruffian.gd" id="12_4jiwq"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
 [ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
-[ext_resource type="Script" uid="uid://buwmxapjhairm" path="res://scenes/maps/trash_can_interaction.gd" id="16_536tc"]
-[ext_resource type="Resource" uid="uid://b0hjagsnchmao" path="res://dialogue/flavor_text.dialogue" id="17_imbm3"]
-[ext_resource type="Script" uid="uid://kcy6t8bpph2w" path="res://scenes/maps/building_interaction.gd" id="18_b02sy"]
+[ext_resource type="Script" uid="uid://btupklh2ernvj" path="res://scenes/npc/flavor_text.gd" id="16_536tc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ss43a"]
 texture = ExtResource("1_00xaj")
@@ -1342,12 +1338,9 @@ limit_right = 1026
 limit_bottom = 639
 position_smoothing_enabled = true
 
-[node name="OpeningCutscene" type="Node2D" parent="." unique_id=26977137]
+[node name="OpeningCutscene" type="Node" parent="." unique_id=551671979]
 script = ExtResource("10_utjhh")
 starting_animations = Array[String](["Fight"])
-
-[node name="OpeningDialogue" type="Node" parent="OpeningCutscene" unique_id=332815490]
-script = ExtResource("9_b02sy")
 
 [node name="Pizza" type="Sprite2D" parent="OpeningCutscene" unique_id=1328169716]
 texture_filter = 1
@@ -1390,7 +1383,6 @@ sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
 flip_h = true
-script = ExtResource("12_4jiwq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=1248671818]
 libraries/ = SubResource("AnimationLibrary_utjhh")
@@ -1431,7 +1423,6 @@ shape = SubResource("RectangleShape2D_imbm3")
 [node name="TrashCanInteraction" type="Area2D" parent="." unique_id=1646778458]
 position = Vector2(120, 143)
 script = ExtResource("16_536tc")
-flavor_dialogue = ExtResource("17_imbm3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCanInteraction" unique_id=1917982166]
 position = Vector2(0, -3)
@@ -1450,8 +1441,8 @@ position = Vector2(177, 412)
 shape = SubResource("RectangleShape2D_rxntd")
 
 [node name="BuildingInteraction" type="Area2D" parent="." unique_id=1127978420]
-script = ExtResource("18_b02sy")
-flavor_dialogue = ExtResource("17_imbm3")
+script = ExtResource("16_536tc")
+dialogue_cue = "building_interaction"
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="BuildingInteraction" unique_id=494766158]
 position = Vector2(293, 136)

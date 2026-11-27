@@ -1,6 +1,6 @@
 
 if GameState.save_data.dummy_dialogue_tester == 5:
-	=> afterxiudad
+	=> after_xiu_dad
 #else:
 #	=> start
 
@@ -8,8 +8,7 @@ if GameState.save_data.dummy_dialogue_tester == 5:
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
 #neutral xiu expression 
-#$> play_cutscene_anim("xiu_turn ") 
-# this no work still - jamie
+$> play_cutscene_anim("xiu_turn")
 [#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
 [#hide_name] [#surprised] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
 #surprised roro expression
@@ -77,7 +76,11 @@ Roro: No, I couldn't possibly leave you (and your relationship) in such dire con
 Xiu: I think we should depart now. This place isn't exactly the safest. 
 Xiu: If you'd like, I could introduce you to my family!
 Roro: Woah, what an honor! Lead the way, Xiu!
+$> debug("Setting seen_tunnel1 to true")
+$> GameState.save_data.seen_tunnel1 = true
+=> END
 
+~ pipe_trouble
 # WITHIN THE GAMEPLAY: Xiu starts to lead the way to another tunnel but oh no! The pipe suddenly bursts! Water starts filling the area and you are unable to follow Xiu who is on the other side. 
 # [SCENE: SUBWAY TUNNELS... but with a bursted pipe and leaking water!]
 Xiu: Oh no! Roro! Are you okay?
@@ -102,11 +105,10 @@ Xiu: Let’s continue on. My family will be so excited to meet a master plumber!
 Roro: Yes!
 Roro: (YES!! I'M NO LONGER A LIAR OR A FRAUD. I HAVE CREDIBILITY!!)
 #Gameplay: They go to meet Xiu’s family. 
-
 => END
 
 #  play this after we meet xiu's dad, should have a save condition or smth so it plays this after we go back out rn its currently playing the tunnelstart ^ 
-~ afterxiudad
+~ after_xiu_dad
 # [SCENE: Subway Tunnels]
 Xiu pulls you aside with something tucked behind her back. 
 #flustered xiu expression
@@ -306,4 +308,3 @@ Roro: ...
 Roro: Alright, dude.
 
 => END
-

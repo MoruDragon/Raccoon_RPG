@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://deitqxmkud6j5" path="res://assets/pipe_spritesheet.png" id="9_vxxps"]
 [ext_resource type="Texture2D" uid="uid://bxofbbhse4ar6" path="res://assets/emote_spritesheet.png" id="10_ekbp3"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="13_jpb5p"]
-[ext_resource type="Script" uid="uid://c5mpcl0veam1r" path="res://scenes/maps/opening_dialogue.gd" id="14_onaxd"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="15_ggk8i"]
 [ext_resource type="Resource" uid="uid://bsvosn280oweb" path="res://dialogue/tunnel.dialogue" id="15_onaxd"]
 
@@ -663,6 +662,60 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_jpb5p"]
+resource_name = "return_to_camera"
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player/Camera2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player/Camera2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ggk8i"]
 resource_name = "roro_stalk"
@@ -724,8 +777,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g1ybv"]
 _data = {
 &"RESET": SubResource("Animation_onaxd"),
+&"return_to_camera": SubResource("Animation_jpb5p"),
 &"roro_stalk": SubResource("Animation_ggk8i"),
-&"xiu_turn ": SubResource("Animation_g1ybv")
+&"xiu_turn": SubResource("Animation_g1ybv")
 }
 
 [node name="SewerFlooded" type="Node2D" unique_id=537667296]
@@ -1156,12 +1210,11 @@ position = Vector2(-64, 145)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
-position = Vector2(-2, 2)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(3, 3)
 limit_left = 0
-limit_top = 7
-limit_right = 719
-limit_bottom = 385
+limit_top = -48
+limit_right = 723
+limit_bottom = 384
 position_smoothing_enabled = true
 
 [node name="Xiu" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
@@ -1196,15 +1249,15 @@ shape = SubResource("RectangleShape2D_65i8f")
 position = Vector2(682, -45)
 shape = SubResource("RectangleShape2D_kh30o")
 
-[node name="OpeningCutscene" type="Node2D" parent="." unique_id=153782941]
+[node name="OpeningCutscene" type="Node" parent="." unique_id=2064995531]
 script = ExtResource("13_jpb5p")
 starting_animations = Array[String](["roro_stalk"])
-
-[node name="OpeningDialogue" type="Node" parent="OpeningCutscene" unique_id=220360555]
-script = ExtResource("14_onaxd")
-opening_dialogue = ExtResource("15_onaxd")
+seen_variable = &"seen_tunnel"
+dialogue_resource = ExtResource("15_onaxd")
+dialogue_cue = "tunnelstart"
 
 [node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1623056312]
+visible = false
 position = Vector2(631, 184)
 sprite_frames = SubResource("SpriteFrames_g1ybv")
 animation = &"idle"

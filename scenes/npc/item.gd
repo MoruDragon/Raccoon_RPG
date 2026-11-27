@@ -5,7 +5,7 @@ extends Sprite2D
 @export var dialogue_resource: DialogueResource
 
 # The starting title marker inside the .dialogue file (matches the '~ start' label).
-@export var dialogue_start_title: String = "start"
+@export var dialogue_cue: String = "start"
 
 @export var ItemID: String = "ate_the_pizza"
 
@@ -15,7 +15,7 @@ func interact() -> void:
 	if dialogue_resource:
 		# Spawns Dialogue Manager built-in GUI balloon to display lines and options.
 		# This handles text layout, typing effects, and choice selections automatically.
-		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start_title)
+		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_cue)
 		
 func _process(_delta: float) -> void:
 	if ItemID != "" and GameState.save_data.get(ItemID) == true:
