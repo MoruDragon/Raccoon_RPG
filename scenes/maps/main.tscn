@@ -1354,6 +1354,7 @@ position = Vector2(648, 184)
 texture = SubResource("AtlasTexture_k5lje")
 script = ExtResource("9_utjhh")
 dialogue_resource = ExtResource("10_4h6cl")
+item_id = "ate_the_pizza"
 
 [node name="Area2D" type="Area2D" parent="OpeningCutscene/Pizza" unique_id=676388685]
 collision_layer = 4

@@ -8,7 +8,7 @@ extends Sprite2D
 # The starting title marker inside the .dialogue file (matches the '~ start' label).
 @export var dialogue_cue: String = "start"
 
-@export var item_id: String = "ate_the_pizza"
+@export var item_id: String = ""
 
 # Called polymorphically by player.gd when the player is in range and presses the interact key.
 func interact() -> void:
