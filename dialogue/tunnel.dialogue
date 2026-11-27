@@ -52,6 +52,7 @@ Xiu: Friend, what's your name?
 [#hide_name] Roro: Oh my gosh, Xiu's asking you for your name!!! Be cool!!
 Roro: It’s Roro.
 Xiu: Roro! What a lovely name.
+$> play_cutscene_anim("roro_jump")
 [#hide_name] Roro: SHE THINKS YOUR NAME IS LOVELY!!! 
 Roro: I will never let you down, Xiu.
 Xiu: How very kind of you.

@@ -12,6 +12,9 @@ extends CharacterBody2D
 # Reference to the child Area2D node that scans for interactable targets.
 @onready var interaction_detector: Area2D = $InteractionDetector
 
+#exclamation for roro
+@onready var exclamation: AnimatedSprite2D = $exclamation
+
 # State flag to freeze player movement, inputs, and state changes during dialogue.
 var is_talking: bool = false
 
@@ -112,3 +115,10 @@ func _apply_entry_position() -> void:
 			
 	if not found:
 		push_warning("[Player] Warning: No marker found matching tag '", SceneManager.target_marker_tag, "'")
+
+func play_exclamation() -> void:
+	exclamation.visible = true
+	exclamation.play()
+	await exclamation.animation_finished
+	exclamation.visible = false
+	 

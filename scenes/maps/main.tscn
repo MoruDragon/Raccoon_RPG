@@ -165,6 +165,10 @@ region = Rect2(256.54337, 0.5889864, 16.056458, 15.484363)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
 radius = 7.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8up1"]
+atlas = ExtResource("3_utjhh")
+region = Rect2(132, 52, 23, 22)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3f035"]
 atlas = ExtResource("12_qy6yc")
 region = Rect2(0, 320, 32, 16)
@@ -474,6 +478,10 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3cid"]
+atlas = ExtResource("3_utjhh")
+region = Rect2(367, 1, 32, 31)
+
 [sub_resource type="Animation" id="Animation_7goih"]
 resource_name = "Camera Normal"
 tracks/0/type = "value"
@@ -646,6 +654,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_3f035"]
 resource_name = "Lovers Leave"
 length = 7.5
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1364,11 +1373,20 @@ script = ExtResource("10_4jiwq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Pizza/Area2D" unique_id=380354168]
 shape = SubResource("CircleShape2D_2tr8x")
 
-[node name="Newspaper" type="Sprite2D" parent="OpeningCutscene" unique_id=175574777]
+[node name="Newspaper" type="Sprite2D" parent="OpeningCutscene" unique_id=1199867713]
+texture_filter = 1
+position = Vector2(300, 613)
+texture = SubResource("AtlasTexture_w8up1")
+script = ExtResource("9_utjhh")
+dialogue_resource = ExtResource("10_4h6cl")
 
-[node name="Area2D" type="Area2D" parent="OpeningCutscene/Newspaper" unique_id=418011233]
+[node name="Area2D" type="Area2D" parent="OpeningCutscene/Newspaper" unique_id=489360328]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("10_4jiwq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Newspaper/Area2D" unique_id=487350899]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Newspaper/Area2D" unique_id=1601904078]
+shape = SubResource("CircleShape2D_2tr8x")
 
 [node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1240057643]
 position = Vector2(631, 184)
@@ -1391,11 +1409,28 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="Macaron" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=2121170661]
+z_index = 1
 position = Vector2(614, 543)
 sprite_frames = SubResource("SpriteFrames_7vnps")
 animation = &"idle"
 autoplay = "idle"
 flip_h = true
+
+[node name="ApplePie" type="Sprite2D" parent="OpeningCutscene/Macaron" unique_id=115409740]
+z_index = -1
+texture_filter = 1
+position = Vector2(-8, 15)
+texture = SubResource("AtlasTexture_y3cid")
+script = ExtResource("9_utjhh")
+dialogue_resource = ExtResource("10_4h6cl")
+
+[node name="Area2D" type="Area2D" parent="OpeningCutscene/Macaron/ApplePie" unique_id=1389788063]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("10_4jiwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpeningCutscene/Macaron/ApplePie/Area2D" unique_id=1012478765]
+shape = SubResource("CircleShape2D_2tr8x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=1248671818]
 libraries/ = SubResource("AnimationLibrary_utjhh")

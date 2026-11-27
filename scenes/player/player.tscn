@@ -1,7 +1,65 @@
 [gd_scene format=3 uid="uid://c4j313gclo7q5"]
 
 [ext_resource type="Script" uid="uid://bmnf0mjycq34v" path="res://scenes/player/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bxofbbhse4ar6" path="res://assets/emote_spritesheet.png" id="2_gmlin"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="2_i3pqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxxps"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekbp3"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7yxi"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpb5p"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onaxd"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggk8i"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(80, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ybv"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(96, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvxji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxxps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekbp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7yxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpb5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onaxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggk8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1ybv")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("2_i3pqv")
@@ -95,6 +153,13 @@ radius = 45.0
 [node name="Player" type="CharacterBody2D" unique_id=2114017779 groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_onrkg")
+
+[node name="exclamation" type="AnimatedSprite2D" parent="." unique_id=1276759999]
+visible = false
+texture_repeat = 2
+position = Vector2(24, -14)
+sprite_frames = SubResource("SpriteFrames_lvxji")
+frame_progress = 0.4878058
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=398866832]
 texture_filter = 1

@@ -675,6 +675,37 @@ tracks/4/keys = {
 "values": [&"idle"]
 }
 
+[sub_resource type="Animation" id="Animation_jpb5p"]
+resource_name = "roro_jump"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(149, 163), Vector2(148, 157), Vector2(149, 163)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_exclamation"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_ggk8i"]
 resource_name = "roro_stalk"
 length = 3.0
@@ -761,6 +792,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g1ybv"]
 _data = {
 &"RESET": SubResource("Animation_onaxd"),
+&"roro_jump": SubResource("Animation_jpb5p"),
 &"roro_stalk": SubResource("Animation_ggk8i"),
 &"xiu_turn": SubResource("Animation_g1ybv")
 }
@@ -1192,7 +1224,7 @@ position = Vector2(255.99998, -3.0517578e-05)
 position = Vector2(-64, 145)
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
+[node name="AnimatedSprite2D" parent="Player" index="1" unique_id=398866832]
 frame_progress = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
@@ -1255,6 +1287,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="FeatheredRuffian" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=35204892]
+visible = false
 position = Vector2(663, 184)
 sprite_frames = SubResource("SpriteFrames_xrnme")
 animation = &"idle"
