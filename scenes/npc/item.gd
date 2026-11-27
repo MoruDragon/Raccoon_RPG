@@ -1,3 +1,4 @@
+@tool
 extends Sprite2D
 
 # The compiled .dialogue file resource to load for this NPC.
@@ -7,7 +8,7 @@ extends Sprite2D
 # The starting title marker inside the .dialogue file (matches the '~ start' label).
 @export var dialogue_cue: String = "start"
 
-@export var ItemID: String = "ate_the_pizza"
+@export var item_id: String = "ate_the_pizza"
 
 # Called polymorphically by player.gd when the player is in range and presses the interact key.
 func interact() -> void:
@@ -18,5 +19,12 @@ func interact() -> void:
 		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_cue)
 		
 func _process(_delta: float) -> void:
-	if ItemID != "" and GameState.save_data.get(ItemID) == true:
+	if Engine.is_editor_hint():
+		return
+	if GameState.save_data.get(item_id):
 		visible = false
+
+func _validate_property(property: Dictionary) -> void:
+	if property.name == &"item_id":
+		property.hint = PROPERTY_HINT_ENUM
+		property.hint_string = ",".join(Util.get_save_data_variables())

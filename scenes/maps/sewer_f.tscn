@@ -641,80 +641,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Player/Camera2D:enabled")
+tracks/2/path = NodePath("../Xiu/AnimatedSprite2D:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Xiu/Sprite2D:flip_h")
+tracks/3/path = NodePath("../Player/AnimatedSprite2D:animation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [&"walk"]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Camera2D:enabled")
+tracks/4/path = NodePath("../Xiu/AnimatedSprite2D:animation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_jpb5p"]
-resource_name = "return_to_camera"
-step = 0.1
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Player/Camera2D")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"make_current"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera2D:enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Player/Camera2D:enabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"values": [&"idle"]
 }
 
 [sub_resource type="Animation" id="Animation_ggk8i"]
@@ -728,34 +686,60 @@ tracks/0/path = NodePath("../Xiu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(23, 143), Vector2(83, 143), Vector2(227, 151)]
+"values": [Vector2(23, 143), Vector2(227, 151)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Player:position")
+tracks/1/path = NodePath("../Xiu/AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.6, 3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-64, 145), Vector2(-64, 145), Vector2(149, 163)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Player/Camera2D:enabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player/AnimatedSprite2D:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CutsceneCamera2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_g1ybv"]
@@ -764,7 +748,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Xiu/Sprite2D:flip_h")
+tracks/0/path = NodePath("../Xiu/AnimatedSprite2D:flip_h")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -777,7 +761,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g1ybv"]
 _data = {
 &"RESET": SubResource("Animation_onaxd"),
-&"return_to_camera": SubResource("Animation_jpb5p"),
 &"roro_stalk": SubResource("Animation_ggk8i"),
 &"xiu_turn": SubResource("Animation_g1ybv")
 }
@@ -1209,6 +1192,9 @@ position = Vector2(255.99998, -3.0517578e-05)
 position = Vector2(-64, 145)
 metadata/_edit_group_ = true
 
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
+frame_progress = 0.0
+
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
 zoom = Vector2(3, 3)
 limit_left = 0
@@ -1219,6 +1205,9 @@ position_smoothing_enabled = true
 
 [node name="Xiu" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
 position = Vector2(23, 143)
+
+[node name="AnimatedSprite2D" parent="Xiu" index="0" unique_id=224542822]
+frame_progress = 0.0
 
 [node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]
 position = Vector2(51, 226)
@@ -1249,12 +1238,14 @@ shape = SubResource("RectangleShape2D_65i8f")
 position = Vector2(682, -45)
 shape = SubResource("RectangleShape2D_kh30o")
 
-[node name="OpeningCutscene" type="Node" parent="." unique_id=2064995531]
+[node name="OpeningCutscene" type="Node" parent="." unique_id=2064995531 node_paths=PackedStringArray("cutscene_camera", "player_camera")]
 script = ExtResource("13_jpb5p")
 starting_animations = Array[String](["roro_stalk"])
 seen_variable = &"seen_tunnel"
 dialogue_resource = ExtResource("15_onaxd")
 dialogue_cue = "tunnelstart"
+cutscene_camera = NodePath("CutsceneCamera2D")
+player_camera = NodePath("../Player/Camera2D")
 
 [node name="FurryRat" type="AnimatedSprite2D" parent="OpeningCutscene" unique_id=1623056312]
 visible = false
@@ -1273,8 +1264,9 @@ flip_h = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OpeningCutscene" unique_id=856649868]
 libraries/ = SubResource("AnimationLibrary_g1ybv")
 
-[node name="Camera2D" type="Camera2D" parent="OpeningCutscene" unique_id=1197313805]
-position = Vector2(188, 177)
-zoom = Vector2(3, 3)
+[node name="CutsceneCamera2D" type="Camera2D" parent="OpeningCutscene" unique_id=1197313805]
+position = Vector2(151, 148)
+zoom = Vector2(4, 4)
 
+[editable path="Player"]
 [editable path="Xiu"]

@@ -8,6 +8,7 @@ if GameState.save_data.dummy_dialogue_tester == 5:
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
 #neutral xiu expression 
+$> wait_for_cutscene_anim("roro_stalk")
 $> play_cutscene_anim("xiu_turn")
 [#neutral] Xiu: Hello friend! Why have you been following me? Is something the matter?
 [#hide_name] [#surprised] Roro: Your flabbers have been gastered as you stare in shock at the Rat Princess' high intuition.
@@ -76,8 +77,9 @@ Roro: No, I couldn't possibly leave you (and your relationship) in such dire con
 Xiu: I think we should depart now. This place isn't exactly the safest. 
 Xiu: If you'd like, I could introduce you to my family!
 Roro: Woah, what an honor! Lead the way, Xiu!
-$> debug("Setting seen_tunnel1 to true")
-$> GameState.save_data.seen_tunnel1 = true
+$> debug("Setting seen_tunnel to true")
+$> GameState.save_data.seen_tunnel = true
+$> return_to_player_camera()
 => END
 
 ~ pipe_trouble

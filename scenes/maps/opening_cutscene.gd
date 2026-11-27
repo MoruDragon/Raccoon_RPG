@@ -9,12 +9,15 @@ extends Node
 
 ## The dialogue resource that this scene uses.
 @export var dialogue_resource: DialogueResource = preload("uid://jwje6kjck28p"):
-	set(val):
-		dialogue_resource = val
+	set(value):
+		dialogue_resource = value
 		notify_property_list_changed()
 
 ## The cue that the cutscene dialogue starts from.
 @export var dialogue_cue: String = "start"
+
+@export var cutscene_camera: Camera2D
+@export var player_camera: Camera2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -50,6 +53,17 @@ func wait_for_cutscene_anim(animation_name: String) -> void:
 		await animation_player.animation_finished
 
 
+func return_to_player_camera() -> void:
+	var original_zoom := player_camera.zoom
+	player_camera.global_position = cutscene_camera.global_position
+	player_camera.zoom = cutscene_camera.zoom
+	player_camera.make_current()
+	var tween = create_tween().set_parallel()
+	tween.tween_property(player_camera, "position", Vector2.ZERO, 0.5)
+	tween.tween_property(player_camera, "zoom", original_zoom, 0.5)
+	print(player_camera.is_current())
+
+
 #region Property Validation
 ## Gives the starting_animations and seen_variable property
 ## dropdowns of valid options.
@@ -64,23 +78,13 @@ func _validate_property(property: Dictionary) -> void:
 		]
 	if property.name == &"seen_variable":
 		property.hint = PROPERTY_HINT_ENUM
-		property.hint_string = ",".join(_get_save_data_variables())
+		property.hint_string = ",".join(Util.get_save_data_variables())
 
 
 func _assert_variables_are_valid() -> void:
-	assert(seen_variable in _get_save_data_variables(),
+	assert(seen_variable in Util.get_save_data_variables(),
 		"'%s' is not a save data variable." % seen_variable)
 	for anim in starting_animations:
 		assert(anim in animation_player.get_animation_list(),
 		"'%s' is not an animation in the current animation player." % anim)
-
-
-func _get_save_data_variables() -> PackedStringArray:
-	var valid_vars: PackedStringArray = []
-	
-	for prop: Dictionary in (SaveData as Script).get_script_property_list():
-		if prop.usage & PROPERTY_USAGE_SCRIPT_VARIABLE:
-			valid_vars.append(prop.name)
-			
-	return valid_vars
 #endregion
