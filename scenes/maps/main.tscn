@@ -15,6 +15,9 @@
 [ext_resource type="Script" uid="uid://c7vmsql27mewa" path="res://scenes/maps/feathered_ruffian.gd" id="12_4jiwq"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
 [ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
+[ext_resource type="Script" uid="uid://buwmxapjhairm" path="res://scenes/maps/trash_can_interaction.gd" id="16_536tc"]
+[ext_resource type="Resource" uid="uid://b0hjagsnchmao" path="res://dialogue/flavor_text.dialogue" id="17_imbm3"]
+[ext_resource type="Script" uid="uid://kcy6t8bpph2w" path="res://scenes/maps/building_interaction.gd" id="18_b02sy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ss43a"]
 texture = ExtResource("1_00xaj")
@@ -1284,6 +1287,21 @@ size = Vector2(10.5, 736)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_imbm3"]
 size = Vector2(1048, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gjug"]
+size = Vector2(17, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oc6l"]
+size = Vector2(16, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ie18w"]
+size = Vector2(45, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxntd"]
+size = Vector2(46, 13.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjjsu"]
+size = Vector2(124.375, 20)
+
 [node name="Main" type="Node2D" unique_id=575015310]
 script = ExtResource("1_4h6cl")
 background_music = ExtResource("2_536tc")
@@ -1299,6 +1317,7 @@ tile_set = SubResource("TileSet_t1uei")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
 position = Vector2(716, 159)
+collision_layer = 3
 
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
 animation = &"idle"
@@ -1309,6 +1328,8 @@ visible = false
 
 [node name="InteractionDetector" parent="Player" index="2" unique_id=1248960068]
 visible = false
+collision_layer = 5
+collision_mask = 5
 
 [node name="CollisionShape2D" parent="Player/InteractionDetector" index="0" unique_id=1826520272]
 visible = false
@@ -1406,5 +1427,46 @@ shape = SubResource("RectangleShape2D_imbm3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=1684885803]
 position = Vector2(521, 658)
 shape = SubResource("RectangleShape2D_imbm3")
+
+[node name="TrashCanInteraction" type="Area2D" parent="." unique_id=1646778458]
+position = Vector2(120, 143)
+script = ExtResource("16_536tc")
+flavor_dialogue = ExtResource("17_imbm3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCanInteraction" unique_id=1917982166]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_4gjug")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TrashCanInteraction" unique_id=210767200]
+position = Vector2(112, -3)
+shape = SubResource("RectangleShape2D_8oc6l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TrashCanInteraction" unique_id=768524049]
+position = Vector2(114, 412)
+shape = SubResource("RectangleShape2D_ie18w")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TrashCanInteraction" unique_id=812058338]
+position = Vector2(177, 412)
+shape = SubResource("RectangleShape2D_rxntd")
+
+[node name="BuildingInteraction" type="Area2D" parent="." unique_id=1127978420]
+script = ExtResource("18_b02sy")
+flavor_dialogue = ExtResource("17_imbm3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BuildingInteraction" unique_id=494766158]
+position = Vector2(293, 136)
+shape = SubResource("RectangleShape2D_qjjsu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BuildingInteraction" unique_id=1790376194]
+position = Vector2(180, 138)
+shape = SubResource("RectangleShape2D_qjjsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingInteraction" unique_id=481568174]
+position = Vector2(68, 136)
+shape = SubResource("RectangleShape2D_qjjsu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BuildingInteraction" unique_id=658837893]
+position = Vector2(824.8125, 112)
+shape = SubResource("RectangleShape2D_qjjsu")
 
 [editable path="Player"]

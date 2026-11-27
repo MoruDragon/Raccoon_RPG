@@ -1,0 +1,25 @@
+~ trash_can_interaction
+% It smells terrible! You should really walk away and save your nostrils. 
+% You wonder if there is any pizza in this one… seems not.
+% This trash can is filled to the brim with fish!!! Not your cup of tea.
+% You hear chatter in this one. Seems like there's a deal going on involving cheese? 
+% This trash can is surprisingly clean! Is that normal?
+% Seems like this trash can belongs to a florist. It’s filled with beautiful bouquets!
+% EW! This one is filled with terrible rom-com books! Disgusting!
+% Hmmm…. Newspapers… Boring!
+% Maybe there is some cake in this one!
+% This trash can is kind of scary…. It’s really dark!
+=> END
+
+~ building_interaction
+% Sounds like there's a lot of humans in this one, better walk away now!
+% This building is very quiet… almost too quiet. 
+% You can hear a lot of music in this one. Makes you want to dance!
+% Someone is singing in this one. They are actually really good. 
+% You can hear someone talking about homework. What is homework? Does it taste good?
+% You try to look through the window… your reflection looks back. 
+% This building smells like bread for some reason. 
+% You use the window to fix your fur. Gotta look nice for the fans!
+% This building reminds you of home. Calm, comfy, and warm. 
+% You look through the window and see a rat! The rat waves at you but immediately runs away.
+=> END

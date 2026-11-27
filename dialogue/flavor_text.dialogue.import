@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b0hjagsnchmao"
+path="res://.godot/imported/flavor_text.dialogue-c266dcfcc534b1fba5a60669825feb9b.tres"
+
+[deps]
+
+source_file="res://dialogue/flavor_text.dialogue"
+dest_files=["res://.godot/imported/flavor_text.dialogue-c266dcfcc534b1fba5a60669825feb9b.tres"]
+
+[params]
+
+defaults=true
