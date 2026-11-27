@@ -21,7 +21,7 @@ extends Node
 func _ready() -> void:
 	# If ran in the editor, check if save data flag is set correctly and return.
 	if Engine.is_editor_hint():
-		assert_variables_are_valid()
+		_assert_variables_are_valid()
 		return
 	
 	# Do not play the cutscene if seen_variable is in the save_data and it is true.
@@ -67,7 +67,7 @@ func _validate_property(property: Dictionary) -> void:
 		property.hint_string = ",".join(_get_save_data_variables())
 
 
-func assert_variables_are_valid() -> void:
+func _assert_variables_are_valid() -> void:
 	assert(seen_variable in _get_save_data_variables(),
 		"'%s' is not a save data variable." % seen_variable)
 	for anim in starting_animations:
