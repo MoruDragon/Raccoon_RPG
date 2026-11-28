@@ -710,6 +710,19 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(4, 4)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:cutscene_camera")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Object(Camera2D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"oversampling_with_scale":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(151, 148),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"offset":Vector2(0, 0),"anchor_mode":1,"ignore_rotation":true,"enabled":true,"zoom":Vector2(4, 4),"process_callback":1,"limit_enabled":true,"limit_left":-10000000,"limit_top":-10000000,"limit_right":10000000,"limit_bottom":10000000,"limit_smoothed":false,"position_smoothing_enabled":false,"position_smoothing_speed":5.0,"rotation_smoothing_enabled":false,"rotation_smoothing_speed":5.0,"drag_horizontal_enabled":false,"drag_vertical_enabled":false,"drag_horizontal_offset":0.0,"drag_vertical_offset":0.0,"drag_left_margin":0.2,"drag_top_margin":0.2,"drag_right_margin":0.2,"drag_bottom_margin":0.2,"editor_draw_screen":true,"editor_draw_limits":false,"editor_draw_drag_margin":false,"script":null)
+]
+}
 
 [sub_resource type="Animation" id="Animation_jpb5p"]
 resource_name = "roro_jump"
@@ -886,6 +899,86 @@ tracks/5/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_5f56w"]
+resource_name = "water_gone"
+length = 7.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PipesLayer/Water:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 94), Vector2(416, 94), Vector2(416, 414)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneCamera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(151, 148), Vector2(417, 230)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneCamera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(2, 2)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("CutsceneCamera2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath(".:cutscene_camera")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Object(Camera2D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"oversampling_with_scale":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(151, 148),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"offset":Vector2(0, 0),"anchor_mode":1,"ignore_rotation":true,"enabled":true,"zoom":Vector2(4, 4),"process_callback":1,"limit_enabled":true,"limit_left":-10000000,"limit_top":-10000000,"limit_right":10000000,"limit_bottom":10000000,"limit_smoothed":false,"position_smoothing_enabled":false,"position_smoothing_speed":5.0,"rotation_smoothing_enabled":false,"rotation_smoothing_speed":5.0,"drag_horizontal_enabled":false,"drag_vertical_enabled":false,"drag_horizontal_offset":0.0,"drag_vertical_offset":0.0,"drag_left_margin":0.2,"drag_top_margin":0.2,"drag_right_margin":0.2,"drag_bottom_margin":0.2,"editor_draw_screen":true,"editor_draw_limits":false,"editor_draw_drag_margin":false,"script":null)
+, Object(Camera2D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"oversampling_with_scale":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(151, 148),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"offset":Vector2(0, 0),"anchor_mode":1,"ignore_rotation":true,"enabled":true,"zoom":Vector2(4, 4),"process_callback":1,"limit_enabled":true,"limit_left":-10000000,"limit_top":-10000000,"limit_right":10000000,"limit_bottom":10000000,"limit_smoothed":false,"position_smoothing_enabled":false,"position_smoothing_speed":5.0,"rotation_smoothing_enabled":false,"rotation_smoothing_speed":5.0,"drag_horizontal_enabled":false,"drag_vertical_enabled":false,"drag_horizontal_offset":0.0,"drag_vertical_offset":0.0,"drag_left_margin":0.2,"drag_top_margin":0.2,"drag_right_margin":0.2,"drag_bottom_margin":0.2,"editor_draw_screen":true,"editor_draw_limits":false,"editor_draw_drag_margin":false,"script":null)
+]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"switch_to_player_camera"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_g1ybv"]
 resource_name = "xiu_turn "
 step = 0.1
@@ -908,6 +1001,7 @@ _data = {
 &"roro_jump": SubResource("Animation_jpb5p"),
 &"roro_stalk": SubResource("Animation_ggk8i"),
 &"water_fall": SubResource("Animation_xrnme"),
+&"water_gone": SubResource("Animation_5f56w"),
 &"xiu_turn": SubResource("Animation_g1ybv")
 }
 
@@ -1340,7 +1434,14 @@ position = Vector2(-64, 145)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" parent="Player" index="1" unique_id=398866832]
+position = Vector2(0, 0)
 frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="Player" index="2" unique_id=1929554871]
+position = Vector2(0, 0)
+
+[node name="InteractionDetector" parent="Player" index="3" unique_id=1248960068]
+position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=196033601]
 zoom = Vector2(3, 3)
@@ -1353,7 +1454,7 @@ position_smoothing_enabled = true
 [node name="Xiu" parent="." unique_id=1401522541 instance=ExtResource("5_r6dbc")]
 position = Vector2(23, 143)
 
-[node name="Sprite2D" parent="Xiu" index="0" unique_id=224542822]
+[node name="AnimatedSprite2D" parent="Xiu" index="0" unique_id=224542822]
 frame_progress = 0.0
 
 [node name="SewerMarker" parent="." unique_id=1224443294 instance=ExtResource("3_imayl")]

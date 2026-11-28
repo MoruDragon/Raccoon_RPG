@@ -1,5 +1,5 @@
 
-~ tunnelstart
+ ~ tunnelstart
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
 #neutral xiu expression 
@@ -70,12 +70,14 @@ Roro: No, I couldn't possibly leave you (and your relationship) in such dire con
 #nervous roro expression
 [#happy] Roro: (I'm a liar!! I'm a liar and a fraud!! There's no way I can let her down now!! I don’t even know what community college is!!!!)
 [#hide_name] Roro: The pipes give another groan overhead. You might not know a lot about pipes, but anyone could tell that it's about to burst.
+# mina- bugtesting animation water gone: ~ tunnelstart
 Xiu: I think we should depart now. This place isn't exactly the safest. 
 Xiu: If you'd like, I could introduce you to my family!
 $> play_cutscene_anim("xiu_turn")
 Roro: Woah, what an honor! Lead the way, Xiu!
 $> pause_to_play_cutscene_anim("water_fall")
 Xiu: Oh no! Roro! Are you okay?
+# mina- bugtesting animation water gone:  $> pause_to_play_cutscene_anim("water_gone")
 Roro: I’m fine! Don’t worry, I’m a master plumber. I got this!!! 
 #nervous roro expression
 [#nervous] Roro: (I am so cooked).
@@ -96,6 +98,7 @@ Roro: I can do this. I'm a nimble raccoon!
 
 #Solves Puzzle
 #surprised roro expression
+$> pause_to_play_cutscene_anim("water_gone")
 [#surprised] Roro: Oh my god I actually did it??
 Roro: WOW! Maybe I AM the best plumber in New York!
 Roro: I can put this on my LockedIn!
