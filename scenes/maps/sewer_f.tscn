@@ -674,6 +674,42 @@ tracks/4/keys = {
 "update": 1,
 "values": [&"idle"]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../PipesLayer/Water:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, -197)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CutsceneCamera2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(151, 148)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CutsceneCamera2D:zoom")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
 
 [sub_resource type="Animation" id="Animation_jpb5p"]
 resource_name = "roro_jump"
@@ -773,6 +809,83 @@ tracks/4/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xrnme"]
+resource_name = "water_fall"
+length = 7.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PipesLayer/Water:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.2, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, -197), Vector2(416, -197), Vector2(416, 94)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneCamera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(151, 148), Vector2(417, 230)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneCamera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Xiu:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(227, 151), Vector2(494, 151)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Xiu/AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5333, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk", &"walk", &"idle"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Xiu/AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="Animation" id="Animation_g1ybv"]
 resource_name = "xiu_turn "
 step = 0.1
@@ -794,6 +907,7 @@ _data = {
 &"RESET": SubResource("Animation_onaxd"),
 &"roro_jump": SubResource("Animation_jpb5p"),
 &"roro_stalk": SubResource("Animation_ggk8i"),
+&"water_fall": SubResource("Animation_xrnme"),
 &"xiu_turn": SubResource("Animation_g1ybv")
 }
 
@@ -809,6 +923,25 @@ tile_set = SubResource("TileSet_imayl")
 [node name="PipesLayer" type="TileMapLayer" parent="." unique_id=257440360]
 tile_map_data = PackedByteArray("AAAAAAEAAAACAAMAAAABAAEAAAADAAMAAAACAAEAAAABAAMAAAAFAAEAAAAAAAUAAAAHAAEAAAAAAAMAAAAJAAEAAAAAAAMAAAADAAEAAAACAAMAAAAEAAEAAAAAAAMAAAAIAAEAAAAAAAUAAAAAAAAAAAAEAAUAAAABAAAAAAAEAAUAAAACAAAAAAAEAAUAAAADAAAAAAAEAAUAAAAEAAAAAAAEAAUAAAAFAAAAAAAEAAUAAAAHAAAAAAAEAAUAAAAJAAAAAAAEAAUAAAAIAAAAAAAEAAUAAAAGAAAAAAAEAAUAAAAGAP//AAAEAAUAAAA=")
 tile_set = SubResource("TileSet_2tr8x")
+
+[node name="Water" type="Node2D" parent="PipesLayer" unique_id=1332662157]
+show_behind_parent = true
+position = Vector2(416, -197)
+rotation = 1.5707964
+
+[node name="Node2D" parent="PipesLayer/Water" unique_id=1294021697 instance=ExtResource("8_14n0g")]
+
+[node name="Node2D2" parent="PipesLayer/Water" unique_id=1867710810 instance=ExtResource("8_14n0g")]
+position = Vector2(64, 0)
+
+[node name="Node2D3" parent="PipesLayer/Water" unique_id=980446478 instance=ExtResource("8_14n0g")]
+position = Vector2(128, 0)
+
+[node name="Node2D4" parent="PipesLayer/Water" unique_id=1763627036 instance=ExtResource("8_14n0g")]
+position = Vector2(191.99998, 0)
+
+[node name="Node2D5" parent="PipesLayer/Water" unique_id=1530560545 instance=ExtResource("8_14n0g")]
+position = Vector2(255.99998, -3.0517578e-05)
 
 [node name="GroundLayer" type="TileMapLayer" parent="." unique_id=319776540]
 tile_map_data = PackedByteArray("AAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAUAAAAAAAIAAAABAAIAAAAAAAIAAAABAAMAAAAAAAIAAAABAAQAAAAAAAIAAAABAAUAAAAAAAIAAAACAAIAAAAAAAIAAAACAAMAAAAAAAIAAAACAAQAAAAAAAIAAAACAAUAAAAAAAIAAAADAAIAAAAAAAIAAAADAAMAAAAAAAIAAAADAAQAAAAAAAIAAAADAAUAAAAAAAIAAAAEAAIAAAAAAAIAAAAEAAMAAAAAAAIAAAAEAAQAAAAAAAIAAAAEAAUAAAAAAAIAAAAFAAQAAAAAAAIAAAAFAAUAAAAAAAIAAAAGAAQAAAACAAYAAAAGAAUAAAACAAYAAAAHAAQAAAAAAAIAAAAHAAUAAAAAAAIAAAAIAAIAAAAAAAIAAAAJAAIAAAAAAAIAAAAKAAIAAAAAAAIAAAALAAIAAAAAAAIAAAALAAMAAAAAAAIAAAALAAQAAAAAAAIAAAAKAAQAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAUAAAAAAAIAAAAIAAQAAAAAAAIAAAAJAAMAAAAAAAIAAAAIAAMAAAAAAAIAAAAIAAUAAAAAAAIAAAAKAAUAAAAAAAIAAAALAAUAAAAAAAIAAAAKAAMAAAAAAAIAAAAKAAEAAAAAAAIAAAALAAEAAAAAAAIAAAAKAAAAAAAAAAIAAAALAAAAAAAAAAIAAAAKAP//AAAAAAIAAAALAP//AAAAAAIAAAAFAAIAAAAAAAIAAAAHAAIAAAAAAAIAAAAFAAMAAAAAAAIAAAAGAAMAAAAFAAYAAAAHAAMAAAAAAAIAAAAGAAEAAAAGAAYAAAAGAAAAAAAIAAYAAAAGAAIAAAACAAYAAAA=")
@@ -1201,24 +1334,6 @@ valve_id = "V3"
 [node name="Valve4" parent="." unique_id=1194892538 instance=ExtResource("7_qsuna")]
 position = Vector2(358, 277)
 valve_id = "V4"
-
-[node name="Water" type="Node2D" parent="." unique_id=1332662157]
-position = Vector2(416, 123)
-rotation = 1.5707964
-
-[node name="Node2D" parent="Water" unique_id=1294021697 instance=ExtResource("8_14n0g")]
-
-[node name="Node2D2" parent="Water" unique_id=1867710810 instance=ExtResource("8_14n0g")]
-position = Vector2(64, 0)
-
-[node name="Node2D3" parent="Water" unique_id=980446478 instance=ExtResource("8_14n0g")]
-position = Vector2(128, 0)
-
-[node name="Node2D4" parent="Water" unique_id=1763627036 instance=ExtResource("8_14n0g")]
-position = Vector2(191.99998, 0)
-
-[node name="Node2D5" parent="Water" unique_id=1530560545 instance=ExtResource("8_14n0g")]
-position = Vector2(255.99998, -3.0517578e-05)
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("2_uf3e1")]
 position = Vector2(-64, 145)
