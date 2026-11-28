@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bfwjf8igkajio" path="res://scenes/npc/interaction_area.gd" id="10_4jiwq"]
 [ext_resource type="Script" uid="uid://caqjgcihthqpk" path="res://scenes/maps/opening_cutscene.gd" id="10_utjhh"]
 [ext_resource type="Texture2D" uid="uid://bkyvurkksmnfs" path="res://assets/character_spritesheet.png" id="12_qy6yc"]
+[ext_resource type="PackedScene" uid="uid://blwak2v673h22" path="res://scenes/maps/waypoint_marker.tscn" id="14_4h6cl"]
 [ext_resource type="AudioStream" uid="uid://cg0e3uuw72wsi" path="res://audio/SFX/Sewer Manhole.mp3" id="14_4jiwq"]
 [ext_resource type="Script" uid="uid://btupklh2ernvj" path="res://scenes/npc/flavor_text.gd" id="16_536tc"]
 
@@ -1292,6 +1293,10 @@ _data = {
 &"Roro Turns Around": SubResource("Animation_8465s")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y17p"]
+atlas = ExtResource("3_utjhh")
+region = Rect2(118, 6, 34, 37)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_536tc"]
 size = Vector2(10.5, 736)
 
@@ -1441,6 +1446,25 @@ scale = Vector2(0.635, 0.635)
 marker_tag = "sewer"
 target_scene_path = "uid://dhaq3jbb42vhe"
 manhole_sfx = ExtResource("14_4jiwq")
+
+[node name="Manhole" type="Sprite2D" parent="GoSewer" unique_id=1745675729]
+texture_filter = 1
+position = Vector2(-1.5747757, 1.5747986)
+scale = Vector2(1.5748031, 1.5748031)
+texture = SubResource("AtlasTexture_7y17p")
+script = ExtResource("9_utjhh")
+
+[node name="Area2D" type="Area2D" parent="GoSewer/Manhole" unique_id=1707020359]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("10_4jiwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoSewer/Manhole/Area2D" unique_id=476023868]
+shape = SubResource("CircleShape2D_2tr8x")
+
+[node name="WaypointMarker" parent="GoSewer/Manhole" unique_id=551483526 instance=ExtResource("14_4h6cl")]
+position = Vector2(0.99998665, -60)
+rotation = 1.5687166
 
 [node name="GoMittensTEST" parent="." unique_id=1996510112 instance=ExtResource("7_536tc")]
 position = Vector2(70, 469)

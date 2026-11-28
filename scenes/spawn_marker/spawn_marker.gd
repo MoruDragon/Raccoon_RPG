@@ -48,3 +48,4 @@ func _on_body_exited(body: Node2D) -> void:
 	
 	if is_inside_tree() and not is_player_inside:
 		can_trigger = true
+		

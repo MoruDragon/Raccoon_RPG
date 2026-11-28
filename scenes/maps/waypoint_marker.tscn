@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://blwak2v673h22"]
+
+[ext_resource type="Texture2D" uid="uid://b65c32jo1hb4o" path="res://assets/big_red_arrow.png" id="1_g0ko7"]
+[ext_resource type="Script" uid="uid://ce8mm7qqpx4kw" path="res://scenes/maps/waypoint_marker.gd" id="2_0h7rx"]
+
+[node name="WaypointMarker" type="Sprite2D" unique_id=551483526]
+z_index = 4096
+texture = ExtResource("1_g0ko7")
+script = ExtResource("2_0h7rx")
