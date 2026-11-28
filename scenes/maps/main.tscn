@@ -1330,14 +1330,14 @@ tile_set = SubResource("TileSet_t1uei")
 position = Vector2(716, 159)
 collision_layer = 3
 
-[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=398866832]
+[node name="AnimatedSprite2D" parent="Player" index="1" unique_id=398866832]
 animation = &"idle"
 frame_progress = 0.0
 
-[node name="CollisionShape2D" parent="Player" index="1" unique_id=1929554871]
+[node name="CollisionShape2D" parent="Player" index="2" unique_id=1929554871]
 visible = false
 
-[node name="InteractionDetector" parent="Player" index="2" unique_id=1248960068]
+[node name="InteractionDetector" parent="Player" index="3" unique_id=1248960068]
 visible = false
 collision_layer = 5
 collision_mask = 5
@@ -1440,6 +1440,13 @@ position = Vector2(232, 296)
 scale = Vector2(0.635, 0.635)
 marker_tag = "sewer"
 target_scene_path = "uid://dhaq3jbb42vhe"
+manhole_sfx = ExtResource("14_4jiwq")
+
+[node name="GoMittensTEST" parent="." unique_id=1996510112 instance=ExtResource("7_536tc")]
+position = Vector2(70, 469)
+scale = Vector2(0.40322497, 0.40322497)
+marker_tag = "mittens"
+target_scene_path = "uid://vq6wj6tnogn0"
 manhole_sfx = ExtResource("14_4jiwq")
 
 [node name="Node" type="Node" parent="." unique_id=686568255]

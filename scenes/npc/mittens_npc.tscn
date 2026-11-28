@@ -392,8 +392,7 @@ texture_filter = 1
 position = Vector2(2, -33)
 sprite_frames = SubResource("SpriteFrames_d12m8")
 animation = &"pigeon_slam"
-autoplay = "idle_small"
-frame_progress = 0.48012286
+autoplay = "pigeon_slam"
 flip_h = true
 
 [node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=726418333]
