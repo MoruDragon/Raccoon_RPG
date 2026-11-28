@@ -145,7 +145,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tr8x"]
-height = 36.0
+radius = 0.99999994
+height = 38.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2tr8x"]
 radius = 45.0
@@ -170,6 +171,7 @@ frame_progress = 0.9623582
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929554871]
 z_index = -1
+position = Vector2(0, 8)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_2tr8x")
 

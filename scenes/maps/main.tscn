@@ -116,7 +116,8 @@ texture = ExtResource("3_utjhh")
 16:2/0 = 0
 5:0/size_in_atlas = Vector2i(2, 4)
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.6583557, 6.3547688, 4.78784, 8, 4.0980835, 23.22245, -4.098076, 23.22245)
+5:0/0/y_sort_origin = 20
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 24, 3, 24, 3, 32, -3, 32)
 7:0/size_in_atlas = Vector2i(3, 3)
 7:0/0 = 0
 8:3/size_in_atlas = Vector2i(2, 2)
@@ -152,7 +153,8 @@ texture = ExtResource("3_utjhh")
 19:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-21.744635, -3.546997, 24.82898, -5.0891685, 22.361504, 19.27716, -20.510897, 19.585594)
 0:0/size_in_atlas = Vector2i(5, 6)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 7.9229584, 14.479881, 7.376549, 31.965027, 5.1909027, 41.254005, -5.1909027, 41.800415)
+0:0/0/y_sort_origin = 40
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 36, 6, 36, 6, 48, -3, 48)
 
 [sub_resource type="TileSet" id="TileSet_t1uei"]
 physics_layer_0/collision_layer = 1
@@ -1319,6 +1321,7 @@ size = Vector2(46, 13.5)
 size = Vector2(124.375, 20)
 
 [node name="Main" type="Node2D" unique_id=575015310]
+y_sort_enabled = true
 script = ExtResource("1_4h6cl")
 background_music = ExtResource("2_536tc")
 
@@ -1328,10 +1331,12 @@ tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAE
 tile_set = SubResource("TileSet_00xaj")
 
 [node name="BuildingsAndPropsLayer" type="TileMapLayer" parent="." unique_id=1199281701]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAHAAgAAwAMAAAAAAAOAAgAAwAKAAAAAAAEAAMAAAAAAAAAAAALAAMAAAAAAAAAAAASAAMAAAAAAAAAAAAPAAoAAwAQAAEAAAAOABIAAwAHAAAAAAAzAAQAAAAGAAAAAAAhAB4AAwAAAAAAAAApAB4AAwAAAAAAAAAmAB8AAwAQAAMAAAAcAAoAAwAFAAAAAAAIAAoAAwAOAAIAAAAOACIAAwATAAMAAAAQACIAAwAQAAEAAAASACIAAwATAAMAAAARACQAAwAOAAMAAAA=")
 tile_set = SubResource("TileSet_t1uei")
 
 [node name="Player" parent="." unique_id=2114017779 instance=ExtResource("8_imbm3")]
+y_sort_enabled = true
 position = Vector2(716, 159)
 collision_layer = 3
 
