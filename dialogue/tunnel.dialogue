@@ -1,3 +1,9 @@
+
+if GameState.save_data.dummy_dialogue_tester == 5:
+	=> after_xiu_dad
+#else:
+#	=> start
+
 ~ tunnelstart
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
@@ -71,23 +77,28 @@ Roro: No, I couldn't possibly leave you (and your relationship) in such dire con
 [#hide_name] Roro: The pipes give another groan overhead. You might not know a lot about pipes, but anyone could tell that it's about to burst.
 Xiu: I think we should depart now. This place isn't exactly the safest. 
 Xiu: If you'd like, I could introduce you to my family!
+$> play_cutscene_anim("xiu_turn")
 Roro: Woah, what an honor! Lead the way, Xiu!
+$> pause_to_play_cutscene_anim("water_fall")
+Xiu: Oh no! Roro! Are you okay?
+Roro: I’m fine! Don’t worry, I’m a master plumber. I got this!!! 
+#nervous roro expression
+[#nervous] Roro: (I am so cooked).
+
 $> debug("Setting seen_tunnel to true")
 $> GameState.save_data.seen_tunnel = true
 $> return_to_player_camera()
 => END
 
-~ pipe_trouble
-# WITHIN THE GAMEPLAY: Xiu starts to lead the way to another tunnel but oh no! The pipe suddenly bursts! Water starts filling the area and you are unable to follow Xiu who is on the other side. 
-# [SCENE: SUBWAY TUNNELS... but with a bursted pipe and leaking water!]
-Xiu: Oh no! Roro! Are you okay?
-Roro: I’m fine! Don’t worry, I’m a master plumber. I got this!!! 
-#nervous roro expression
-[#nervous] Roro: (I am so cooked).
+~ pipe_trouble 
+
 #Start of plumbing puzzle
 #thinking roro expression
 [#thinking] Roro: Maybe if I just turn some pipes around, it'll fix itself!
 Roro: I can do this. I'm a nimble raccoon!
+
+# insert puzzle here
+
 #Solves Puzzle
 #surprised roro expression
 [#surprised] Roro: Oh my god I actually did it??
