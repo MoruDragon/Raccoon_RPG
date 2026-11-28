@@ -4,6 +4,11 @@
 [ext_resource type="Script" uid="uid://ce8mm7qqpx4kw" path="res://scenes/maps/waypoint_marker.gd" id="2_0h7rx"]
 
 [node name="WaypointMarker" type="Sprite2D" unique_id=551483526]
+top_level = true
 z_index = 4096
+rotation = 1.5707964
 texture = ExtResource("1_g0ko7")
+offset = Vector2(-16, 0)
+region_enabled = true
+region_rect = Rect2(32, 23, 32, 19)
 script = ExtResource("2_0h7rx")
