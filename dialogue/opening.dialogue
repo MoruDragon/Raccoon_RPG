@@ -6,10 +6,6 @@ if GameState.save_data.dummy_dialogue_tester == 4:
 Your mouth salivates thinking about your culinary options. 
 What will today bring? 
 # roro neutral
-[#neutral] A hero?
-Some scrumptious pasta.
-A nice orange drink.
-...If you know, you know.
 $> pause_to_play_cutscene_anim("Fight Moving")
 # roro surprised
 [#surprised] Roro: [$> play_cutscene_anim("Roro Jump Back")]Ah!
