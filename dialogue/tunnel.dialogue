@@ -102,7 +102,6 @@ Xiu: Let’s continue on. My family will be so excited to meet a master plumber!
 Roro: Yes!
 Roro: (YES!! I'M NO LONGER A LIAR OR A FRAUD. I HAVE CREDIBILITY!!)
 #Gameplay: They go to meet Xiu’s family. 
-$> GameState.save_data.seen_tunnel = true
 => END
 
 #  play this after we meet xiu's dad, should have a save condition or smth so it plays this after we go back out rn its currently playing the tunnelstart ^ 
@@ -119,6 +118,7 @@ Xiu pulls you aside with something tucked behind her back.
 [#neutral] Roro: You can leave that letter in my capable paws Xiu!
 #happy xiu expression
 [#happy] Xiu: Thank you, Roro, safe travels.
+#$> GameState.save_data.dummy_dialogue_tester = 5
 => END
 
 ~ tunnel2 

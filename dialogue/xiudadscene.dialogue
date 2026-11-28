@@ -54,6 +54,7 @@ Xiu's Father: Ah, alright. Stay safe out there, sugarcube.
 Xiu: I will, father.
 # GAMEPLAY xiu leaves and player follows her back into the tunnel. 
 
+$> GameState.save_data.seen_xiu_dad = true
 # we need a save here 
 
 => END

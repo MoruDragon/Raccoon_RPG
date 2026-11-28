@@ -7,6 +7,7 @@ class_name SaveData
 
 @export var seen_opening := false
 @export var seen_tunnel := false
+@export var seen_xiu_dad := false # test
 
 @export var dummy_dialogue_tester := 5
 @export var current_map: String
