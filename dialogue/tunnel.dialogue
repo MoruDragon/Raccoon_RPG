@@ -1,9 +1,3 @@
-
-if GameState.save_data.dummy_dialogue_tester == 5:
-	=> after_xiu_dad
-#else:
-#	=> start
-
 ~ tunnelstart
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
@@ -108,6 +102,7 @@ Xiu: Let’s continue on. My family will be so excited to meet a master plumber!
 Roro: Yes!
 Roro: (YES!! I'M NO LONGER A LIAR OR A FRAUD. I HAVE CREDIBILITY!!)
 #Gameplay: They go to meet Xiu’s family. 
+$> GameState.save_data.seen_tunnel = true
 => END
 
 #  play this after we meet xiu's dad, should have a save condition or smth so it plays this after we go back out rn its currently playing the tunnelstart ^ 
@@ -124,7 +119,6 @@ Xiu pulls you aside with something tucked behind her back.
 [#neutral] Roro: You can leave that letter in my capable paws Xiu!
 #happy xiu expression
 [#happy] Xiu: Thank you, Roro, safe travels.
-
 => END
 
 ~ tunnel2 
