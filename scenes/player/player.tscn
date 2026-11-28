@@ -164,6 +164,7 @@ frame_progress = 0.4878058
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=398866832]
 texture_filter = 1
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_2tr8x")
 animation = &"walk"
 autoplay = "idle"
@@ -171,11 +172,12 @@ frame_progress = 0.9623582
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929554871]
 z_index = -1
-position = Vector2(0, 8)
+position = Vector2(0, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_2tr8x")
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=1248960068]
+position = Vector2(0, -9)
 collision_layer = 4
 collision_mask = 4
 
