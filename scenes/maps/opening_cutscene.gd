@@ -64,12 +64,7 @@ func switch_to_player_camera() -> void:
 
 
 func switch_to_cutscene_camera() -> void:
-	var original_zoom := cutscene_camera.zoom
-	cutscene_camera.global_position = player_camera.global_position
-	cutscene_camera.zoom = player_camera.zoom
 	cutscene_camera.make_current()
-	var tween = create_tween()
-	tween.tween_property(cutscene_camera, "zoom", original_zoom, 0.5)
 
 
 #region Property Validation

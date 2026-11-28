@@ -3,7 +3,7 @@ extends StaticBody2D
 # The compiled .dialogue file resource to load for this NPC.
 # Drag your .dialogue file into this slot in the Godot Inspector.
 @export var dialogue_resource: DialogueResource
-@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var physics_collision: CollisionShape2D = $PhysicsCollision
 
 # The starting title marker inside the .dialogue file (matches the '~ start' label).
@@ -12,11 +12,11 @@ extends StaticBody2D
 func flip_h(flip_dir: bool) -> void:
 	sprite_2d.flip_h = flip_dir
 
-func scale_collision(scale: float) -> void:
-	var scale_vector := Vector2(scale, scale)
+func scale_collision(new_scale: float) -> void:
+	var scale_vector := Vector2(new_scale, new_scale)
 	physics_collision.scale = scale_vector
 	
-func collision_offset(x:int, y:int) -> void:
+func collision_offset(x: int, y: int) -> void:
 	physics_collision.position = Vector2(x,y)
 
 # Called polymorphically by player.gd when the player is in range and presses the interact key.
