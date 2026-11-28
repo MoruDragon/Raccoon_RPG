@@ -1,4 +1,4 @@
-~ wirestart
+~ wire_start
 #[SCENE: SIDEWALK]
 [#hide_name] Roro: You leave the tunnel system and return to the sidewalk, letter clenched in your paws, enthused to complete the quest the Xiu has given you. 
 Determined, you start assembling the RV plane wings Xiu’s father gave you. 
@@ -18,7 +18,9 @@ Roro: Why would I be? It's not like I've been stuck on land my entire life. I'm 
 
 You take a deep breath and start running down the sidewalk. With a final push of your backpaws, the plane wings start to glow and your paws start lifting off the ground.
 Roro: OH MY GOD, IT WORKED!!!!
+=> END
 
+~ skyscraper_start
 #[SCENE: NYC APARTMENTS/SKYSCRAPERS]
 # make roro sprite spin / sway in dizziness
 #neutral pigeon npc expression

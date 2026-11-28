@@ -35,7 +35,7 @@ Papa Xiu hands you a mysterious device.
 #thinking roro expression 
 [#thinking] Roro: Wow, this looks like...
 Roro: What is this.
-Xiu: It's like an RV plane!
+[#surprised] Xiu: It's like an RV plane!
 Roro: A what.
 Roro: Can I eat it?
 Xiu's Father: HA! Nah, stripes. This thing here can let ya fly up.
@@ -55,6 +55,4 @@ Xiu: I will, father.
 # GAMEPLAY xiu leaves and player follows her back into the tunnel. 
 
 $> GameState.save_data.seen_xiu_dad = true
-# we need a save here 
-
 => END

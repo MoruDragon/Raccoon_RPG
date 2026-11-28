@@ -1,9 +1,4 @@
 
-if GameState.save_data.dummy_dialogue_tester == 5:
-	=> after_xiu_dad
-#else:
-#	=> start
-
 ~ tunnelstart
 You and Xiu finally reach the entrance of the tunnel system... without Xiu knowing of your presence, all thanks to your stealthy raccoon prowess.
 Xiu pushes open the tunnel door and hops inside. You squeeze yourself into the entrance as quickly as possible so you don’t lose sight of the rat princess!
@@ -130,6 +125,8 @@ Xiu pulls you aside with something tucked behind her back.
 #happy xiu expression
 [#happy] Xiu: Thank you, Roro, safe travels.
 #$> GameState.save_data.dummy_dialogue_tester = 5
+$> GameState.save_data.seen_xiu_dad = false
+$> GameState.save_data.seen_wire = true
 => END
 
 ~ tunnel2 
