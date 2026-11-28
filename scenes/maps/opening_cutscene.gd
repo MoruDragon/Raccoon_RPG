@@ -53,7 +53,7 @@ func wait_for_cutscene_anim(animation_name: String) -> void:
 		await animation_player.animation_finished
 
 
-func return_to_player_camera() -> void:
+func switch_to_player_camera() -> void:
 	var original_zoom := player_camera.zoom
 	player_camera.global_position = cutscene_camera.global_position
 	player_camera.zoom = cutscene_camera.zoom
@@ -61,7 +61,15 @@ func return_to_player_camera() -> void:
 	var tween = create_tween().set_parallel()
 	tween.tween_property(player_camera, "position", Vector2.ZERO, 0.5)
 	tween.tween_property(player_camera, "zoom", original_zoom, 0.5)
-	print(player_camera.is_current())
+
+
+func switch_to_cutscene_camera() -> void:
+	var original_zoom := cutscene_camera.zoom
+	cutscene_camera.global_position = player_camera.global_position
+	cutscene_camera.zoom = player_camera.zoom
+	cutscene_camera.make_current()
+	var tween = create_tween()
+	tween.tween_property(cutscene_camera, "zoom", original_zoom, 0.5)
 
 
 #region Property Validation

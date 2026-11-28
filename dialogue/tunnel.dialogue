@@ -82,7 +82,7 @@ Roro: I’m fine! Don’t worry, I’m a master plumber. I got this!!!
 
 $> debug("Setting seen_tunnel to true")
 $> GameState.save_data.seen_tunnel = true
-$> return_to_player_camera()
+$> switch_to_player_camera()
 => END
 
 ~ pipe_trouble 
